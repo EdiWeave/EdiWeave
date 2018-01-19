@@ -58,8 +58,8 @@ namespace EdiFabric.Framework.Readers
         internal static string Read(this StreamReader reader, int bytes)
         {
             var result = new char[bytes];
-            reader.Read(result, 0, result.Length);
-            return String.Concat(result);
+            var charsRead = reader.Read(result, 0, result.Length);
+            return String.Concat(result.Take(charsRead));
         }
 
         internal static string[] GetDataElements(this string segment, Separators separators)

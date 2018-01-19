@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Xml.Linq;
 using EdiFabric.Framework.Controls;
+using EdiFabric.Framework.Exceptions;
 using EdiFabric.Framework.Validation;
 using EdiFabric.Rules.X12004010X098A1837;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -63,6 +64,24 @@ namespace EdiFabric.Tests
             var parsedXml = TestHelper.Serialize(ediItems.OfType<Rules.X12005010X222A1837.M_837>().Single());
             Assert.IsNotNull(parsedXml.Root);
             Assert.AreEqual(parsedXml.Root.ToString(), expectedXml.ToString());
+        }
+
+        [TestMethod]
+        public void TestParse5010_isa_near_end()
+        {
+            // ARRANGE
+            const string sample = "EdiFabric.Tests.Edi.Hipaa_837P_00501_ISAnearend.txt";
+
+            // ACT
+            var ediItems = TestHelper.ParseX12(sample).ToList();
+
+            var parsingEx = ediItems.OfType<ParsingException>();
+
+            // ASSERT
+            Assert.IsNotNull(ediItems);
+            Assert.IsNotNull(ediItems.OfType<S_ISA>().SingleOrDefault());
+            Assert.IsNotNull(ediItems.OfType<S_GS>().SingleOrDefault());
+            Assert.AreEqual(parsingEx.Count(), 0);
         }
 
         [TestMethod]

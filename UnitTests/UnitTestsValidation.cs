@@ -22,12 +22,12 @@ namespace EdiWeave.UnitTests
         public void TestValidationRequiredMissing()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Edi.Edifact_INVOIC_D00A_Val_RequiredMissing.txt";
+            const string sample = "EdiWeave.UnitTests.Edi.Edifact_INVOIC_D00A_Val_RequiredMissing.txt";
             var ediStream = CommonHelper.LoadStream(sample, false);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new EdifactReader(ediStream, "EdiFabric.Rules.EdifactD00A.Rep"))
+            using (var ediReader = new EdifactReader(ediStream, "EdiWeave.Rules.EdifactD00A.Rep"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -100,12 +100,12 @@ namespace EdiWeave.UnitTests
         public void TestValidationListCountMax()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Edi.Edifact_INVOIC_D00A_Val_ListCountMax.txt";
+            const string sample = "EdiWeave.UnitTests.Edi.Edifact_INVOIC_D00A_Val_ListCountMax.txt";
             var ediStream = CommonHelper.LoadStream(sample, false);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new EdifactReader(ediStream, "EdiFabric.Rules.EdifactD00A.Rep"))
+            using (var ediReader = new EdifactReader(ediStream, "EdiWeave.Rules.EdifactD00A.Rep"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -164,12 +164,12 @@ namespace EdiWeave.UnitTests
         public void TestValidationListCountMin()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Edi.Edifact_INVOIC_D00A_Val_ListCountMin.txt";
+            const string sample = "EdiWeave.UnitTests.Edi.Edifact_INVOIC_D00A_Val_ListCountMin.txt";
             var ediStream = CommonHelper.LoadStream(sample, false);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new EdifactReader(ediStream, "EdiFabric.Rules.EdifactD00A.Rep"))
+            using (var ediReader = new EdifactReader(ediStream, "EdiWeave.Rules.EdifactD00A.Rep"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -228,12 +228,12 @@ namespace EdiWeave.UnitTests
         public void TestValidationInvalidAttributes()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Edi.Edifact_INVOIC_D00A_Val_InvalidAttributes.txt";
+            const string sample = "EdiWeave.UnitTests.Edi.Edifact_INVOIC_D00A_Val_InvalidAttributes.txt";
             var ediStream = CommonHelper.LoadStream(sample, false);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new EdifactReader(ediStream, "EdiFabric.Rules.EdifactD00A.Rep"))
+            using (var ediReader = new EdifactReader(ediStream, "EdiWeave.Rules.EdifactD00A.Rep"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -250,12 +250,12 @@ namespace EdiWeave.UnitTests
         public void TestValidationStringLen()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Edi.Edifact_INVOIC_D00A_Val_StringLen.txt";
+            const string sample = "EdiWeave.UnitTests.Edi.Edifact_INVOIC_D00A_Val_StringLen.txt";
             var ediStream = CommonHelper.LoadStream(sample, false);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new EdifactReader(ediStream, "EdiFabric.Rules.EdifactD00A.Rep"))
+            using (var ediReader = new EdifactReader(ediStream, "EdiWeave.Rules.EdifactD00A.Rep"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -320,12 +320,12 @@ namespace EdiWeave.UnitTests
         public void TestValidationNoAttributes()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Edi.Edifact_INVOIC_D00A_Val_NoAttributes.txt";
+            const string sample = "EdiWeave.UnitTests.Edi.Edifact_INVOIC_D00A_Val_NoAttributes.txt";
             var ediStream = CommonHelper.LoadStream(sample, false);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new EdifactReader(ediStream, "EdiFabric.Rules.EdifactD00A.Rep"))
+            using (var ediReader = new EdifactReader(ediStream, "EdiWeave.Rules.EdifactD00A.Rep"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -342,12 +342,12 @@ namespace EdiWeave.UnitTests
         public void TestValidationInvalidCode()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Edi.Edifact_INVOIC_D00A_Val_InvalidCode.txt";
+            const string sample = "EdiWeave.UnitTests.Edi.Edifact_INVOIC_D00A_Val_InvalidCode.txt";
             var ediStream = CommonHelper.LoadStream(sample, false);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new EdifactReader(ediStream, "EdiFabric.Rules.EdifactD00A.Rep"))
+            using (var ediReader = new EdifactReader(ediStream, "EdiWeave.Rules.EdifactD00A.Rep"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -407,12 +407,12 @@ namespace EdiWeave.UnitTests
         public void TestValidationNoControlNumber()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Edi.Edifact_INVOIC_D00A_Val_NoControlNumber.txt";
+            const string sample = "EdiWeave.UnitTests.Edi.Edifact_INVOIC_D00A_Val_NoControlNumber.txt";
             var ediStream = CommonHelper.LoadStream(sample, false);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new EdifactReader(ediStream, "EdiFabric.Rules.EdifactD00A"))
+            using (var ediReader = new EdifactReader(ediStream, "EdiWeave.Rules.EdifactD00A"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -432,12 +432,12 @@ namespace EdiWeave.UnitTests
         public void TestValidationNoTrailerControlNumber()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Edi.Edifact_INVOIC_D00A_Val_NoTrailerControlNumber.txt";
+            const string sample = "EdiWeave.UnitTests.Edi.Edifact_INVOIC_D00A_Val_NoTrailerControlNumber.txt";
             var ediStream = CommonHelper.LoadStream(sample, false);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new EdifactReader(ediStream, "EdiFabric.Rules.EdifactD00A"))
+            using (var ediReader = new EdifactReader(ediStream, "EdiWeave.Rules.EdifactD00A"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -457,12 +457,12 @@ namespace EdiWeave.UnitTests
         public void TestValidationNoTrailerSegmentCount()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Edi.Edifact_INVOIC_D00A_Val_NoTrailerSegmentCount.txt";
+            const string sample = "EdiWeave.UnitTests.Edi.Edifact_INVOIC_D00A_Val_NoTrailerSegmentCount.txt";
             var ediStream = CommonHelper.LoadStream(sample, false);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new EdifactReader(ediStream, "EdiFabric.Rules.EdifactD00A"))
+            using (var ediReader = new EdifactReader(ediStream, "EdiWeave.Rules.EdifactD00A"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -482,12 +482,12 @@ namespace EdiWeave.UnitTests
         public void TestValidationWrongControlNumber()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Edi.Edifact_INVOIC_D00A_Val_WrongControlNumber.txt";
+            const string sample = "EdiWeave.UnitTests.Edi.Edifact_INVOIC_D00A_Val_WrongControlNumber.txt";
             var ediStream = CommonHelper.LoadStream(sample, false);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new EdifactReader(ediStream, "EdiFabric.Rules.EdifactD00A"))
+            using (var ediReader = new EdifactReader(ediStream, "EdiWeave.Rules.EdifactD00A"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -507,12 +507,12 @@ namespace EdiWeave.UnitTests
         public void TestValidationWrongSegmentCount()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Edi.Edifact_INVOIC_D00A_Val_WrongSegmentCount.txt";
+            const string sample = "EdiWeave.UnitTests.Edi.Edifact_INVOIC_D00A_Val_WrongSegmentCount.txt";
             var ediStream = CommonHelper.LoadStream(sample, false);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new EdifactReader(ediStream, "EdiFabric.Rules.EdifactD00A"))
+            using (var ediReader = new EdifactReader(ediStream, "EdiWeave.Rules.EdifactD00A"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -532,10 +532,10 @@ namespace EdiWeave.UnitTests
         public void TestValidationIsa()
         {
             //  ARRANGE
-            const string sample = "EdiFabric.UnitTests.Edi.X12_820_00204.txt";
+            const string sample = "EdiWeave.UnitTests.Edi.X12_820_00204.txt";
             var ediStream = CommonHelper.LoadStream(sample, false);
             ISA isa;
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040.Rep"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040.Rep"))
             {
                 var ediItems = ediReader.ReadToEnd().ToList();
                 isa = ediItems.OfType<ISA>().Single();
@@ -553,10 +553,10 @@ namespace EdiWeave.UnitTests
         public void TestValidationUnb()
         {
             //  ARRANGE
-            const string sample = "EdiFabric.UnitTests.Edi.Edifact_INVOIC_D00A_ValidUnb.txt";
+            const string sample = "EdiWeave.UnitTests.Edi.Edifact_INVOIC_D00A_ValidUnb.txt";
             var ediStream = CommonHelper.LoadStream(sample, false);
             UNB unb;
-            using (var ediReader = new EdifactReader(ediStream, "EdiFabric.Rules.EdifactD00A.Rep"))
+            using (var ediReader = new EdifactReader(ediStream, "EdiWeave.Rules.EdifactD00A.Rep"))
             {
                 var ediItems = ediReader.ReadToEnd().ToList();
                 unb = ediItems.OfType<UNB>().Single();

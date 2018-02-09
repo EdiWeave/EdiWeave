@@ -19,7 +19,7 @@ namespace EdiWeave.UnitTests.Hipaa
         public void Test4010()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Hipaa.Edi.Hipaa_837P_00401.txt";
+            const string sample = "EdiWeave.UnitTests.Hipaa.Edi.Hipaa_837P_00401.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             List<EdiItem> ediItems;
@@ -42,7 +42,7 @@ namespace EdiWeave.UnitTests.Hipaa
         public void Test5010()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Hipaa.Edi.Hipaa_837P_00501.txt";
+            const string sample = "EdiWeave.UnitTests.Hipaa.Edi.Hipaa_837P_00501.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             List<EdiItem> ediItems;
@@ -65,7 +65,7 @@ namespace EdiWeave.UnitTests.Hipaa
         public void Test5010Isa()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Hipaa.Edi.Hipaa_837P_00501_ISA.txt";
+            const string sample = "EdiWeave.UnitTests.Hipaa.Edi.Hipaa_837P_00501_ISA.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             List<EdiItem> ediItems;
@@ -88,7 +88,7 @@ namespace EdiWeave.UnitTests.Hipaa
         public void Test5010Hl()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Hipaa.Edi.Hipaa_837P_00501_HL.txt";
+            const string sample = "EdiWeave.UnitTests.Hipaa.Edi.Hipaa_837P_00501_HL.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             List<EdiItem> ediItems;
@@ -111,7 +111,7 @@ namespace EdiWeave.UnitTests.Hipaa
         public void Test5010Lfnm1Lisa()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Hipaa.Edi.Hipaa_837P_00501_LF.txt";
+            const string sample = "EdiWeave.UnitTests.Hipaa.Edi.Hipaa_837P_00501_LF.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             List<EdiItem> ediItems;
@@ -135,9 +135,9 @@ namespace EdiWeave.UnitTests.Hipaa
         private Assembly HipaaFactory(MessageContext mc)
         {
             if (mc.Version == "005010X222A1")
-                return Assembly.Load(new AssemblyName("EdiFabric.Rules.Hipaa005010"));
+                return Assembly.Load(new AssemblyName("EdiWeave.Rules.Hipaa005010"));
             if (mc.Version == "004010X098A1")
-                return Assembly.Load(new AssemblyName("EdiFabric.Rules.Hipaa004010"));
+                return Assembly.Load(new AssemblyName("EdiWeave.Rules.Hipaa004010"));
 
             throw new Exception("Not supported!");
         }
@@ -146,7 +146,7 @@ namespace EdiWeave.UnitTests.Hipaa
         public void Test5010WithCustomValidation()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Hipaa.Edi.Hipaa_837P_00501_Custom.txt";
+            const string sample = "EdiWeave.UnitTests.Hipaa.Edi.Hipaa_837P_00501_Custom.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             List<EdiItem> ediItems;
 

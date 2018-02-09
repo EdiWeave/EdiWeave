@@ -17,13 +17,13 @@ namespace EdiWeave.UnitTests.Eancom
         public void TestSingleMessage()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Eancom.Edi.Eancom_INVOIC_D01BEAN3.txt";
+            const string sample = "EdiWeave.UnitTests.Eancom.Edi.Eancom_INVOIC_D01BEAN3.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new EdifactReader(ediStream, "EdiFabric.Rules.EancomD01BEAN3"))
+            using (var ediReader = new EdifactReader(ediStream, "EdiWeave.Rules.EancomD01BEAN3"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }

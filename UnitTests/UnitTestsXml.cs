@@ -20,14 +20,14 @@ namespace EdiWeave.UnitTests
         public void TestSerialization()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Edi.Edifact_INVOIC_D00A.txt";
-            const string expectedSample = "EdiFabric.UnitTests.Xml.Edifact_INVOIC_D00A.xml";
+            const string sample = "EdiWeave.UnitTests.Edi.Edifact_INVOIC_D00A.txt";
+            const string expectedSample = "EdiWeave.UnitTests.Xml.Edifact_INVOIC_D00A.xml";
             var ediStream = CommonHelper.LoadStream(sample, false);
             var expected = XDocument.Parse(CommonHelper.LoadString(expectedSample, Encoding.UTF8, false));
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new EdifactReader(ediStream, "EdiFabric.Rules.EdifactD00A.Rep", Encoding.UTF8))
+            using (var ediReader = new EdifactReader(ediStream, "EdiWeave.Rules.EdifactD00A.Rep", Encoding.UTF8))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }

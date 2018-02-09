@@ -25,13 +25,13 @@ namespace EdiWeave.UnitTests.X12
         public void TestSingleMessage()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -52,14 +52,14 @@ namespace EdiWeave.UnitTests.X12
         public void TestRepetitionSeparator()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_RepetitionSeparator.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_RepetitionSeparator.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             List<EdiItem> ediItems;
             Separators separators;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040.Rep"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040.Rep"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
                 separators = ediReader.Separators;
@@ -82,14 +82,14 @@ namespace EdiWeave.UnitTests.X12
         public void TestDuplicateSeparator()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_RepetitionSeparator.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_RepetitionSeparator.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             List<EdiItem> ediItems;
             Separators separators;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040.Rep"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040.Rep"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
                 separators = ediReader.Separators;
@@ -104,14 +104,14 @@ namespace EdiWeave.UnitTests.X12
         public void TestSegmentSeparatorLf()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_SegmentSeparatorLF.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_SegmentSeparatorLF.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             List<EdiItem> ediItems;
             Separators separators;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
                 separators = ediReader.Separators;
@@ -133,14 +133,14 @@ namespace EdiWeave.UnitTests.X12
         public void TestPostfixLf()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_LF.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_LF.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             List<EdiItem> ediItems;
             Separators separators;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
                 separators = ediReader.Separators;
@@ -162,12 +162,12 @@ namespace EdiWeave.UnitTests.X12
         public void TestError()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_BadSegment.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_BadSegment.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -189,13 +189,13 @@ namespace EdiWeave.UnitTests.X12
         public void TestMultipleGroups()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_MultipleGroups.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_MultipleGroups.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -215,13 +215,13 @@ namespace EdiWeave.UnitTests.X12
         public void TestMultipleMessages()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_MultipleMessages.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_MultipleMessages.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -241,13 +241,13 @@ namespace EdiWeave.UnitTests.X12
         public void TestBom()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_BOM.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_BOM.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -261,14 +261,14 @@ namespace EdiWeave.UnitTests.X12
         public void TestTrailingBlanks()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_TrailingBlanks.txt";
-            const string cleanSample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_TrailingBlanks.txt";
+            const string cleanSample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(cleanSample);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -289,14 +289,14 @@ namespace EdiWeave.UnitTests.X12
         public void TestMultipleInterchange()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_MultipleInterchanges.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_MultipleInterchanges.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             var ediItems = new List<EdiItem>();
 
             // ACT
             var actual = "";
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040"))
             {
                 while (ediReader.Read())
                 {
@@ -320,12 +320,12 @@ namespace EdiWeave.UnitTests.X12
         public void TestInvalidTrailers()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_InvalidTrailers.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_InvalidTrailers.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -345,12 +345,12 @@ namespace EdiWeave.UnitTests.X12
         public void TestInvalidHeader()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_InvalidHeader.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_InvalidHeader.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -365,12 +365,12 @@ namespace EdiWeave.UnitTests.X12
         public void TestTooManyDataElements()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_InvalidSegment.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_InvalidSegment.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -398,12 +398,12 @@ namespace EdiWeave.UnitTests.X12
         public void TestTooManyComponentDataElements()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_InvalidSegment2.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_InvalidSegment2.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040.Rep"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040.Rep"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -432,12 +432,12 @@ namespace EdiWeave.UnitTests.X12
         public void TestGroupRead()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_MultipleGroups.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_MultipleGroups.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var ediItems = new List<object>();
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040"))
             {
                 while (ediReader.Read())
                 {
@@ -458,12 +458,12 @@ namespace EdiWeave.UnitTests.X12
         public void TestInterchangeRead()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_MultipleInterchanges.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_MultipleInterchanges.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var ediItems = new List<object>();
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040"))
             {
                 while (ediReader.Read())
                 {
@@ -486,12 +486,12 @@ namespace EdiWeave.UnitTests.X12
         public void TestMissingGroupTrailer()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_MissingGroupTrailer.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_MissingGroupTrailer.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -509,12 +509,12 @@ namespace EdiWeave.UnitTests.X12
         public void TestMissingInterchangeTrailer()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_MissingInterchangeTrailer.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_MissingInterchangeTrailer.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -532,12 +532,12 @@ namespace EdiWeave.UnitTests.X12
         public void TestValidAndInvalidMessageRead()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_ValidAndInvalidMessage.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_ValidAndInvalidMessage.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -558,12 +558,12 @@ namespace EdiWeave.UnitTests.X12
         public void TestVersionFromSt()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_VersionFromSt.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_VersionFromSt.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -581,13 +581,13 @@ namespace EdiWeave.UnitTests.X12
         public void TestNoRepetition()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_NoRepetition.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_NoRepetition.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -608,15 +608,15 @@ namespace EdiWeave.UnitTests.X12
         public void TestBlankRepetition()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_BlankRepetition.txt";
-            const string cleanSample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_BlankRepetitionClean.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_BlankRepetition.txt";
+            const string cleanSample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_BlankRepetitionClean.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(cleanSample);
             List<EdiItem> ediItems;
             Separators separators;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
                 separators = ediReader.Separators;
@@ -639,12 +639,12 @@ namespace EdiWeave.UnitTests.X12
         public void TestMultipleInvalidInterchangesWithContinueOnError()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_MultipleInvalidInterchanges.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_MultipleInvalidInterchanges.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040", Encoding.UTF8, true))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040", Encoding.UTF8, true))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -662,12 +662,12 @@ namespace EdiWeave.UnitTests.X12
         public void TestMultipleInvalidInterchanges()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_MultipleInvalidInterchanges.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_MultipleInvalidInterchanges.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -685,12 +685,12 @@ namespace EdiWeave.UnitTests.X12
         public void TestMultipleInvalidIMessagesWithContinueOnError()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_MultipleInvalidMessages.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_MultipleInvalidMessages.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040", Encoding.UTF8, true))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040", Encoding.UTF8, true))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -709,12 +709,12 @@ namespace EdiWeave.UnitTests.X12
         public void TestMultipleInvalidIMessages()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_MultipleInvalidMessages.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_MultipleInvalidMessages.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -731,14 +731,14 @@ namespace EdiWeave.UnitTests.X12
         public void TestTa1()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_TA1.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_TA1.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             List<EdiItem> ediItems;
             Separators separators;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
                 separators = ediReader.Separators;
@@ -761,7 +761,7 @@ namespace EdiWeave.UnitTests.X12
         public void TestLoadingWithDelegate()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             List<EdiItem> ediItems;
@@ -787,16 +787,16 @@ namespace EdiWeave.UnitTests.X12
         private static Assembly AssemblyLoadFactory(MessageContext messageContext)
         {
             if (messageContext.SenderId == "PartnerA")
-                return Assembly.Load(new AssemblyName("EdiFabric.Rules.PartnerA.X12002040"));
+                return Assembly.Load(new AssemblyName("EdiWeave.Rules.PartnerA.X12002040"));
 
-            return Assembly.Load(new AssemblyName("EdiFabric.Rules.X12002040"));
+            return Assembly.Load(new AssemblyName("EdiWeave.Rules.X12002040"));
         }
 
         [TestMethod]
         public void TestPreserveWhiteSpace()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_Write.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_Write.txt";
             var expected = CommonHelper.LoadString(sample);
             string actual;
 
@@ -821,7 +821,7 @@ namespace EdiWeave.UnitTests.X12
         public void TestNoPreserveWhiteSpace()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_WriteNoPreserveWhitespace.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_WriteNoPreserveWhitespace.txt";
             var expected = CommonHelper.LoadString(sample);
             string actual;
 
@@ -846,14 +846,14 @@ namespace EdiWeave.UnitTests.X12
         public void TestEval()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204.txt";
-            const string sampleEval = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_Eval.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204.txt";
+            const string sampleEval = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_Eval.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sampleEval);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040.Eval"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040.Eval"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -874,13 +874,13 @@ namespace EdiWeave.UnitTests.X12
         public void TestNoValidationAttributes()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040.NoValidation"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040.NoValidation"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -901,14 +901,14 @@ namespace EdiWeave.UnitTests.X12
         public void TestSegmentSeparatorCr()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_SegmentSeparatorCR.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_SegmentSeparatorCR.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             List<EdiItem> ediItems;
             Separators separators;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
                 separators = ediReader.Separators;
@@ -930,14 +930,14 @@ namespace EdiWeave.UnitTests.X12
         public void TestPostfixCr()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_CR.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_CR.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             List<EdiItem> ediItems;
             Separators separators;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
                 separators = ediReader.Separators;
@@ -959,14 +959,14 @@ namespace EdiWeave.UnitTests.X12
         public void TestCrLf()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_CRLF.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_CRLF.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             List<EdiItem> ediItems;
             Separators separators;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
                 separators = ediReader.Separators;
@@ -988,12 +988,12 @@ namespace EdiWeave.UnitTests.X12
         public void TestSplitMessage()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_Split.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_Split.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040.Rep"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040.Rep"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
@@ -1039,12 +1039,12 @@ namespace EdiWeave.UnitTests.X12
         public void TestSplitWithValidation()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.X12.Edi.X12_810_00204_Split.txt";
+            const string sample = "EdiWeave.UnitTests.X12.Edi.X12_810_00204_Split.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             List<EdiItem> ediItems;
 
             // ACT
-            using (var ediReader = new X12Reader(ediStream, "EdiFabric.Rules.X12002040.Rep"))
+            using (var ediReader = new X12Reader(ediStream, "EdiWeave.Rules.X12002040.Rep"))
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }

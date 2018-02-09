@@ -19,7 +19,7 @@ namespace EdiWeave.UnitTests.Vda
         public void TestSingleMessage()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Vda.Edi.Vda_4905_02.txt";
+            const string sample = "EdiWeave.UnitTests.Vda.Edi.Vda_4905_02.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             List<EdiItem> ediItems;
@@ -42,7 +42,7 @@ namespace EdiWeave.UnitTests.Vda
         public void TestMultipleMessages()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Vda.Edi.Vda_4905_02_MultipleMessages.txt";
+            const string sample = "EdiWeave.UnitTests.Vda.Edi.Vda_4905_02_MultipleMessages.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             List<EdiItem> ediItems;
@@ -65,7 +65,7 @@ namespace EdiWeave.UnitTests.Vda
         public void TestMultipleInvalidMessages()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Vda.Edi.Vda_4905_02_MultipleInvalidMessages.txt";
+            const string sample = "EdiWeave.UnitTests.Vda.Edi.Vda_4905_02_MultipleInvalidMessages.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             List<EdiItem> ediItems;
 
@@ -87,7 +87,7 @@ namespace EdiWeave.UnitTests.Vda
         public void TestShortSegment()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Vda.Edi.Vda_4905_02_ShortSegment.txt";
+            const string sample = "EdiWeave.UnitTests.Vda.Edi.Vda_4905_02_ShortSegment.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             List<EdiItem> ediItems;
 
@@ -107,7 +107,7 @@ namespace EdiWeave.UnitTests.Vda
         public void TestMultipleInvalidMessagesWithShortSegment()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Vda.Edi.Vda_4905_02_MultipleInvalidMessagesWithShortSegment.txt";
+            const string sample = "EdiWeave.UnitTests.Vda.Edi.Vda_4905_02_MultipleInvalidMessagesWithShortSegment.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             List<EdiItem> ediItems;
 
@@ -129,7 +129,7 @@ namespace EdiWeave.UnitTests.Vda
         public void TestWithBom()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Vda.Edi.Vda_4905_02_BOM.txt";
+            const string sample = "EdiWeave.UnitTests.Vda.Edi.Vda_4905_02_BOM.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             List<EdiItem> ediItems;
@@ -152,7 +152,7 @@ namespace EdiWeave.UnitTests.Vda
         public void TestNoPostfix()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Vda.Edi.Vda_4905_02_NoPostfix.txt";
+            const string sample = "EdiWeave.UnitTests.Vda.Edi.Vda_4905_02_NoPostfix.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             List<EdiItem> ediItems;
@@ -175,7 +175,7 @@ namespace EdiWeave.UnitTests.Vda
         public void TestTrailing()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Vda.Edi.Vda_4905_02_Trailing.txt";
+            const string sample = "EdiWeave.UnitTests.Vda.Edi.Vda_4905_02_Trailing.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             var expected = CommonHelper.LoadString(sample);
             List<EdiItem> ediItems;
@@ -198,7 +198,7 @@ namespace EdiWeave.UnitTests.Vda
         public void TestWithUnexpectedPostfix()
         {
             // ARRANGE
-            const string sample = "EdiFabric.UnitTests.Vda.Edi.Vda_4905_02.txt";
+            const string sample = "EdiWeave.UnitTests.Vda.Edi.Vda_4905_02.txt";
             var ediStream = CommonHelper.LoadStream(sample);
             List<EdiItem> ediItems;
 
@@ -234,7 +234,7 @@ namespace EdiWeave.UnitTests.Vda
             var receiver = segment.Substring(6, 9);
 
             return new MessageContext("4905", newControlNumber, "1", "VDA", sender, "", receiver, "",
-                mc => Assembly.Load(new AssemblyName("EdiFabric.Rules.Vda")));
+                mc => Assembly.Load(new AssemblyName("EdiWeave.Rules.Vda")));
         }
     }
 }

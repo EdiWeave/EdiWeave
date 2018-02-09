@@ -15,11 +15,11 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using EdiFabric.Framework.Controls;
-using EdiFabric.Framework.Exceptions;
-using EdiFabric.Framework.Parsing;
+using EdiWeave.Framework.Controls;
+using EdiWeave.Framework.Exceptions;
+using EdiWeave.Framework.Parsing;
 
-namespace EdiFabric.Framework.Readers
+namespace EdiWeave.Framework.Readers
 {
     /// <summary>
     /// Reads X12 messages into .NET objects.

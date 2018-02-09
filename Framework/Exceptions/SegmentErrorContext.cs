@@ -12,7 +12,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace EdiFabric.Framework.Exceptions
+namespace EdiWeave.Framework.Exceptions
 {
     /// <summary>
     /// Information for the data, error codes and the context of the data elements that failed.

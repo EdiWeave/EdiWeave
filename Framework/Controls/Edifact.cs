@@ -13,7 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 
-namespace EdiFabric.Framework.Controls
+namespace EdiWeave.Framework.Controls
 {
     /// <summary>
     /// This class represents EDIFACT interchange header.

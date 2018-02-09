@@ -12,9 +12,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using EdiFabric.Framework.Parsing;
+using EdiWeave.Framework.Parsing;
 
-namespace EdiFabric.Framework.Controls
+namespace EdiWeave.Framework.Controls
 {
     /// <summary>
     /// This class represents an EDI interchange or group. 

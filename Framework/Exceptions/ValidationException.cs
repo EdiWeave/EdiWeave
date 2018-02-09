@@ -12,7 +12,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace EdiFabric.Framework.Exceptions
+namespace EdiWeave.Framework.Exceptions
 {
     /// <summary>
     /// Validation exception.

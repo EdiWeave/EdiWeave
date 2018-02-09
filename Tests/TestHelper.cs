@@ -6,8 +6,8 @@ using System.Reflection;
 using System.Text;
 using System.Xml.Linq;
 using System.Xml.Serialization;
-using EdiFabric.Framework.Controls;
-using EdiFabric.Framework.Readers;
+using EdiWeave.Framework.Controls;
+using EdiWeave.Framework.Readers;
 
 namespace EdiFabric.Tests
 {

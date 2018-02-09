@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
 using System.Xml.Linq;
-using EdiFabric.Framework.Controls;
-using EdiFabric.Framework.Exceptions;
-using EdiFabric.Framework.Validation;
-using EdiFabric.Rules.X12004010X098A1837;
+using EdiWeave.Framework.Controls;
+using EdiWeave.Framework.Exceptions;
+using EdiWeave.Framework.Validation;
+using EdiWeave.Rules.X12004010X098A1837;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace EdiFabric.Tests
@@ -61,7 +61,7 @@ namespace EdiFabric.Tests
             Assert.IsNotNull(ediItems);
             Assert.IsNotNull(ediItems.OfType<S_ISA>().SingleOrDefault());
             Assert.IsNotNull(ediItems.OfType<S_GS>().SingleOrDefault());
-            var parsedXml = TestHelper.Serialize(ediItems.OfType<Rules.X12005010X222A1837.M_837>().Single());
+            var parsedXml = TestHelper.Serialize(ediItems.OfType<EdiWeave.Rules.X12005010X222A1837.M_837>().Single());
             Assert.IsNotNull(parsedXml.Root);
             Assert.AreEqual(parsedXml.Root.ToString(), expectedXml.ToString());
         }
@@ -89,7 +89,7 @@ namespace EdiFabric.Tests
         {
             // ARRANGE
             const string sample = "EdiFabric.Tests.Edi.Hipaa_837P_00501.txt";
-            var interchange = TestHelper.GenerateX12<Rules.X12005010X222A1837.M_837>(sample);
+            var interchange = TestHelper.GenerateX12<EdiWeave.Rules.X12005010X222A1837.M_837>(sample);
 
             // ACT
             var ediSegments = interchange.GenerateEdi();
@@ -113,7 +113,7 @@ namespace EdiFabric.Tests
             Assert.IsNotNull(ediItems);
             Assert.IsNotNull(ediItems.OfType<S_ISA>().SingleOrDefault());
             Assert.IsNotNull(ediItems.OfType<S_GS>().SingleOrDefault());
-            var parsedXml = TestHelper.Serialize(ediItems.OfType<Rules.X12005010X222A1837.M_837>().Single());
+            var parsedXml = TestHelper.Serialize(ediItems.OfType<EdiWeave.Rules.X12005010X222A1837.M_837>().Single());
             Assert.IsNotNull(parsedXml.Root);
             Assert.AreEqual(parsedXml.Root.ToString(), expectedXml.ToString());
         }
@@ -123,7 +123,7 @@ namespace EdiFabric.Tests
         {
             // ARRANGE
             const string sample = "EdiFabric.Tests.Edi.Hipaa_837P_00501_HL.txt";
-            var interchange = TestHelper.GenerateX12<Rules.X12005010X222A1837.M_837>(sample);
+            var interchange = TestHelper.GenerateX12<EdiWeave.Rules.X12005010X222A1837.M_837>(sample);
 
             // ACT
             var ediSegments = interchange.GenerateEdi();
@@ -147,7 +147,7 @@ namespace EdiFabric.Tests
             Assert.IsNotNull(ediItems);
             Assert.IsNotNull(ediItems.OfType<S_ISA>().SingleOrDefault());
             Assert.IsNotNull(ediItems.OfType<S_GS>().SingleOrDefault());
-            var parsedXml = TestHelper.Serialize(ediItems.OfType<Rules.X12005010X222A1837.M_837>().Single());
+            var parsedXml = TestHelper.Serialize(ediItems.OfType<EdiWeave.Rules.X12005010X222A1837.M_837>().Single());
             Assert.IsNotNull(parsedXml.Root);
             Assert.AreEqual(parsedXml.Root.ToString(), expectedXml.ToString());
         }
@@ -157,7 +157,7 @@ namespace EdiFabric.Tests
         {
             // ARRANGE
             const string sample = "EdiFabric.Tests.Edi.Hipaa_837P_00501_NoEnum.txt";
-            var interchange = TestHelper.GenerateX12<Rules.X12005010X222A1837.M_837>(sample);
+            var interchange = TestHelper.GenerateX12<EdiWeave.Rules.X12005010X222A1837.M_837>(sample);
 
             // ACT
             var ediSegments = interchange.GenerateEdi();
@@ -171,7 +171,7 @@ namespace EdiFabric.Tests
         {
             // ARRANGE
             const string sample = "EdiFabric.Tests.Xml.Hipaa_837P_00501_Validation.xml";
-            var obj = TestHelper.Deserialize<Rules.X12005010X222A1837.M_837>(TestHelper.Load(sample));
+            var obj = TestHelper.Deserialize<EdiWeave.Rules.X12005010X222A1837.M_837>(TestHelper.Load(sample));
             const string expectedResult = "EdiFabric.Tests.Xml.Hipaa_837P_00501_ValidationExpected.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
@@ -200,7 +200,7 @@ namespace EdiFabric.Tests
             Assert.IsNotNull(ediItems);
             Assert.IsNotNull(ediItems.OfType<S_ISA>().SingleOrDefault());
             Assert.IsNotNull(ediItems.OfType<S_GS>().SingleOrDefault());
-            var parsedXml = TestHelper.Serialize(ediItems.OfType<Rules.X12005010X222A1837.M_837>().Single());
+            var parsedXml = TestHelper.Serialize(ediItems.OfType<EdiWeave.Rules.X12005010X222A1837.M_837>().Single());
             Assert.IsNotNull(parsedXml.Root);
             Assert.AreEqual(parsedXml.Root.ToString(), expectedXml.ToString());
         }

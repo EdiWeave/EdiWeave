@@ -9,7 +9,7 @@
 // PURPOSE.
 //---------------------------------------------------------------------
 
-namespace EdiFabric.Framework.Exceptions
+namespace EdiWeave.Framework.Exceptions
 {
     static class ErrorCodeDescriptions
     {

@@ -12,9 +12,9 @@
 using System;
 using System.Linq;
 using System.Reflection;
-using EdiFabric.Framework.Exceptions;
+using EdiWeave.Framework.Exceptions;
 
-namespace EdiFabric.Framework
+namespace EdiWeave.Framework
 {
     /// <summary>
     /// The context of an EDI transaction set (or message).

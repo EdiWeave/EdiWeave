@@ -12,7 +12,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace EdiFabric.Framework.Exceptions
+namespace EdiWeave.Framework.Exceptions
 {
     /// <summary>
     /// Parsing exception.

@@ -13,10 +13,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using EdiFabric.Framework.Exceptions;
-using EdiFabric.Framework.Parsing;
+using EdiWeave.Framework.Exceptions;
+using EdiWeave.Framework.Parsing;
 
-namespace EdiFabric.Framework.Readers
+namespace EdiWeave.Framework.Readers
 {
     internal static class EdiReaderExtensions
     {

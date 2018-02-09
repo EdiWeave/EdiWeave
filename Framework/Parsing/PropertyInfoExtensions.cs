@@ -15,7 +15,7 @@ using System.Linq;
 using System.Reflection;
 using System.Xml.Serialization;
 
-namespace EdiFabric.Framework.Parsing
+namespace EdiWeave.Framework.Parsing
 {
     static class PropertyInfoExtensions
     {

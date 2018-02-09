@@ -9,7 +9,7 @@
 // PURPOSE.
 //---------------------------------------------------------------------
 
-namespace EdiFabric.Framework.Controls
+namespace EdiWeave.Framework.Controls
 {
     /// <summary>
     /// Identifies a control segment.

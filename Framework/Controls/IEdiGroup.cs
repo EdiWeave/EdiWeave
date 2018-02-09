@@ -11,7 +11,7 @@
 
 using System.Collections.Generic;
 
-namespace EdiFabric.Framework.Controls
+namespace EdiWeave.Framework.Controls
 {
     /// <summary>
     /// Identifies an EDI group.

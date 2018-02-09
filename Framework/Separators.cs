@@ -12,9 +12,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using EdiFabric.Framework.Parsing;
+using EdiWeave.Framework.Parsing;
 
-namespace EdiFabric.Framework
+namespace EdiWeave.Framework
 {
     /// <summary>
     /// EDI separators.

@@ -1,4 +1,4 @@
-namespace EdiFabric.Rules.X12004010X098A1837 {
+namespace EdiWeave.Rules.X12004010X098A1837 {
     using System;
     using System.Xml.Serialization;
     using System.Collections.Generic;
@@ -319,9 +319,9 @@ namespace EdiFabric.Rules.X12004010X098A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_TS837Q1_2010A {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public G_TS837Q1_2010AA G_TS837Q1_2010AA {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public G_TS837Q1_2010AB G_TS837Q1_2010AB {get; set;}
     }
     [Serializable]
@@ -728,13 +728,13 @@ namespace EdiFabric.Rules.X12004010X098A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_TS837Q1_2010B {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public G_TS837Q1_2010BA G_TS837Q1_2010BA {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public G_TS837Q1_2010BB G_TS837Q1_2010BB {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public G_TS837Q1_2010BC G_TS837Q1_2010BC {get; set;}
-    [XmlElementAttribute(Order=3)]
+    [XmlElement(Order=3)]
     public G_TS837Q1_2010BD G_TS837Q1_2010BD {get; set;}
     }
     [Serializable]
@@ -852,7 +852,7 @@ namespace EdiFabric.Rules.X12004010X098A1837 {
     public class A_REF_TS837Q1_2010BA {
     [XmlElement(Order=0)]
     public U_REF_SubscriberSecondaryIdentification_TS837Q1_2010BA U_REF_SubscriberSecondaryIdentification_TS837Q1_2010BA {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_REF_PropertyAndCasualtyClaimNumber_TS837Q1_2010BA S_REF_PropertyAndCasualtyClaimNumber_TS837Q1_2010BA {get; set;}
     }
     [Serializable]
@@ -1254,11 +1254,11 @@ namespace EdiFabric.Rules.X12004010X098A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_DTP_TS837Q1_2300 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_DTP_DateInitialTreatment_TS837Q1_2300 S_DTP_DateInitialTreatment_TS837Q1_2300 {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_DTP_DateDateLastSeen_TS837Q1_2300 S_DTP_DateDateLastSeen_TS837Q1_2300 {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public S_DTP_DateOnsetOfCurrentIllnessSymptom_TS837Q1_2300 S_DTP_DateOnsetOfCurrentIllnessSymptom_TS837Q1_2300 {get; set;}
     [XmlElement(Order=3)]
     public U_DTP_DateAcuteManifestation_TS837Q1_2300 U_DTP_DateAcuteManifestation_TS837Q1_2300 {get; set;}
@@ -1266,23 +1266,23 @@ namespace EdiFabric.Rules.X12004010X098A1837 {
     public U_DTP_DateSimilarIllnessSymptomOnset_TS837Q1_2300 U_DTP_DateSimilarIllnessSymptomOnset_TS837Q1_2300 {get; set;}
     [XmlElement(Order=5)]
     public U_DTP_DateAccident_TS837Q1_2300 U_DTP_DateAccident_TS837Q1_2300 {get; set;}
-    [XmlElementAttribute(Order=6)]
+    [XmlElement(Order=6)]
     public S_DTP_DateLastMenstrualPeriod_TS837Q1_2300 S_DTP_DateLastMenstrualPeriod_TS837Q1_2300 {get; set;}
-    [XmlElementAttribute(Order=7)]
+    [XmlElement(Order=7)]
     public S_DTP_DateLastXray_TS837Q1_2300 S_DTP_DateLastXray_TS837Q1_2300 {get; set;}
-    [XmlElementAttribute(Order=8)]
+    [XmlElement(Order=8)]
     public S_DTP_DateHearingAndVisionPrescriptionDate_TS837Q1_2300 S_DTP_DateHearingAndVisionPrescriptionDate_TS837Q1_2300 {get; set;}
     [XmlElement(Order=9)]
     public U_DTP_DateDisabilityBegin_TS837Q1_2300 U_DTP_DateDisabilityBegin_TS837Q1_2300 {get; set;}
     [XmlElement(Order=10)]
     public U_DTP_DateDisabilityEnd_TS837Q1_2300 U_DTP_DateDisabilityEnd_TS837Q1_2300 {get; set;}
-    [XmlElementAttribute(Order=11)]
+    [XmlElement(Order=11)]
     public S_DTP_DateLastWorked_TS837Q1_2300 S_DTP_DateLastWorked_TS837Q1_2300 {get; set;}
-    [XmlElementAttribute(Order=12)]
+    [XmlElement(Order=12)]
     public S_DTP_DateAuthorizedReturnToWork_TS837Q1_2300 S_DTP_DateAuthorizedReturnToWork_TS837Q1_2300 {get; set;}
-    [XmlElementAttribute(Order=13)]
+    [XmlElement(Order=13)]
     public S_DTP_DateAdmission_TS837Q1_2300 S_DTP_DateAdmission_TS837Q1_2300 {get; set;}
-    [XmlElementAttribute(Order=14)]
+    [XmlElement(Order=14)]
     public S_DTP_DateDischarge_TS837Q1_2300 S_DTP_DateDischarge_TS837Q1_2300 {get; set;}
     [XmlElement(Order=15)]
     public U_DTP_DateAssumedAndRelinquishedCareDates_TS837Q1_2300 U_DTP_DateAssumedAndRelinquishedCareDates_TS837Q1_2300 {get; set;}
@@ -1736,11 +1736,11 @@ namespace EdiFabric.Rules.X12004010X098A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_AMT_TS837Q1_2300 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_AMT_CreditDebitCardMaximumAmount_TS837Q1_2300 S_AMT_CreditDebitCardMaximumAmount_TS837Q1_2300 {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_AMT_PatientAmountPaid_TS837Q1_2300 S_AMT_PatientAmountPaid_TS837Q1_2300 {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public S_AMT_TotalPurchasedServiceAmount_TS837Q1_2300 S_AMT_TotalPurchasedServiceAmount_TS837Q1_2300 {get; set;}
     }
     [Serializable]
@@ -1795,31 +1795,31 @@ namespace EdiFabric.Rules.X12004010X098A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_REF_TS837Q1_2300 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_REF_ServiceAuthorizationExceptionCode_TS837Q1_2300 S_REF_ServiceAuthorizationExceptionCode_TS837Q1_2300 {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_REF_MandatoryMedicareSection4081CrossoverIndicator_TS837Q1_2300 S_REF_MandatoryMedicareSection4081CrossoverIndicator_TS837Q1_2300 {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public S_REF_MammographyCertificationNumber_TS837Q1_2300 S_REF_MammographyCertificationNumber_TS837Q1_2300 {get; set;}
     [XmlElement(Order=3)]
     public U_REF_PriorAuthorizationOrReferralNumber_TS837Q1_2300 U_REF_PriorAuthorizationOrReferralNumber_TS837Q1_2300 {get; set;}
-    [XmlElementAttribute(Order=4)]
+    [XmlElement(Order=4)]
     public S_REF_OriginalReferenceNumberICNDCN_TS837Q1_2300 S_REF_OriginalReferenceNumberICNDCN_TS837Q1_2300 {get; set;}
     [XmlElement(Order=5)]
     public U_REF_ClinicalLaboratoryImprovementAmendmentCLIANumber_TS837Q1_2300 U_REF_ClinicalLaboratoryImprovementAmendmentCLIANumber_TS837Q1_2300 {get; set;}
-    [XmlElementAttribute(Order=6)]
+    [XmlElement(Order=6)]
     public S_REF_RepricedClaimNumber_TS837Q1_2300 S_REF_RepricedClaimNumber_TS837Q1_2300 {get; set;}
-    [XmlElementAttribute(Order=7)]
+    [XmlElement(Order=7)]
     public S_REF_AdjustedRepricedClaimNumber_TS837Q1_2300 S_REF_AdjustedRepricedClaimNumber_TS837Q1_2300 {get; set;}
-    [XmlElementAttribute(Order=8)]
+    [XmlElement(Order=8)]
     public S_REF_InvestigationalDeviceExemptionNumber_TS837Q1_2300 S_REF_InvestigationalDeviceExemptionNumber_TS837Q1_2300 {get; set;}
-    [XmlElementAttribute(Order=9)]
+    [XmlElement(Order=9)]
     public S_REF_ClaimIdentificationNumberForClearingHousesAndOtherTransmissionIntermediaries_TS837Q1_2300 S_REF_ClaimIdentificationNumberForClearingHousesAndOtherTransmissionIntermediaries_TS837Q1_2300 {get; set;}
     [XmlElement(Order=10)]
     public U_REF_AmbulatoryPatientGroupAPG_TS837Q1_2300 U_REF_AmbulatoryPatientGroupAPG_TS837Q1_2300 {get; set;}
-    [XmlElementAttribute(Order=11)]
+    [XmlElement(Order=11)]
     public S_REF_MedicalRecordNumber_TS837Q1_2300 S_REF_MedicalRecordNumber_TS837Q1_2300 {get; set;}
-    [XmlElementAttribute(Order=12)]
+    [XmlElement(Order=12)]
     public S_REF_DemonstrationProjectIdentifier_TS837Q1_2300 S_REF_DemonstrationProjectIdentifier_TS837Q1_2300 {get; set;}
     }
     [Serializable]
@@ -2159,9 +2159,9 @@ namespace EdiFabric.Rules.X12004010X098A1837 {
     public U_CRC_AmbulanceCertification_TS837Q1_2300 U_CRC_AmbulanceCertification_TS837Q1_2300 {get; set;}
     [XmlElement(Order=1)]
     public U_CRC_PatientConditionInformationVision_TS837Q1_2300 U_CRC_PatientConditionInformationVision_TS837Q1_2300 {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public S_CRC_HomeboundIndicator_TS837Q1_2300 S_CRC_HomeboundIndicator_TS837Q1_2300 {get; set;}
-    [XmlElementAttribute(Order=3)]
+    [XmlElement(Order=3)]
     public S_CRC_EPSDTReferral_TS837Q1_2300 S_CRC_EPSDTReferral_TS837Q1_2300 {get; set;}
     }
     [Serializable]
@@ -2607,13 +2607,13 @@ namespace EdiFabric.Rules.X12004010X098A1837 {
     public class A_TS837Q1_2310 {
     [XmlElement(Order=0)]
     public U_TS837Q1_2310A U_TS837Q1_2310A {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public G_TS837Q1_2310B G_TS837Q1_2310B {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public G_TS837Q1_2310C G_TS837Q1_2310C {get; set;}
-    [XmlElementAttribute(Order=3)]
+    [XmlElement(Order=3)]
     public G_TS837Q1_2310D G_TS837Q1_2310D {get; set;}
-    [XmlElementAttribute(Order=4)]
+    [XmlElement(Order=4)]
     public G_TS837Q1_2310E G_TS837Q1_2310E {get; set;}
     }
     [Serializable]
@@ -3287,25 +3287,25 @@ namespace EdiFabric.Rules.X12004010X098A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_AMT_CoordinationOfBenefitsCOB_TS837Q1_2320 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_AMT_CoordinationOfBenefitsCOBPayerPaidAmount_TS837Q1_2320 S_AMT_CoordinationOfBenefitsCOBPayerPaidAmount_TS837Q1_2320 {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_AMT_CoordinationOfBenefitsCOBApprovedAmount_TS837Q1_2320 S_AMT_CoordinationOfBenefitsCOBApprovedAmount_TS837Q1_2320 {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public S_AMT_CoordinationOfBenefitsCOBAllowedAmount_TS837Q1_2320 S_AMT_CoordinationOfBenefitsCOBAllowedAmount_TS837Q1_2320 {get; set;}
-    [XmlElementAttribute(Order=3)]
+    [XmlElement(Order=3)]
     public S_AMT_CoordinationOfBenefitsCOBPatientResponsibilityAmount_TS837Q1_2320 S_AMT_CoordinationOfBenefitsCOBPatientResponsibilityAmount_TS837Q1_2320 {get; set;}
-    [XmlElementAttribute(Order=4)]
+    [XmlElement(Order=4)]
     public S_AMT_CoordinationOfBenefitsCOBCoveredAmount_TS837Q1_2320 S_AMT_CoordinationOfBenefitsCOBCoveredAmount_TS837Q1_2320 {get; set;}
-    [XmlElementAttribute(Order=5)]
+    [XmlElement(Order=5)]
     public S_AMT_CoordinationOfBenefitsCOBDiscountAmount_TS837Q1_2320 S_AMT_CoordinationOfBenefitsCOBDiscountAmount_TS837Q1_2320 {get; set;}
-    [XmlElementAttribute(Order=6)]
+    [XmlElement(Order=6)]
     public S_AMT_CoordinationOfBenefitsCOBPerDayLimitAmount_TS837Q1_2320 S_AMT_CoordinationOfBenefitsCOBPerDayLimitAmount_TS837Q1_2320 {get; set;}
-    [XmlElementAttribute(Order=7)]
+    [XmlElement(Order=7)]
     public S_AMT_CoordinationOfBenefitsCOBPatientPaidAmount_TS837Q1_2320 S_AMT_CoordinationOfBenefitsCOBPatientPaidAmount_TS837Q1_2320 {get; set;}
-    [XmlElementAttribute(Order=8)]
+    [XmlElement(Order=8)]
     public S_AMT_CoordinationOfBenefitsCOBTaxAmount_TS837Q1_2320 S_AMT_CoordinationOfBenefitsCOBTaxAmount_TS837Q1_2320 {get; set;}
-    [XmlElementAttribute(Order=9)]
+    [XmlElement(Order=9)]
     public S_AMT_CoordinationOfBenefitsCOBTotalClaimBeforeTaxesAmount_TS837Q1_2320 S_AMT_CoordinationOfBenefitsCOBTotalClaimBeforeTaxesAmount_TS837Q1_2320 {get; set;}
     }
     [Serializable]
@@ -3540,21 +3540,21 @@ namespace EdiFabric.Rules.X12004010X098A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_TS837Q1_2330 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public G_TS837Q1_2330A G_TS837Q1_2330A {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public G_TS837Q1_2330B G_TS837Q1_2330B {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public G_TS837Q1_2330C G_TS837Q1_2330C {get; set;}
     [XmlElement(Order=3)]
     public U_TS837Q1_2330D U_TS837Q1_2330D {get; set;}
-    [XmlElementAttribute(Order=4)]
+    [XmlElement(Order=4)]
     public G_TS837Q1_2330E G_TS837Q1_2330E {get; set;}
-    [XmlElementAttribute(Order=5)]
+    [XmlElement(Order=5)]
     public G_TS837Q1_2330F G_TS837Q1_2330F {get; set;}
-    [XmlElementAttribute(Order=6)]
+    [XmlElement(Order=6)]
     public G_TS837Q1_2330G G_TS837Q1_2330G {get; set;}
-    [XmlElementAttribute(Order=7)]
+    [XmlElement(Order=7)]
     public G_TS837Q1_2330H G_TS837Q1_2330H {get; set;}
     }
     [Serializable]
@@ -4655,7 +4655,7 @@ namespace EdiFabric.Rules.X12004010X098A1837 {
     public class A_CRC_TS837Q1_2400 {
     [XmlElement(Order=0)]
     public U_CRC_AmbulanceCertification_TS837Q1_2400 U_CRC_AmbulanceCertification_TS837Q1_2400 {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_CRC_HospiceEmployeeIndicator_TS837Q1_2400 S_CRC_HospiceEmployeeIndicator_TS837Q1_2400 {get; set;}
     [XmlElement(Order=2)]
     public U_CRC_DMERCConditionIndicator_TS837Q1_2400 U_CRC_DMERCConditionIndicator_TS837Q1_2400 {get; set;}
@@ -4759,31 +4759,31 @@ namespace EdiFabric.Rules.X12004010X098A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_DTP_TS837Q1_2400 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_DTP_DateServiceDate_TS837Q1_2400 S_DTP_DateServiceDate_TS837Q1_2400 {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_DTP_DateCertificationRevisionDate_TS837Q1_2400 S_DTP_DateCertificationRevisionDate_TS837Q1_2400 {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public S_DTP_DateBeginTherapyDate_TS837Q1_2400 S_DTP_DateBeginTherapyDate_TS837Q1_2400 {get; set;}
-    [XmlElementAttribute(Order=3)]
+    [XmlElement(Order=3)]
     public S_DTP_DateLastCertificationDate_TS837Q1_2400 S_DTP_DateLastCertificationDate_TS837Q1_2400 {get; set;}
-    [XmlElementAttribute(Order=4)]
+    [XmlElement(Order=4)]
     public S_DTP_DateDateLastSeen_TS837Q1_2400 S_DTP_DateDateLastSeen_TS837Q1_2400 {get; set;}
     [XmlElement(Order=5)]
     public U_DTP_DateTest_TS837Q1_2400 U_DTP_DateTest_TS837Q1_2400 {get; set;}
     [XmlElement(Order=6)]
     public U_DTP_DateOxygenSaturationArterialBloodGasTest_TS837Q1_2400 U_DTP_DateOxygenSaturationArterialBloodGasTest_TS837Q1_2400 {get; set;}
-    [XmlElementAttribute(Order=7)]
+    [XmlElement(Order=7)]
     public S_DTP_DateShipped_TS837Q1_2400 S_DTP_DateShipped_TS837Q1_2400 {get; set;}
-    [XmlElementAttribute(Order=8)]
+    [XmlElement(Order=8)]
     public S_DTP_DateOnsetOfCurrentSymptomIllness_TS837Q1_2400 S_DTP_DateOnsetOfCurrentSymptomIllness_TS837Q1_2400 {get; set;}
-    [XmlElementAttribute(Order=9)]
+    [XmlElement(Order=9)]
     public S_DTP_DateLastXray_TS837Q1_2400 S_DTP_DateLastXray_TS837Q1_2400 {get; set;}
-    [XmlElementAttribute(Order=10)]
+    [XmlElement(Order=10)]
     public S_DTP_DateAcuteManifestation_TS837Q1_2400 S_DTP_DateAcuteManifestation_TS837Q1_2400 {get; set;}
-    [XmlElementAttribute(Order=11)]
+    [XmlElement(Order=11)]
     public S_DTP_DateInitialTreatment_TS837Q1_2400 S_DTP_DateInitialTreatment_TS837Q1_2400 {get; set;}
-    [XmlElementAttribute(Order=12)]
+    [XmlElement(Order=12)]
     public S_DTP_DateSimilarIllnessSymptomOnset_TS837Q1_2400 S_DTP_DateSimilarIllnessSymptomOnset_TS837Q1_2400 {get; set;}
     }
     [Serializable]
@@ -5160,27 +5160,27 @@ namespace EdiFabric.Rules.X12004010X098A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_REF_TS837Q1_2400 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_REF_RepricedLineItemReferenceNumber_TS837Q1_2400 S_REF_RepricedLineItemReferenceNumber_TS837Q1_2400 {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_REF_AdjustedRepricedLineItemReferenceNumber_TS837Q1_2400 S_REF_AdjustedRepricedLineItemReferenceNumber_TS837Q1_2400 {get; set;}
     [XmlElement(Order=2)]
     public U_REF_PriorAuthorizationOrReferralNumber_TS837Q1_2400 U_REF_PriorAuthorizationOrReferralNumber_TS837Q1_2400 {get; set;}
-    [XmlElementAttribute(Order=3)]
+    [XmlElement(Order=3)]
     public S_REF_LineItemControlNumber_TS837Q1_2400 S_REF_LineItemControlNumber_TS837Q1_2400 {get; set;}
-    [XmlElementAttribute(Order=4)]
+    [XmlElement(Order=4)]
     public S_REF_MammographyCertificationNumber_TS837Q1_2400 S_REF_MammographyCertificationNumber_TS837Q1_2400 {get; set;}
-    [XmlElementAttribute(Order=5)]
+    [XmlElement(Order=5)]
     public S_REF_ClinicalLaboratoryImprovementAmendmentCLIAIdentification_TS837Q1_2400 S_REF_ClinicalLaboratoryImprovementAmendmentCLIAIdentification_TS837Q1_2400 {get; set;}
-    [XmlElementAttribute(Order=6)]
+    [XmlElement(Order=6)]
     public S_REF_ReferringClinicalLaboratoryImprovementAmendmentCLIAFacilityIdentification_TS837Q1_2400 S_REF_ReferringClinicalLaboratoryImprovementAmendmentCLIAFacilityIdentification_TS837Q1_2400 {get; set;}
-    [XmlElementAttribute(Order=7)]
+    [XmlElement(Order=7)]
     public S_REF_ImmunizationBatchNumber_TS837Q1_2400 S_REF_ImmunizationBatchNumber_TS837Q1_2400 {get; set;}
     [XmlElement(Order=8)]
     public U_REF_AmbulatoryPatientGroupAPG_TS837Q1_2400 U_REF_AmbulatoryPatientGroupAPG_TS837Q1_2400 {get; set;}
-    [XmlElementAttribute(Order=9)]
+    [XmlElement(Order=9)]
     public S_REF_OxygenFlowRate_TS837Q1_2400 S_REF_OxygenFlowRate_TS837Q1_2400 {get; set;}
-    [XmlElementAttribute(Order=10)]
+    [XmlElement(Order=10)]
     public S_REF_UniversalProductNumberUPN_TS837Q1_2400 S_REF_UniversalProductNumberUPN_TS837Q1_2400 {get; set;}
     }
     [Serializable]
@@ -5392,11 +5392,11 @@ namespace EdiFabric.Rules.X12004010X098A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_AMT_TS837Q1_2400 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_AMT_SalesTaxAmount_TS837Q1_2400 S_AMT_SalesTaxAmount_TS837Q1_2400 {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_AMT_ApprovedAmount_TS837Q1_2400 S_AMT_ApprovedAmount_TS837Q1_2400 {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public S_AMT_PostageClaimedAmount_TS837Q1_2400 S_AMT_PostageClaimedAmount_TS837Q1_2400 {get; set;}
     }
     [Serializable]
@@ -5748,15 +5748,15 @@ namespace EdiFabric.Rules.X12004010X098A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_TS837Q1_2420 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public G_TS837Q1_2420A G_TS837Q1_2420A {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public G_TS837Q1_2420B G_TS837Q1_2420B {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public G_TS837Q1_2420C G_TS837Q1_2420C {get; set;}
-    [XmlElementAttribute(Order=3)]
+    [XmlElement(Order=3)]
     public G_TS837Q1_2420D G_TS837Q1_2420D {get; set;}
-    [XmlElementAttribute(Order=4)]
+    [XmlElement(Order=4)]
     public G_TS837Q1_2420E G_TS837Q1_2420E {get; set;}
     [XmlElement(Order=5)]
     public U_TS837Q1_2420F U_TS837Q1_2420F {get; set;}
@@ -6867,7 +6867,7 @@ namespace EdiFabric.Rules.X12004010X098A1837 {
     public class A_REF_TS837Q1_2010CA {
     [XmlElement(Order=0)]
     public U_REF_PatientSecondaryIdentification_TS837Q1_2010CA U_REF_PatientSecondaryIdentification_TS837Q1_2010CA {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_REF_PropertyAndCasualtyClaimNumber_TS837Q1_2010CA S_REF_PropertyAndCasualtyClaimNumber_TS837Q1_2010CA {get; set;}
     }
     [Serializable]

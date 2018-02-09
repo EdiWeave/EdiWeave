@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Xml.Serialization;
 
-namespace EdiFabric.Framework
+namespace EdiWeave.Framework
 {
     /// <summary>
     /// Public helpers.

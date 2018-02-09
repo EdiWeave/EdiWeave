@@ -1,4 +1,4 @@
-namespace EdiFabric.Rules.Rep.X12002040810
+namespace EdiWeave.Rules.Rep.X12002040810
 {
     using System;
     using System.Xml.Serialization;

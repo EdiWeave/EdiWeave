@@ -14,7 +14,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace EdiFabric.Framework.Parsing
+namespace EdiWeave.Framework.Parsing
 {
     static class ParseNodeExtensions
     {

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
-using EdiFabric.Framework;
-using EdiFabric.Framework.Controls;
-using EdiFabric.Framework.Exceptions;
-using EdiFabric.Framework.Readers;
-using EdiFabric.Framework.Validation;
-using EdiFabric.Rules.X12002040810;
+using EdiWeave.Framework;
+using EdiWeave.Framework.Controls;
+using EdiWeave.Framework.Exceptions;
+using EdiWeave.Framework.Readers;
+using EdiWeave.Framework.Validation;
+using EdiWeave.Rules.X12002040810;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace EdiFabric.Tests
@@ -101,11 +101,11 @@ namespace EdiFabric.Tests
             Assert.IsNotNull(ediItems);
             Assert.IsNotNull(ediItems.OfType<S_ISA>().SingleOrDefault());
             Assert.IsNotNull(ediItems.OfType<S_GS>().SingleOrDefault());
-            Assert.IsNotNull(ediItems.OfType<Rules.Rep.X12002040810.M_810>().SingleOrDefault());
+            Assert.IsNotNull(ediItems.OfType<EdiWeave.Rules.Rep.X12002040810.M_810>().SingleOrDefault());
             Assert.IsNotNull(ediItems.OfType<S_GE>().SingleOrDefault());
             Assert.IsNotNull(ediItems.OfType<S_IEA>().SingleOrDefault());
             Assert.IsNull(ediItems.OfType<ParsingException>().SingleOrDefault());
-            var parsedXml = TestHelper.Serialize(ediItems.OfType<Rules.Rep.X12002040810.M_810>().Single());
+            var parsedXml = TestHelper.Serialize(ediItems.OfType<EdiWeave.Rules.Rep.X12002040810.M_810>().Single());
             Assert.IsNotNull(parsedXml.Root);
             Assert.AreEqual(parsedXml.Root.ToString(), expectedXml.ToString());
         }
@@ -115,7 +115,7 @@ namespace EdiFabric.Tests
         {
             // ARRANGE
             const string sample = "EdiFabric.Tests.Edi.X12_810_00204_RepetitionSeparator.txt";
-            var interchange = TestHelper.GenerateX12<Rules.Rep.X12002040810.M_810>(sample, "EdiFabric.Rules.Rep");
+            var interchange = TestHelper.GenerateX12<EdiWeave.Rules.Rep.X12002040810.M_810>(sample, "EdiFabric.Rules.Rep");
 
             // ACT
             var defaultSeparators = Separators.DefaultX12();
@@ -132,7 +132,7 @@ namespace EdiFabric.Tests
         {
             // ARRANGE
             const string sample = "EdiFabric.Tests.Edi.X12_810_00204_RepetitionSeparator.txt";
-            var interchange = TestHelper.GenerateX12<Rules.Rep.X12002040810.M_810>(sample, "EdiFabric.Rules.Rep");
+            var interchange = TestHelper.GenerateX12<EdiWeave.Rules.Rep.X12002040810.M_810>(sample, "EdiFabric.Rules.Rep");
 
             // ACT
             var defaultSeparators = Separators.DefaultX12();
@@ -715,7 +715,7 @@ namespace EdiFabric.Tests
         {
             // ARRANGE
             const string sample = "EdiFabric.Tests.Xml.X12_810_00204_Validation.xml";
-            var obj = TestHelper.Deserialize<Rules.Rep.X12002040810.M_810>(TestHelper.Load(sample));
+            var obj = TestHelper.Deserialize<EdiWeave.Rules.Rep.X12002040810.M_810>(TestHelper.Load(sample));
             const string expectedResult = "EdiFabric.Tests.Xml.X12_810_00204_ValidationExpected.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 

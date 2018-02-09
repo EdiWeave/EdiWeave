@@ -13,7 +13,7 @@ using System;
 using System.Configuration;
 using System.IO;
 
-namespace EdiFabric.Framework
+namespace EdiWeave.Framework
 {
     /// <summary>
     /// Simple logger for dumping the traversal of the parse tree to a file.

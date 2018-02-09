@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml.Linq;
-using EdiFabric.Framework;
-using EdiFabric.Framework.Controls;
-using EdiFabric.Framework.Exceptions;
-using EdiFabric.Framework.Readers;
-using EdiFabric.Framework.Validation;
-using EdiFabric.Rules.EdifactD00AINVOIC;
+using EdiWeave.Framework;
+using EdiWeave.Framework.Controls;
+using EdiWeave.Framework.Exceptions;
+using EdiWeave.Framework.Readers;
+using EdiWeave.Framework.Validation;
+using EdiWeave.Rules.EdifactD00AINVOIC;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace EdiFabric.Tests

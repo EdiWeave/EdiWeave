@@ -1,4 +1,4 @@
-namespace EdiFabric.Rules.EdifactD00AINVOIC {
+namespace EdiWeave.Rules.EdifactD00AINVOIC {
     using System;
     using System.Xml.Serialization;
     using System.Collections.Generic;

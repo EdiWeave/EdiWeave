@@ -11,7 +11,7 @@
 
 using System;
 
-namespace EdiFabric.Framework.Exceptions
+namespace EdiWeave.Framework.Exceptions
 {
     /// <summary>
     /// Information for the position, data and error code of the data element that failed. 

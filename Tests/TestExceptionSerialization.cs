@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
-using EdiFabric.Framework.Exceptions;
+using EdiWeave.Framework.Exceptions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace EdiFabric.Tests

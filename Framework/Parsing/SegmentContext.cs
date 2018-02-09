@@ -11,9 +11,9 @@
 
 using System;
 using System.Linq;
-using EdiFabric.Framework.Readers;
+using EdiWeave.Framework.Readers;
 
-namespace EdiFabric.Framework.Parsing
+namespace EdiWeave.Framework.Parsing
 {
     /// <summary>
     /// Extends a segment line with additional attributes inferred from the data.

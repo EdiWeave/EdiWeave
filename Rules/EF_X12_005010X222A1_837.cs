@@ -1,4 +1,4 @@
-namespace EdiFabric.Rules.X12005010X222A1837 {
+namespace EdiWeave.Rules.X12005010X222A1837 {
     using System;
     using System.Xml.Serialization;
     using System.Collections.Generic;
@@ -72,9 +72,9 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_NM1 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public G_TS837_1000A G_TS837_1000A {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public G_TS837_1000B G_TS837_1000B {get; set;}
     }
     [Serializable]
@@ -336,11 +336,11 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_NM1_2 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public G_TS837_2010AA G_TS837_2010AA {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public G_TS837_2010AB G_TS837_2010AB {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public G_TS837_2010AC G_TS837_2010AC {get; set;}
     }
     [Serializable]
@@ -419,7 +419,7 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_REF {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_REF_BillingProviderTaxIdentification S_REF_BillingProviderTaxIdentification {get; set;}
     [XmlElement(Order=1)]
     public U_REF_BillingProviderUPIN_LicenseInformation U_REF_BillingProviderUPIN_LicenseInformation {get; set;}
@@ -678,9 +678,9 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_REF_2 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_REF_Pay_ToPlanSecondaryIdentification S_REF_Pay_ToPlanSecondaryIdentification {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_REF_Pay_ToPlanTaxIdentificationNumber S_REF_Pay_ToPlanTaxIdentificationNumber {get; set;}
     }
     [Serializable]
@@ -855,9 +855,9 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_NM1_3 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public G_TS837_2010BA G_TS837_2010BA {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public G_TS837_2010BB G_TS837_2010BB {get; set;}
     }
     [Serializable]
@@ -988,9 +988,9 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_REF_3 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_REF_SubscriberSecondaryIdentification S_REF_SubscriberSecondaryIdentification {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_REF_PropertyandCasualtyClaimNumber S_REF_PropertyandCasualtyClaimNumber {get; set;}
     }
     [Serializable]
@@ -1362,37 +1362,37 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_DTP {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_DTP_Date_OnsetofCurrentIllnessorSymptom S_DTP_Date_OnsetofCurrentIllnessorSymptom {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_DTP_Date_InitialTreatmentDate S_DTP_Date_InitialTreatmentDate {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public S_DTP_Date_LastSeenDate S_DTP_Date_LastSeenDate {get; set;}
-    [XmlElementAttribute(Order=3)]
+    [XmlElement(Order=3)]
     public S_DTP_Date_AcuteManifestation S_DTP_Date_AcuteManifestation {get; set;}
-    [XmlElementAttribute(Order=4)]
+    [XmlElement(Order=4)]
     public S_DTP_Date_Accident S_DTP_Date_Accident {get; set;}
-    [XmlElementAttribute(Order=5)]
+    [XmlElement(Order=5)]
     public S_DTP_Date_LastMenstrualPeriod S_DTP_Date_LastMenstrualPeriod {get; set;}
-    [XmlElementAttribute(Order=6)]
+    [XmlElement(Order=6)]
     public S_DTP_Date_LastX_rayDate S_DTP_Date_LastX_rayDate {get; set;}
-    [XmlElementAttribute(Order=7)]
+    [XmlElement(Order=7)]
     public S_DTP_Date_HearingandVisionPrescriptionDate S_DTP_Date_HearingandVisionPrescriptionDate {get; set;}
-    [XmlElementAttribute(Order=8)]
+    [XmlElement(Order=8)]
     public S_DTP_Date_DisabilityDates S_DTP_Date_DisabilityDates {get; set;}
-    [XmlElementAttribute(Order=9)]
+    [XmlElement(Order=9)]
     public S_DTP_Date_LastWorked S_DTP_Date_LastWorked {get; set;}
-    [XmlElementAttribute(Order=10)]
+    [XmlElement(Order=10)]
     public S_DTP_Date_AuthorizedReturntoWork S_DTP_Date_AuthorizedReturntoWork {get; set;}
-    [XmlElementAttribute(Order=11)]
+    [XmlElement(Order=11)]
     public S_DTP_Date_Admission S_DTP_Date_Admission {get; set;}
-    [XmlElementAttribute(Order=12)]
+    [XmlElement(Order=12)]
     public S_DTP_Date_Discharge S_DTP_Date_Discharge {get; set;}
     [XmlElement(Order=13)]
     public U_DTP_Date_AssumedandRelinquishedCareDates U_DTP_Date_AssumedandRelinquishedCareDates {get; set;}
-    [XmlElementAttribute(Order=14)]
+    [XmlElement(Order=14)]
     public S_DTP_PropertyandCasualtyDateofFirstContact S_DTP_PropertyandCasualtyDateofFirstContact {get; set;}
-    [XmlElementAttribute(Order=15)]
+    [XmlElement(Order=15)]
     public S_DTP_Date_RepricerReceivedDate S_DTP_Date_RepricerReceivedDate {get; set;}
     }
     [Serializable]
@@ -1882,33 +1882,33 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_REF_5 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_REF_ServiceAuthorizationExceptionCode S_REF_ServiceAuthorizationExceptionCode {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_REF_MandatoryMedicare_Section4081_CrossoverIndicator S_REF_MandatoryMedicare_Section4081_CrossoverIndicator {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public S_REF_MammographyCertificationNumber S_REF_MammographyCertificationNumber {get; set;}
-    [XmlElementAttribute(Order=3)]
+    [XmlElement(Order=3)]
     public S_REF_ReferralNumber S_REF_ReferralNumber {get; set;}
-    [XmlElementAttribute(Order=4)]
+    [XmlElement(Order=4)]
     public S_REF_PriorAuthorization S_REF_PriorAuthorization {get; set;}
-    [XmlElementAttribute(Order=5)]
+    [XmlElement(Order=5)]
     public S_REF_PayerClaimControlNumber S_REF_PayerClaimControlNumber {get; set;}
-    [XmlElementAttribute(Order=6)]
+    [XmlElement(Order=6)]
     public S_REF_ClinicalLaboratoryImprovementAmendment_CLIA_Number S_REF_ClinicalLaboratoryImprovementAmendment_CLIA_Number {get; set;}
-    [XmlElementAttribute(Order=7)]
+    [XmlElement(Order=7)]
     public S_REF_RepricedClaimNumber S_REF_RepricedClaimNumber {get; set;}
-    [XmlElementAttribute(Order=8)]
+    [XmlElement(Order=8)]
     public S_REF_AdjustedRepricedClaimNumber S_REF_AdjustedRepricedClaimNumber {get; set;}
-    [XmlElementAttribute(Order=9)]
+    [XmlElement(Order=9)]
     public S_REF_InvestigationalDeviceExemptionNumber S_REF_InvestigationalDeviceExemptionNumber {get; set;}
-    [XmlElementAttribute(Order=10)]
+    [XmlElement(Order=10)]
     public S_REF_ClaimIdentifierForTransmissionIntermediaries S_REF_ClaimIdentifierForTransmissionIntermediaries {get; set;}
-    [XmlElementAttribute(Order=11)]
+    [XmlElement(Order=11)]
     public S_REF_MedicalRecordNumber S_REF_MedicalRecordNumber {get; set;}
-    [XmlElementAttribute(Order=12)]
+    [XmlElement(Order=12)]
     public S_REF_DemonstrationProjectIdentifier S_REF_DemonstrationProjectIdentifier {get; set;}
-    [XmlElementAttribute(Order=13)]
+    [XmlElement(Order=13)]
     public S_REF_CarePlanOversight S_REF_CarePlanOversight {get; set;}
     }
     [Serializable]
@@ -2573,9 +2573,9 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     public U_CRC_AmbulanceCertification U_CRC_AmbulanceCertification {get; set;}
     [XmlElement(Order=1)]
     public U_CRC_PatientConditionInformation_Vision U_CRC_PatientConditionInformation_Vision {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public S_CRC_HomeboundIndicator S_CRC_HomeboundIndicator {get; set;}
-    [XmlElementAttribute(Order=3)]
+    [XmlElement(Order=3)]
     public S_CRC_EPSDTReferral S_CRC_EPSDTReferral {get; set;}
     }
     [Serializable]
@@ -2699,9 +2699,9 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_HI {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_HI_HealthCareDiagnosisCode S_HI_HealthCareDiagnosisCode {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_HI_AnesthesiaRelatedProcedure S_HI_AnesthesiaRelatedProcedure {get; set;}
     [XmlElement(Order=2)]
     public U_HI_ConditionInformation U_HI_ConditionInformation {get; set;}
@@ -3727,15 +3727,15 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     public class A_NM1_4 {
     [XmlElement(Order=0)]
     public U_TS837_2310A U_TS837_2310A {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public G_TS837_2310B G_TS837_2310B {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public G_TS837_2310C G_TS837_2310C {get; set;}
-    [XmlElementAttribute(Order=3)]
+    [XmlElement(Order=3)]
     public G_TS837_2310D G_TS837_2310D {get; set;}
-    [XmlElementAttribute(Order=4)]
+    [XmlElement(Order=4)]
     public G_TS837_2310E G_TS837_2310E {get; set;}
-    [XmlElementAttribute(Order=5)]
+    [XmlElement(Order=5)]
     public G_TS837_2310F G_TS837_2310F {get; set;}
     }
     [Serializable]
@@ -4435,11 +4435,11 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_AMT {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_AMT_CoordinationofBenefits_COB_PayerPaidAmount S_AMT_CoordinationofBenefits_COB_PayerPaidAmount {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_AMT_CoordinationofBenefits_COB_TotalNon_coveredAmount S_AMT_CoordinationofBenefits_COB_TotalNon_coveredAmount {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public S_AMT_RemainingPatientLiability S_AMT_RemainingPatientLiability {get; set;}
     }
     [Serializable]
@@ -4537,19 +4537,19 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_NM1_5 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public G_TS837_2330A G_TS837_2330A {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public G_TS837_2330B G_TS837_2330B {get; set;}
     [XmlElement(Order=2)]
     public U_TS837_2330C U_TS837_2330C {get; set;}
-    [XmlElementAttribute(Order=3)]
+    [XmlElement(Order=3)]
     public G_TS837_2330D G_TS837_2330D {get; set;}
-    [XmlElementAttribute(Order=4)]
+    [XmlElement(Order=4)]
     public G_TS837_2330E G_TS837_2330E {get; set;}
-    [XmlElementAttribute(Order=5)]
+    [XmlElement(Order=5)]
     public G_TS837_2330F G_TS837_2330F {get; set;}
-    [XmlElementAttribute(Order=6)]
+    [XmlElement(Order=6)]
     public G_TS837_2330G G_TS837_2330G {get; set;}
     }
     [Serializable]
@@ -4748,13 +4748,13 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     public class A_REF_6 {
     [XmlElement(Order=0)]
     public U_REF_OtherPayerSecondaryIdentifier U_REF_OtherPayerSecondaryIdentifier {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_REF_OtherPayerPriorAuthorizationNumber S_REF_OtherPayerPriorAuthorizationNumber {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public S_REF_OtherPayerReferralNumber S_REF_OtherPayerReferralNumber {get; set;}
-    [XmlElementAttribute(Order=3)]
+    [XmlElement(Order=3)]
     public S_REF_OtherPayerClaimAdjustmentIndicator S_REF_OtherPayerClaimAdjustmentIndicator {get; set;}
-    [XmlElementAttribute(Order=4)]
+    [XmlElement(Order=4)]
     public S_REF_OtherPayerClaimControlNumber S_REF_OtherPayerClaimControlNumber {get; set;}
     }
     [Serializable]
@@ -5455,7 +5455,7 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     public class A_PWK {
     [XmlElement(Order=0)]
     public U_PWK_LineSupplementalInformation U_PWK_LineSupplementalInformation {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_PWK_DurableMedicalEquipmentCertificateofMedicalNecessityIndicator S_PWK_DurableMedicalEquipmentCertificateofMedicalNecessityIndicator {get; set;}
     }
     [Serializable]
@@ -5688,9 +5688,9 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     public class A_CRC_2 {
     [XmlElement(Order=0)]
     public U_CRC_AmbulanceCertification_2 U_CRC_AmbulanceCertification_2 {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_CRC_HospiceEmployeeIndicator S_CRC_HospiceEmployeeIndicator {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public S_CRC_ConditionIndicator_DurableMedicalEquipment S_CRC_ConditionIndicator_DurableMedicalEquipment {get; set;}
     }
     [Serializable]
@@ -5768,25 +5768,25 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_DTP_2 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_DTP_Date_ServiceDate S_DTP_Date_ServiceDate {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_DTP_Date_PrescriptionDate S_DTP_Date_PrescriptionDate {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public S_DTP_DATE_CertificationRevision_RecertificationDate S_DTP_DATE_CertificationRevision_RecertificationDate {get; set;}
-    [XmlElementAttribute(Order=3)]
+    [XmlElement(Order=3)]
     public S_DTP_Date_BeginTherapyDate S_DTP_Date_BeginTherapyDate {get; set;}
-    [XmlElementAttribute(Order=4)]
+    [XmlElement(Order=4)]
     public S_DTP_Date_LastCertificationDate S_DTP_Date_LastCertificationDate {get; set;}
-    [XmlElementAttribute(Order=5)]
+    [XmlElement(Order=5)]
     public S_DTP_Date_LastSeenDate_2 S_DTP_Date_LastSeenDate_2 {get; set;}
     [XmlElement(Order=6)]
     public U_DTP_Date_TestDate U_DTP_Date_TestDate {get; set;}
-    [XmlElementAttribute(Order=7)]
+    [XmlElement(Order=7)]
     public S_DTP_Date_ShippedDate S_DTP_Date_ShippedDate {get; set;}
-    [XmlElementAttribute(Order=8)]
+    [XmlElement(Order=8)]
     public S_DTP_Date_LastX_rayDate_2 S_DTP_Date_LastX_rayDate_2 {get; set;}
-    [XmlElementAttribute(Order=9)]
+    [XmlElement(Order=9)]
     public S_DTP_Date_InitialTreatmentDate_2 S_DTP_Date_InitialTreatmentDate_2 {get; set;}
     }
     [Serializable]
@@ -5947,9 +5947,9 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_QTY {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_QTY_AmbulancePatientCount S_QTY_AmbulancePatientCount {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_QTY_ObstetricAnesthesiaAdditionalUnits S_QTY_ObstetricAnesthesiaAdditionalUnits {get; set;}
     }
     [Serializable]
@@ -6162,21 +6162,21 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_REF_7 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_REF_RepricedLineItemReferenceNumber S_REF_RepricedLineItemReferenceNumber {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_REF_AdjustedRepricedLineItemReferenceNumber S_REF_AdjustedRepricedLineItemReferenceNumber {get; set;}
     [XmlElement(Order=2)]
     public U_REF_PriorAuthorization_2 U_REF_PriorAuthorization_2 {get; set;}
-    [XmlElementAttribute(Order=3)]
+    [XmlElement(Order=3)]
     public S_REF_LineItemControlNumber S_REF_LineItemControlNumber {get; set;}
-    [XmlElementAttribute(Order=4)]
+    [XmlElement(Order=4)]
     public S_REF_MammographyCertificationNumber_2 S_REF_MammographyCertificationNumber_2 {get; set;}
-    [XmlElementAttribute(Order=5)]
+    [XmlElement(Order=5)]
     public S_REF_ClinicalLaboratoryImprovementAmendment_CLIA_Number_2 S_REF_ClinicalLaboratoryImprovementAmendment_CLIA_Number_2 {get; set;}
-    [XmlElementAttribute(Order=6)]
+    [XmlElement(Order=6)]
     public S_REF_ReferringClinicalLaboratoryImprovementAmendment_CLIA_FacilityIdentification S_REF_ReferringClinicalLaboratoryImprovementAmendment_CLIA_FacilityIdentification {get; set;}
-    [XmlElementAttribute(Order=7)]
+    [XmlElement(Order=7)]
     public S_REF_ImmunizationBatchNumber S_REF_ImmunizationBatchNumber {get; set;}
     [XmlElement(Order=8)]
     public U_REF_ReferralNumber_2 U_REF_ReferralNumber_2 {get; set;}
@@ -6488,9 +6488,9 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_AMT_2 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_AMT_SalesTaxAmount S_AMT_SalesTaxAmount {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_AMT_PostageClaimedAmount S_AMT_PostageClaimedAmount {get; set;}
     }
     [Serializable]
@@ -6577,9 +6577,9 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_NTE {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_NTE_LineNote S_NTE_LineNote {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_NTE_ThirdPartyOrganizationNotes S_NTE_ThirdPartyOrganizationNotes {get; set;}
     }
     [Serializable]
@@ -6887,21 +6887,21 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_NM1_6 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public G_TS837_2420A G_TS837_2420A {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public G_TS837_2420B G_TS837_2420B {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public G_TS837_2420C G_TS837_2420C {get; set;}
-    [XmlElementAttribute(Order=3)]
+    [XmlElement(Order=3)]
     public G_TS837_2420D G_TS837_2420D {get; set;}
-    [XmlElementAttribute(Order=4)]
+    [XmlElement(Order=4)]
     public G_TS837_2420E G_TS837_2420E {get; set;}
     [XmlElement(Order=5)]
     public U_TS837_2420F U_TS837_2420F {get; set;}
-    [XmlElementAttribute(Order=6)]
+    [XmlElement(Order=6)]
     public G_TS837_2420G G_TS837_2420G {get; set;}
-    [XmlElementAttribute(Order=7)]
+    [XmlElement(Order=7)]
     public G_TS837_2420H G_TS837_2420H {get; set;}
     }
     [Serializable]
@@ -7926,9 +7926,9 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_REF_8 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_REF_PropertyandCasualtyClaimNumber_2 S_REF_PropertyandCasualtyClaimNumber_2 {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_REF_PropertyandCasualtyPatientIdentifier S_REF_PropertyandCasualtyPatientIdentifier {get; set;}
     }
     [Serializable]
@@ -8134,37 +8134,37 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_DTP_3 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_DTP_Date_OnsetofCurrentIllnessorSymptom_2 S_DTP_Date_OnsetofCurrentIllnessorSymptom_2 {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_DTP_Date_InitialTreatmentDate_3 S_DTP_Date_InitialTreatmentDate_3 {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public S_DTP_Date_LastSeenDate_3 S_DTP_Date_LastSeenDate_3 {get; set;}
-    [XmlElementAttribute(Order=3)]
+    [XmlElement(Order=3)]
     public S_DTP_Date_AcuteManifestation_2 S_DTP_Date_AcuteManifestation_2 {get; set;}
-    [XmlElementAttribute(Order=4)]
+    [XmlElement(Order=4)]
     public S_DTP_Date_Accident_2 S_DTP_Date_Accident_2 {get; set;}
-    [XmlElementAttribute(Order=5)]
+    [XmlElement(Order=5)]
     public S_DTP_Date_LastMenstrualPeriod_2 S_DTP_Date_LastMenstrualPeriod_2 {get; set;}
-    [XmlElementAttribute(Order=6)]
+    [XmlElement(Order=6)]
     public S_DTP_Date_LastX_rayDate_3 S_DTP_Date_LastX_rayDate_3 {get; set;}
-    [XmlElementAttribute(Order=7)]
+    [XmlElement(Order=7)]
     public S_DTP_Date_HearingandVisionPrescriptionDate_2 S_DTP_Date_HearingandVisionPrescriptionDate_2 {get; set;}
-    [XmlElementAttribute(Order=8)]
+    [XmlElement(Order=8)]
     public S_DTP_Date_DisabilityDates_2 S_DTP_Date_DisabilityDates_2 {get; set;}
-    [XmlElementAttribute(Order=9)]
+    [XmlElement(Order=9)]
     public S_DTP_Date_LastWorked_2 S_DTP_Date_LastWorked_2 {get; set;}
-    [XmlElementAttribute(Order=10)]
+    [XmlElement(Order=10)]
     public S_DTP_Date_AuthorizedReturntoWork_2 S_DTP_Date_AuthorizedReturntoWork_2 {get; set;}
-    [XmlElementAttribute(Order=11)]
+    [XmlElement(Order=11)]
     public S_DTP_Date_Admission_2 S_DTP_Date_Admission_2 {get; set;}
-    [XmlElementAttribute(Order=12)]
+    [XmlElement(Order=12)]
     public S_DTP_Date_Discharge_2 S_DTP_Date_Discharge_2 {get; set;}
     [XmlElement(Order=13)]
     public U_DTP_Date_AssumedandRelinquishedCareDates_2 U_DTP_Date_AssumedandRelinquishedCareDates_2 {get; set;}
-    [XmlElementAttribute(Order=14)]
+    [XmlElement(Order=14)]
     public S_DTP_PropertyandCasualtyDateofFirstContact_2 S_DTP_PropertyandCasualtyDateofFirstContact_2 {get; set;}
-    [XmlElementAttribute(Order=15)]
+    [XmlElement(Order=15)]
     public S_DTP_Date_RepricerReceivedDate_2 S_DTP_Date_RepricerReceivedDate_2 {get; set;}
     }
     [Serializable]
@@ -8413,33 +8413,33 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_REF_9 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_REF_ServiceAuthorizationExceptionCode_2 S_REF_ServiceAuthorizationExceptionCode_2 {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_REF_MandatoryMedicare_Section4081_CrossoverIndicator_2 S_REF_MandatoryMedicare_Section4081_CrossoverIndicator_2 {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public S_REF_MammographyCertificationNumber_3 S_REF_MammographyCertificationNumber_3 {get; set;}
-    [XmlElementAttribute(Order=3)]
+    [XmlElement(Order=3)]
     public S_REF_ReferralNumber_3 S_REF_ReferralNumber_3 {get; set;}
-    [XmlElementAttribute(Order=4)]
+    [XmlElement(Order=4)]
     public S_REF_PriorAuthorization_3 S_REF_PriorAuthorization_3 {get; set;}
-    [XmlElementAttribute(Order=5)]
+    [XmlElement(Order=5)]
     public S_REF_PayerClaimControlNumber_2 S_REF_PayerClaimControlNumber_2 {get; set;}
-    [XmlElementAttribute(Order=6)]
+    [XmlElement(Order=6)]
     public S_REF_ClinicalLaboratoryImprovementAmendment_CLIA_Number_3 S_REF_ClinicalLaboratoryImprovementAmendment_CLIA_Number_3 {get; set;}
-    [XmlElementAttribute(Order=7)]
+    [XmlElement(Order=7)]
     public S_REF_RepricedClaimNumber_2 S_REF_RepricedClaimNumber_2 {get; set;}
-    [XmlElementAttribute(Order=8)]
+    [XmlElement(Order=8)]
     public S_REF_AdjustedRepricedClaimNumber_2 S_REF_AdjustedRepricedClaimNumber_2 {get; set;}
-    [XmlElementAttribute(Order=9)]
+    [XmlElement(Order=9)]
     public S_REF_InvestigationalDeviceExemptionNumber_2 S_REF_InvestigationalDeviceExemptionNumber_2 {get; set;}
-    [XmlElementAttribute(Order=10)]
+    [XmlElement(Order=10)]
     public S_REF_ClaimIdentifierForTransmissionIntermediaries_2 S_REF_ClaimIdentifierForTransmissionIntermediaries_2 {get; set;}
-    [XmlElementAttribute(Order=11)]
+    [XmlElement(Order=11)]
     public S_REF_MedicalRecordNumber_2 S_REF_MedicalRecordNumber_2 {get; set;}
-    [XmlElementAttribute(Order=12)]
+    [XmlElement(Order=12)]
     public S_REF_DemonstrationProjectIdentifier_2 S_REF_DemonstrationProjectIdentifier_2 {get; set;}
-    [XmlElementAttribute(Order=13)]
+    [XmlElement(Order=13)]
     public S_REF_CarePlanOversight_2 S_REF_CarePlanOversight_2 {get; set;}
     }
     [Serializable]
@@ -8979,9 +8979,9 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     public U_CRC_AmbulanceCertification_3 U_CRC_AmbulanceCertification_3 {get; set;}
     [XmlElement(Order=1)]
     public U_CRC_PatientConditionInformation_Vision_2 U_CRC_PatientConditionInformation_Vision_2 {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public S_CRC_HomeboundIndicator_2 S_CRC_HomeboundIndicator_2 {get; set;}
-    [XmlElementAttribute(Order=3)]
+    [XmlElement(Order=3)]
     public S_CRC_EPSDTReferral_2 S_CRC_EPSDTReferral_2 {get; set;}
     }
     [Serializable]
@@ -9064,9 +9064,9 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_HI_2 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_HI_HealthCareDiagnosisCode_2 S_HI_HealthCareDiagnosisCode_2 {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_HI_AnesthesiaRelatedProcedure_2 S_HI_AnesthesiaRelatedProcedure_2 {get; set;}
     [XmlElement(Order=2)]
     public U_HI_ConditionInformation_2 U_HI_ConditionInformation_2 {get; set;}
@@ -10027,15 +10027,15 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     public class A_NM1_7 {
     [XmlElement(Order=0)]
     public U_TS837_2310A_1 U_TS837_2310A_1 {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public G_TS837_2310B_1 G_TS837_2310B_1 {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public G_TS837_2310C_1 G_TS837_2310C_1 {get; set;}
-    [XmlElementAttribute(Order=3)]
+    [XmlElement(Order=3)]
     public G_TS837_2310D_1 G_TS837_2310D_1 {get; set;}
-    [XmlElementAttribute(Order=4)]
+    [XmlElement(Order=4)]
     public G_TS837_2310E_1 G_TS837_2310E_1 {get; set;}
-    [XmlElementAttribute(Order=5)]
+    [XmlElement(Order=5)]
     public G_TS837_2310F_1 G_TS837_2310F_1 {get; set;}
     }
     [Serializable]
@@ -10620,11 +10620,11 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_AMT_3 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_AMT_CoordinationofBenefits_COB_PayerPaidAmount_2 S_AMT_CoordinationofBenefits_COB_PayerPaidAmount_2 {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_AMT_CoordinationofBenefits_COB_TotalNon_coveredAmount_2 S_AMT_CoordinationofBenefits_COB_TotalNon_coveredAmount_2 {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public S_AMT_RemainingPatientLiability_3 S_AMT_RemainingPatientLiability_3 {get; set;}
     }
     [Serializable]
@@ -10704,19 +10704,19 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_NM1_8 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public G_TS837_2330A_1 G_TS837_2330A_1 {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public G_TS837_2330B_1 G_TS837_2330B_1 {get; set;}
     [XmlElement(Order=2)]
     public U_TS837_2330C_1 U_TS837_2330C_1 {get; set;}
-    [XmlElementAttribute(Order=3)]
+    [XmlElement(Order=3)]
     public G_TS837_2330D_1 G_TS837_2330D_1 {get; set;}
-    [XmlElementAttribute(Order=4)]
+    [XmlElement(Order=4)]
     public G_TS837_2330E_1 G_TS837_2330E_1 {get; set;}
-    [XmlElementAttribute(Order=5)]
+    [XmlElement(Order=5)]
     public G_TS837_2330F_1 G_TS837_2330F_1 {get; set;}
-    [XmlElementAttribute(Order=6)]
+    [XmlElement(Order=6)]
     public G_TS837_2330G_1 G_TS837_2330G_1 {get; set;}
     }
     [Serializable]
@@ -10908,13 +10908,13 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     public class A_REF_10 {
     [XmlElement(Order=0)]
     public U_REF_OtherPayerSecondaryIdentifier_2 U_REF_OtherPayerSecondaryIdentifier_2 {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_REF_OtherPayerPriorAuthorizationNumber_2 S_REF_OtherPayerPriorAuthorizationNumber_2 {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public S_REF_OtherPayerReferralNumber_2 S_REF_OtherPayerReferralNumber_2 {get; set;}
-    [XmlElementAttribute(Order=3)]
+    [XmlElement(Order=3)]
     public S_REF_OtherPayerClaimAdjustmentIndicator_2 S_REF_OtherPayerClaimAdjustmentIndicator_2 {get; set;}
-    [XmlElementAttribute(Order=4)]
+    [XmlElement(Order=4)]
     public S_REF_OtherPayerClaimControlNumber_2 S_REF_OtherPayerClaimControlNumber_2 {get; set;}
     }
     [Serializable]
@@ -11588,7 +11588,7 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     public class A_PWK_2 {
     [XmlElement(Order=0)]
     public U_PWK_LineSupplementalInformation_2 U_PWK_LineSupplementalInformation_2 {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_PWK_DurableMedicalEquipmentCertificateofMedicalNecessityIndicator_2 S_PWK_DurableMedicalEquipmentCertificateofMedicalNecessityIndicator_2 {get; set;}
     }
     [Serializable]
@@ -11713,9 +11713,9 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     public class A_CRC_4 {
     [XmlElement(Order=0)]
     public U_CRC_AmbulanceCertification_4 U_CRC_AmbulanceCertification_4 {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_CRC_HospiceEmployeeIndicator_2 S_CRC_HospiceEmployeeIndicator_2 {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public S_CRC_ConditionIndicator_DurableMedicalEquipment_2 S_CRC_ConditionIndicator_DurableMedicalEquipment_2 {get; set;}
     }
     [Serializable]
@@ -11779,25 +11779,25 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_DTP_4 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_DTP_Date_ServiceDate_2 S_DTP_Date_ServiceDate_2 {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_DTP_Date_PrescriptionDate_2 S_DTP_Date_PrescriptionDate_2 {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public S_DTP_DATE_CertificationRevision_RecertificationDate_2 S_DTP_DATE_CertificationRevision_RecertificationDate_2 {get; set;}
-    [XmlElementAttribute(Order=3)]
+    [XmlElement(Order=3)]
     public S_DTP_Date_BeginTherapyDate_2 S_DTP_Date_BeginTherapyDate_2 {get; set;}
-    [XmlElementAttribute(Order=4)]
+    [XmlElement(Order=4)]
     public S_DTP_Date_LastCertificationDate_2 S_DTP_Date_LastCertificationDate_2 {get; set;}
-    [XmlElementAttribute(Order=5)]
+    [XmlElement(Order=5)]
     public S_DTP_Date_LastSeenDate_4 S_DTP_Date_LastSeenDate_4 {get; set;}
     [XmlElement(Order=6)]
     public U_DTP_Date_TestDate_2 U_DTP_Date_TestDate_2 {get; set;}
-    [XmlElementAttribute(Order=7)]
+    [XmlElement(Order=7)]
     public S_DTP_Date_ShippedDate_2 S_DTP_Date_ShippedDate_2 {get; set;}
-    [XmlElementAttribute(Order=8)]
+    [XmlElement(Order=8)]
     public S_DTP_Date_LastX_rayDate_4 S_DTP_Date_LastX_rayDate_4 {get; set;}
-    [XmlElementAttribute(Order=9)]
+    [XmlElement(Order=9)]
     public S_DTP_Date_InitialTreatmentDate_4 S_DTP_Date_InitialTreatmentDate_4 {get; set;}
     }
     [Serializable]
@@ -11914,9 +11914,9 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_QTY_2 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_QTY_AmbulancePatientCount_2 S_QTY_AmbulancePatientCount_2 {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_QTY_ObstetricAnesthesiaAdditionalUnits_2 S_QTY_ObstetricAnesthesiaAdditionalUnits_2 {get; set;}
     }
     [Serializable]
@@ -12100,21 +12100,21 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_REF_11 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_REF_RepricedLineItemReferenceNumber_2 S_REF_RepricedLineItemReferenceNumber_2 {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_REF_AdjustedRepricedLineItemReferenceNumber_2 S_REF_AdjustedRepricedLineItemReferenceNumber_2 {get; set;}
     [XmlElement(Order=2)]
     public U_REF_PriorAuthorization_4 U_REF_PriorAuthorization_4 {get; set;}
-    [XmlElementAttribute(Order=3)]
+    [XmlElement(Order=3)]
     public S_REF_LineItemControlNumber_2 S_REF_LineItemControlNumber_2 {get; set;}
-    [XmlElementAttribute(Order=4)]
+    [XmlElement(Order=4)]
     public S_REF_MammographyCertificationNumber_4 S_REF_MammographyCertificationNumber_4 {get; set;}
-    [XmlElementAttribute(Order=5)]
+    [XmlElement(Order=5)]
     public S_REF_ClinicalLaboratoryImprovementAmendment_CLIA_Number_4 S_REF_ClinicalLaboratoryImprovementAmendment_CLIA_Number_4 {get; set;}
-    [XmlElementAttribute(Order=6)]
+    [XmlElement(Order=6)]
     public S_REF_ReferringClinicalLaboratoryImprovementAmendment_CLIA_FacilityIdentification_2 S_REF_ReferringClinicalLaboratoryImprovementAmendment_CLIA_FacilityIdentification_2 {get; set;}
-    [XmlElementAttribute(Order=7)]
+    [XmlElement(Order=7)]
     public S_REF_ImmunizationBatchNumber_2 S_REF_ImmunizationBatchNumber_2 {get; set;}
     [XmlElement(Order=8)]
     public U_REF_ReferralNumber_4 U_REF_ReferralNumber_4 {get; set;}
@@ -12393,9 +12393,9 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_AMT_4 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_AMT_SalesTaxAmount_2 S_AMT_SalesTaxAmount_2 {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_AMT_PostageClaimedAmount_2 S_AMT_PostageClaimedAmount_2 {get; set;}
     }
     [Serializable]
@@ -12470,9 +12470,9 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_NTE_2 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public S_NTE_LineNote_2 S_NTE_LineNote_2 {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public S_NTE_ThirdPartyOrganizationNotes_2 S_NTE_ThirdPartyOrganizationNotes_2 {get; set;}
     }
     [Serializable]
@@ -12713,21 +12713,21 @@ namespace EdiFabric.Rules.X12005010X222A1837 {
     [XmlType(AnonymousType=true, Namespace="www.edifabric.com/x12")]
     [XmlRoot(Namespace="www.edifabric.com/x12", IsNullable=false)]
     public class A_NM1_9 {
-    [XmlElementAttribute(Order=0)]
+    [XmlElement(Order=0)]
     public G_TS837_2420A_1 G_TS837_2420A_1 {get; set;}
-    [XmlElementAttribute(Order=1)]
+    [XmlElement(Order=1)]
     public G_TS837_2420B_1 G_TS837_2420B_1 {get; set;}
-    [XmlElementAttribute(Order=2)]
+    [XmlElement(Order=2)]
     public G_TS837_2420C_1 G_TS837_2420C_1 {get; set;}
-    [XmlElementAttribute(Order=3)]
+    [XmlElement(Order=3)]
     public G_TS837_2420D_1 G_TS837_2420D_1 {get; set;}
-    [XmlElementAttribute(Order=4)]
+    [XmlElement(Order=4)]
     public G_TS837_2420E_1 G_TS837_2420E_1 {get; set;}
     [XmlElement(Order=5)]
     public U_TS837_2420F_1 U_TS837_2420F_1 {get; set;}
-    [XmlElementAttribute(Order=6)]
+    [XmlElement(Order=6)]
     public G_TS837_2420G_1 G_TS837_2420G_1 {get; set;}
-    [XmlElementAttribute(Order=7)]
+    [XmlElement(Order=7)]
     public G_TS837_2420H_1 G_TS837_2420H_1 {get; set;}
     }
     [Serializable]

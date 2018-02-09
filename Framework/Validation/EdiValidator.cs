@@ -19,9 +19,9 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Schema;
 using System.Xml.Serialization;
-using EdiFabric.Framework.Exceptions;
+using EdiWeave.Framework.Exceptions;
 
-namespace EdiFabric.Framework.Validation
+namespace EdiWeave.Framework.Validation
 {
     /// <summary>
     /// Validates EDI objects.

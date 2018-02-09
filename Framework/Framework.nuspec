@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/Silvenga/EdiWeave/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>.NET framework for reading and creating of EDI documents.</description>
-    <releaseNotes>Initial Release</releaseNotes>
+    <releaseNotes></releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>.NET EDI Framework EDIFACT X12 HIPAA</tags>
   </metadata>

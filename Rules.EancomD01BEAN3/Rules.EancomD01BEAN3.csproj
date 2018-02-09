@@ -7,8 +7,8 @@
     <ProjectGuid>{344F2698-7A31-4DDB-9053-9F8BA8A53131}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EdiFabric.Rules.EancomD01BEAN3</RootNamespace>
-    <AssemblyName>EdiFabric.Rules.EancomD01BEAN3</AssemblyName>
+    <RootNamespace>EdiWeave.Rules.EancomD01BEAN3</RootNamespace>
+    <AssemblyName>EdiWeave.Rules.EancomD01BEAN3</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

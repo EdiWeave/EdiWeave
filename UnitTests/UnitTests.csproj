@@ -6,8 +6,8 @@
     <ProjectGuid>{F66E2275-FAE0-4876-8F12-831A2A90C7A7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EdiFabric.UnitTests</RootNamespace>
-    <AssemblyName>EdiFabric.UnitTests</AssemblyName>
+    <RootNamespace>EdiWeave.UnitTests</RootNamespace>
+    <AssemblyName>EdiWeave.UnitTests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

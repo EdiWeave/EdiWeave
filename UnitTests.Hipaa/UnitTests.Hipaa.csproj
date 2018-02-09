@@ -6,8 +6,8 @@
     <ProjectGuid>{82E0A3B3-A0EB-45FF-99CC-1D7A5BCAEDF3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EdiFabric.UnitTests.Hipaa</RootNamespace>
-    <AssemblyName>EdiFabric.UnitTests.Hipaa</AssemblyName>
+    <RootNamespace>EdiWeave.UnitTests.Hipaa</RootNamespace>
+    <AssemblyName>EdiWeave.UnitTests.Hipaa</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

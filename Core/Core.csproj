@@ -7,8 +7,8 @@
     <ProjectGuid>{6CE3310F-1DC2-4074-8559-27C5ADB46FE7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EdiFabric.Core</RootNamespace>
-    <AssemblyName>EdiFabric.Core</AssemblyName>
+    <RootNamespace>EdiWeave.Core</RootNamespace>
+    <AssemblyName>EdiWeave.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -20,7 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\EdiFabric.Core.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\EdiWeave.Core.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>

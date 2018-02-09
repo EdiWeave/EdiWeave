@@ -5,12 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("EdiFabric.Framework")]
+[assembly: AssemblyTitle("EdiWeave.Framework")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("EdiFabric.Framework")]
-[assembly: AssemblyCopyright("Copyright © ediFabric 2017")]
+[assembly: AssemblyProduct("EdiWeave.Framework")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -6,8 +6,8 @@
     <ProjectGuid>{085CA191-2F38-4633-84E1-92BDD6B9C142}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EdiFabric.UnitTests.Eancom</RootNamespace>
-    <AssemblyName>EdiFabric.UnitTests.Eancom</AssemblyName>
+    <RootNamespace>EdiWeave.UnitTests.Eancom</RootNamespace>
+    <AssemblyName>EdiWeave.UnitTests.Eancom</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

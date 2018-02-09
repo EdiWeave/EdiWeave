@@ -7,8 +7,8 @@
     <ProjectGuid>{8DB14447-6C22-4BBB-9126-73AC17FA38C2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EdiFabric.Rules.Vda</RootNamespace>
-    <AssemblyName>EdiFabric.Rules.Vda</AssemblyName>
+    <RootNamespace>EdiWeave.Rules.Vda</RootNamespace>
+    <AssemblyName>EdiWeave.Rules.Vda</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

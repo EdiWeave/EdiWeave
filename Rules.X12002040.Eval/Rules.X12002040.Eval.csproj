@@ -7,8 +7,8 @@
     <ProjectGuid>{395DFE7D-2676-47B5-BCC9-878EE6F8CF12}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EdiFabric.Rules.X12002040.Eval</RootNamespace>
-    <AssemblyName>EdiFabric.Rules.X12002040.Eval</AssemblyName>
+    <RootNamespace>EdiWeave.Rules.X12002040.Eval</RootNamespace>
+    <AssemblyName>EdiWeave.Rules.X12002040.Eval</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

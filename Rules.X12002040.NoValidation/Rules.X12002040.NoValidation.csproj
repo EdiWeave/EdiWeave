@@ -7,8 +7,8 @@
     <ProjectGuid>{1928FB85-D646-466A-8E6B-FF3C3A6CBCE5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EdiFabric.Rules.X12002040.NoValidation</RootNamespace>
-    <AssemblyName>EdiFabric.Rules.X12002040.NoValidation</AssemblyName>
+    <RootNamespace>EdiWeave.Rules.X12002040.NoValidation</RootNamespace>
+    <AssemblyName>EdiWeave.Rules.X12002040.NoValidation</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

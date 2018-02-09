@@ -7,8 +7,8 @@
     <ProjectGuid>{8CCC6EC4-A522-463F-BB5D-1C7C07A87460}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EdiFabric.Rules.X12002040.Rep</RootNamespace>
-    <AssemblyName>EdiFabric.Rules.X12002040.Rep</AssemblyName>
+    <RootNamespace>EdiWeave.Rules.X12002040.Rep</RootNamespace>
+    <AssemblyName>EdiWeave.Rules.X12002040.Rep</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -7,8 +7,8 @@
     <ProjectGuid>{17947E82-982A-4828-8E8B-E36CE8E86636}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EdiFabric.Rules.EdifactD00A</RootNamespace>
-    <AssemblyName>EdiFabric.Rules.EdifactD00A</AssemblyName>
+    <RootNamespace>EdiWeave.Rules.EdifactD00A</RootNamespace>
+    <AssemblyName>EdiWeave.Rules.EdifactD00A</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

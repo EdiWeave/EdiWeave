@@ -12,12 +12,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using EdiFabric.Core.ErrorCodes;
-using EdiFabric.Core.Model.Edi.ErrorContexts;
-using EdiFabric.Framework.Exceptions;
+using EdiWeave.Core.ErrorCodes;
+using EdiWeave.Core.Model.Edi.ErrorContexts;
 using System.Reflection;
+using EdiWeave.Framework.Exceptions;
 
-namespace EdiFabric.Framework.Model
+namespace EdiWeave.Framework.Model
 {
     class TransactionSet : ParseNode
     {

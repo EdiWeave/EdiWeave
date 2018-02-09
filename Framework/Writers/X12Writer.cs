@@ -11,9 +11,9 @@
 
 using System.IO;
 using System.Text;
-using EdiFabric.Core.Model.Edi.X12;
+using EdiWeave.Core.Model.Edi.X12;
 
-namespace EdiFabric.Framework.Writers
+namespace EdiWeave.Framework.Writers
 {
     /// <summary>
     /// Writes .NET object into EDI documents.

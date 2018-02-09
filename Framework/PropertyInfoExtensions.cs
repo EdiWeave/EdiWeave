@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using EdiFabric.Core.Annotations.Edi;
+using EdiWeave.Core.Annotations.Edi;
 
-namespace EdiFabric.Framework
+namespace EdiWeave.Framework
 {
     /// <summary>
     /// PropertyInfo extensions

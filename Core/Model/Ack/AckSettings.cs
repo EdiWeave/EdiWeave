@@ -11,7 +11,7 @@
 
 using System;
 
-namespace EdiFabric.Core.Model.Ack
+namespace EdiWeave.Core.Model.Ack
 {
     /// <summary>
     /// This class contains all of the configuration settings.

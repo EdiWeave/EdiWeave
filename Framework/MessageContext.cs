@@ -12,12 +12,12 @@
 using System;
 using System.Linq;
 using System.Reflection;
-using EdiFabric.Core.Annotations.Edi;
-using EdiFabric.Core.ErrorCodes;
-using EdiFabric.Core.Model.Edi.ErrorContexts;
-using EdiFabric.Framework.Exceptions;
+using EdiWeave.Core.Annotations.Edi;
+using EdiWeave.Core.ErrorCodes;
+using EdiWeave.Core.Model.Edi.ErrorContexts;
+using EdiWeave.Framework.Exceptions;
 
-namespace EdiFabric.Framework
+namespace EdiWeave.Framework
 {
     /// <summary>
     /// The context of an EDI transaction set (or message).

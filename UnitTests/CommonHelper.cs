@@ -4,9 +4,9 @@ using System.Reflection;
 using System.Text;
 using System.Xml.Linq;
 using System.Xml.Serialization;
-using EdiFabric.Core.Model.Edi;
+using EdiWeave.Core.Model.Edi;
 
-namespace EdiFabric.UnitTests
+namespace EdiWeave.UnitTests
 {
     public class CommonHelper
     {

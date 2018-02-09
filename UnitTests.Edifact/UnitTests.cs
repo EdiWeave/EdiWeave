@@ -4,17 +4,17 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using EdiFabric.Core.ErrorCodes;
-using EdiFabric.Core.Model.Edi;
-using EdiFabric.Core.Model.Edi.Edifact;
-using EdiFabric.Core.Model.Edi.ErrorContexts;
-using EdiFabric.Framework;
-using EdiFabric.Framework.Readers;
-using EdiFabric.Framework.Writers;
-using EdiFabric.Rules.EDIFACT_D00A;
+using EdiWeave.Core.ErrorCodes;
+using EdiWeave.Core.Model.Edi;
+using EdiWeave.Core.Model.Edi.Edifact;
+using EdiWeave.Core.Model.Edi.ErrorContexts;
+using EdiWeave.Framework;
+using EdiWeave.Framework.Readers;
+using EdiWeave.Framework.Writers;
+using EdiWeave.Rules.EDIFACT_D00A;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace EdiFabric.UnitTests.Edifact
+namespace EdiWeave.UnitTests.Edifact
 {
     [TestClass]
     public class UnitTests
@@ -1083,7 +1083,7 @@ namespace EdiFabric.UnitTests.Edifact
             Assert.IsNotNull(ediItems);
             Assert.IsNotNull(ediItems.OfType<UNB>().SingleOrDefault());
             Assert.IsNull(ediItems.OfType<UNG>().SingleOrDefault());
-            var messages = ediItems.OfType<Rules.EDIFACT_D00A.Rep.TSINVOICSplit>().ToList();
+            var messages = ediItems.OfType<EdiWeave.Rules.EDIFACT_D00A.Rep.TSINVOICSplit>().ToList();
             Assert.IsTrue(messages.Count(m => !m.HasErrors) == 3);
 
             foreach (var msg in messages)
@@ -1105,7 +1105,7 @@ namespace EdiFabric.UnitTests.Edifact
 
             Assert.IsNull(ediItems.OfType<UNE>().SingleOrDefault());
             Assert.IsNotNull(ediItems.OfType<UNZ>().SingleOrDefault());
-            var errors = ediItems.OfType<Rules.EDIFACT_D00A.Rep.TSINVOICSplit>().Where(m => m.HasErrors).ToList();
+            var errors = ediItems.OfType<EdiWeave.Rules.EDIFACT_D00A.Rep.TSINVOICSplit>().Where(m => m.HasErrors).ToList();
             Assert.IsTrue(errors.Count() == 1);
            
             foreach (var err in errors)
@@ -1134,7 +1134,7 @@ namespace EdiFabric.UnitTests.Edifact
             Assert.IsNotNull(ediItems);
             Assert.IsNotNull(ediItems.OfType<UNB>().SingleOrDefault());
             Assert.IsNull(ediItems.OfType<UNG>().SingleOrDefault());
-            var messages = ediItems.OfType<Rules.EDIFACT_D00A.Rep.TSINVOICSplit>().ToList();
+            var messages = ediItems.OfType<EdiWeave.Rules.EDIFACT_D00A.Rep.TSINVOICSplit>().ToList();
             Assert.IsTrue(messages.Count(m => !m.HasErrors) == 3);
             Assert.IsTrue(messages.Count(m => m.HasErrors) == 1);
             Assert.IsNull(ediItems.OfType<UNE>().SingleOrDefault());

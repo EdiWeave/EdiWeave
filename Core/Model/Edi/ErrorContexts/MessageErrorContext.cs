@@ -11,9 +11,9 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using EdiFabric.Core.ErrorCodes;
+using EdiWeave.Core.ErrorCodes;
 
-namespace EdiFabric.Core.Model.Edi.ErrorContexts
+namespace EdiWeave.Core.Model.Edi.ErrorContexts
 {
     /// <summary>
     /// Information for the data, error codes and the context of the message that failed.  

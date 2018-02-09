@@ -1,9 +1,9 @@
-using EdiFabric.Core.Annotations;
-using EdiFabric.Core.Annotations.Edi;
-using EdiFabric.Core.Model;
-using EdiFabric.Core.Model.Edi;
+using EdiWeave.Core.Annotations;
+using EdiWeave.Core.Annotations.Edi;
+using EdiWeave.Core.Model;
+using EdiWeave.Core.Model.Edi;
 
-namespace EdiFabric.Rules.EDIFACT_D00A.Rep
+namespace EdiWeave.Rules.EDIFACT_D00A.Rep
 {
     using System;
     using System.Collections.Generic;

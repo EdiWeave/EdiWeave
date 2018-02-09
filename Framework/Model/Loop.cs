@@ -12,9 +12,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using EdiFabric.Core.Annotations.Edi;
+using EdiWeave.Core.Annotations.Edi;
 
-namespace EdiFabric.Framework.Model
+namespace EdiWeave.Framework.Model
 {
     class Loop : ParseNode
     {

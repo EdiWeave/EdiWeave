@@ -12,7 +12,7 @@
 using System;
 using System.Linq;
 
-namespace EdiFabric.Framework.Model
+namespace EdiWeave.Framework.Model
 {
     /// <summary>
     /// Extends a segment line with additional attributes inferred from the data.

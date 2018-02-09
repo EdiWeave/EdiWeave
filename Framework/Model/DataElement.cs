@@ -10,9 +10,9 @@
 //---------------------------------------------------------------------
 
 using System.Reflection;
-using EdiFabric.Core.Annotations.Validation;
+using EdiWeave.Core.Annotations.Validation;
 
-namespace EdiFabric.Framework.Model
+namespace EdiWeave.Framework.Model
 {
     class DataElement : ParseNode
     {

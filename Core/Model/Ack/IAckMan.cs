@@ -1,6 +1,6 @@
-﻿using EdiFabric.Core.Model.Edi;
+﻿using EdiWeave.Core.Model.Edi;
 
-namespace EdiFabric.Core.Model.Ack
+namespace EdiWeave.Core.Model.Ack
 {
     /// <summary>
     /// Interface for generating acknowledgments. 

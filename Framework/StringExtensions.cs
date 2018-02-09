@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace EdiFabric.Framework
+namespace EdiWeave.Framework
 {
     static class StringExtensions
     {

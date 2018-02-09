@@ -1,10 +1,10 @@
-namespace EdiFabric.Rules.EANCOM_D01BEAN3
+namespace EdiWeave.Rules.EANCOM_D01BEAN3
 {
     using System;
     using System.Collections.Generic;
-    using EdiFabric.Core.Annotations.Edi;
-    using EdiFabric.Core.Model.Edi;
-    using EdiFabric.Core.Annotations.Validation;
+    using EdiWeave.Core.Annotations.Edi;
+    using EdiWeave.Core.Model.Edi;
+    using EdiWeave.Core.Annotations.Validation;
     
     
     [Serializable()]

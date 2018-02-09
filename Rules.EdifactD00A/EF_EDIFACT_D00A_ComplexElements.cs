@@ -1,8 +1,8 @@
-using EdiFabric.Core.Annotations;
-using EdiFabric.Core.Annotations.Edi;
-using EdiFabric.Core.Annotations.Validation;
+using EdiWeave.Core.Annotations;
+using EdiWeave.Core.Annotations.Edi;
+using EdiWeave.Core.Annotations.Validation;
 
-namespace EdiFabric.Rules.EDIFACT_D00A
+namespace EdiWeave.Rules.EDIFACT_D00A
 {
     using System;
     using System.Collections.Generic;

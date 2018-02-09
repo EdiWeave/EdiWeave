@@ -12,12 +12,12 @@
 using System;
 using System.IO;
 using System.Text;
-using EdiFabric.Core.Model.Edi;
-using EdiFabric.Framework.Model;
+using EdiWeave.Core.Model.Edi;
 using System.Reflection;
-using EdiFabric.Core.Model.Edi.Edifact;
+using EdiWeave.Core.Model.Edi.Edifact;
+using EdiWeave.Framework.Model;
 
-namespace EdiFabric.Framework.Writers
+namespace EdiWeave.Framework.Writers
 {
     /// <summary>
     /// Writes .NET object into EDI documents.

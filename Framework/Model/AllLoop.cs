@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace EdiFabric.Framework.Model
+namespace EdiWeave.Framework.Model
 {
     class AllLoop : ParseNode
     {

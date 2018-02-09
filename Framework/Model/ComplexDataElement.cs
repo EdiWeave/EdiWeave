@@ -12,11 +12,11 @@
 using System;
 using System.Linq;
 using System.Reflection;
-using EdiFabric.Core.Annotations.Edi;
-using EdiFabric.Core.ErrorCodes;
-using EdiFabric.Framework.Exceptions;
+using EdiWeave.Core.Annotations.Edi;
+using EdiWeave.Core.ErrorCodes;
+using EdiWeave.Framework.Exceptions;
 
-namespace EdiFabric.Framework.Model
+namespace EdiWeave.Framework.Model
 {
     class ComplexDataElement : ParseNode
     {

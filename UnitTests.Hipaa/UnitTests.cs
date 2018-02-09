@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using EdiFabric.Core.Model.Edi;
-using EdiFabric.Core.Model.Edi.ErrorContexts;
-using EdiFabric.Core.Model.Edi.X12;
-using EdiFabric.Framework;
-using EdiFabric.Framework.Readers;
-using EdiFabric.Rules.HIPAA_005010X222A1_837;
+using EdiWeave.Core.Model.Edi;
+using EdiWeave.Core.Model.Edi.ErrorContexts;
+using EdiWeave.Core.Model.Edi.X12;
+using EdiWeave.Framework;
+using EdiWeave.Framework.Readers;
+using EdiWeave.Rules.HIPAA_005010X222A1_837;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace EdiFabric.UnitTests.Hipaa
+namespace EdiWeave.UnitTests.Hipaa
 {
     [TestClass]
     public class UnitTests

@@ -12,9 +12,9 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-using EdiFabric.Core.ErrorCodes;
+using EdiWeave.Core.ErrorCodes;
 
-namespace EdiFabric.Core.Model.Edi.ErrorContexts
+namespace EdiWeave.Core.Model.Edi.ErrorContexts
 {
     /// <summary>
     /// Information for the data, error codes and the context of the segments that failed.

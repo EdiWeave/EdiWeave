@@ -11,10 +11,10 @@
 
 using System.IO;
 using System.Text;
-using EdiFabric.Core.Model.Edi;
-using EdiFabric.Framework.Model;
+using EdiWeave.Core.Model.Edi;
+using EdiWeave.Framework.Model;
 
-namespace EdiFabric.Framework.Writers
+namespace EdiWeave.Framework.Writers
 {
     /// <summary>
     /// Writes .NET object into VDA documents.

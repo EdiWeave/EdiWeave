@@ -16,13 +16,13 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
-using EdiFabric.Core.ErrorCodes;
-using EdiFabric.Core.Model.Edi;
-using EdiFabric.Core.Model.Edi.ErrorContexts;
-using EdiFabric.Framework.Exceptions;
-using EdiFabric.Framework.Model;
+using EdiWeave.Core.ErrorCodes;
+using EdiWeave.Core.Model.Edi;
+using EdiWeave.Core.Model.Edi.ErrorContexts;
+using EdiWeave.Framework.Exceptions;
+using EdiWeave.Framework.Model;
 
-namespace EdiFabric.Framework.Readers
+namespace EdiWeave.Framework.Readers
 {
     /// <summary>
     /// The base reader.

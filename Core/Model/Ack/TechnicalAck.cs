@@ -9,7 +9,7 @@
 // PURPOSE.
 //---------------------------------------------------------------------
 
-namespace EdiFabric.Core.Model.Ack
+namespace EdiWeave.Core.Model.Ack
 {
     /// <summary>
     /// Control the generation of TA1.

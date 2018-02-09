@@ -11,7 +11,7 @@
 
 using System;
 
-namespace EdiFabric.Core.Annotations.Edi
+namespace EdiWeave.Core.Annotations.Edi
 {
     /// <summary>
     /// Base class for all EDI attributes.

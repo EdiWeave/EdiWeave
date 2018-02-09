@@ -10,9 +10,9 @@
 //---------------------------------------------------------------------
 
 using System;
-using EdiFabric.Core.ErrorCodes;
+using EdiWeave.Core.ErrorCodes;
 
-namespace EdiFabric.Core.Model.Edi.ErrorContexts
+namespace EdiWeave.Core.Model.Edi.ErrorContexts
 {
     /// <summary>
     /// The reason for any reader failure.

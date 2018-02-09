@@ -1,7 +1,7 @@
 ﻿using System;
-using EdiFabric.Core.Model.Edi.ErrorContexts;
+using EdiWeave.Core.Model.Edi.ErrorContexts;
 
-namespace EdiFabric.Framework.Exceptions
+namespace EdiWeave.Framework.Exceptions
 {
     class ParserMessageException : Exception
     {

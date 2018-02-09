@@ -10,9 +10,9 @@
 //---------------------------------------------------------------------
 
 using System;
-using EdiFabric.Core.Annotations.Edi;
+using EdiWeave.Core.Annotations.Edi;
 
-namespace EdiFabric.Core.Model.Edi.X12
+namespace EdiWeave.Core.Model.Edi.X12
 {
     [Serializable()]
     [EdiCodes(",00,01,02,03,04,05,06,")]

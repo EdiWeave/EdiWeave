@@ -4,19 +4,19 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using EdiFabric.Core.ErrorCodes;
-using EdiFabric.Core.Model.Edi;
-using EdiFabric.Core.Model.Edi.ErrorContexts;
-using EdiFabric.Core.Model.Edi.X12;
-using EdiFabric.Framework;
-using EdiFabric.Framework.Readers;
-using EdiFabric.Framework.Writers;
-using EdiFabric.Rules.X12_002040;
-using EdiFabric.Rules.X12_002040.Rep;
+using EdiWeave.Core.ErrorCodes;
+using EdiWeave.Core.Model.Edi;
+using EdiWeave.Core.Model.Edi.ErrorContexts;
+using EdiWeave.Core.Model.Edi.X12;
+using EdiWeave.Framework;
+using EdiWeave.Framework.Readers;
+using EdiWeave.Framework.Writers;
+using EdiWeave.Rules.X12_002040;
+using EdiWeave.Rules.X12_002040.Rep;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TS810 = EdiFabric.Rules.X12_002040.TS810;
+using TS810 = EdiWeave.Rules.X12_002040.TS810;
 
-namespace EdiFabric.UnitTests.X12
+namespace EdiWeave.UnitTests.X12
 {
     [TestClass]
     public class UnitTests
@@ -70,7 +70,7 @@ namespace EdiFabric.UnitTests.X12
             Assert.IsNotNull(ediItems);
             Assert.IsNotNull(ediItems.OfType<ISA>().SingleOrDefault());
             Assert.IsNotNull(ediItems.OfType<GS>().SingleOrDefault());
-            Assert.IsNotNull(ediItems.OfType<Rules.X12_002040.Rep.TS810>().SingleOrDefault());
+            Assert.IsNotNull(ediItems.OfType<EdiWeave.Rules.X12_002040.Rep.TS810>().SingleOrDefault());
             Assert.IsNotNull(ediItems.OfType<GE>().SingleOrDefault());
             Assert.IsNotNull(ediItems.OfType<IEA>().SingleOrDefault());
             Assert.IsNull(ediItems.OfType<ErrorContext>().SingleOrDefault());
@@ -411,10 +411,10 @@ namespace EdiFabric.UnitTests.X12
             // ASSERT
             Assert.IsNotNull(ediItems.OfType<ISA>().SingleOrDefault());
             Assert.IsNotNull(ediItems.OfType<GS>().SingleOrDefault());
-            Assert.IsNotNull(ediItems.OfType<Rules.X12_002040.Rep.TS810>().SingleOrDefault());
+            Assert.IsNotNull(ediItems.OfType<EdiWeave.Rules.X12_002040.Rep.TS810>().SingleOrDefault());
             Assert.IsNotNull(ediItems.OfType<GE>().SingleOrDefault());
             Assert.IsNotNull(ediItems.OfType<IEA>().SingleOrDefault());
-            var error = ediItems.OfType<Rules.X12_002040.Rep.TS810>().SingleOrDefault();
+            var error = ediItems.OfType<EdiWeave.Rules.X12_002040.Rep.TS810>().SingleOrDefault();
             Assert.IsNotNull(error);
             Assert.IsTrue(error.HasErrors);
             Assert.IsNotNull(error);

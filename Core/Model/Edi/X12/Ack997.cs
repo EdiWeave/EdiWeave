@@ -11,9 +11,9 @@
 
 using System;
 using System.Collections.Generic;
-using EdiFabric.Core.Annotations.Edi;
+using EdiWeave.Core.Annotations.Edi;
 
-namespace EdiFabric.Core.Model.Edi.X12
+namespace EdiWeave.Core.Model.Edi.X12
 {
     [Serializable()]
     [Message("X12", "005010", "997")]

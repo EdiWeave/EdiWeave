@@ -13,12 +13,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using EdiFabric.Core.Annotations.Edi;
-using EdiFabric.Core.ErrorCodes;
-using EdiFabric.Core.Model.Edi;
-using EdiFabric.Core.Model.Edi.ErrorContexts;
+using EdiWeave.Core.Annotations.Edi;
+using EdiWeave.Core.ErrorCodes;
+using EdiWeave.Core.Model.Edi;
+using EdiWeave.Core.Model.Edi.ErrorContexts;
 
-namespace EdiFabric.Core.Annotations.Validation
+namespace EdiWeave.Core.Annotations.Validation
 {
     /// <summary>
     /// Validation attribute for mandatory items. 

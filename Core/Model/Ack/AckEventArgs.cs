@@ -10,9 +10,9 @@
 //---------------------------------------------------------------------
 
 using System;
-using EdiFabric.Core.Model.Edi;
+using EdiWeave.Core.Model.Edi;
 
-namespace EdiFabric.Core.Model.Ack
+namespace EdiWeave.Core.Model.Ack
 {
     /// <summary>
     /// This class contains the data raised by the message event.

@@ -11,10 +11,10 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using EdiFabric.Core.Annotations.Edi;
-using EdiFabric.Core.Model.Edi.ErrorContexts;
+using EdiWeave.Core.Annotations.Edi;
+using EdiWeave.Core.Model.Edi.ErrorContexts;
 
-namespace EdiFabric.Core.Model.Edi
+namespace EdiWeave.Core.Model.Edi
 {
     static class ValidationExtensions
     {

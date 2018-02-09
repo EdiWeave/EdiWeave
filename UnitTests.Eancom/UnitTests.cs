@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using EdiFabric.Core.Model.Edi;
-using EdiFabric.Core.Model.Edi.Edifact;
-using EdiFabric.Core.Model.Edi.ErrorContexts;
-using EdiFabric.Framework.Readers;
-using EdiFabric.Rules.EANCOM_D01BEAN3;
+using EdiWeave.Core.Model.Edi;
+using EdiWeave.Core.Model.Edi.Edifact;
+using EdiWeave.Core.Model.Edi.ErrorContexts;
+using EdiWeave.Framework.Readers;
+using EdiWeave.Rules.EANCOM_D01BEAN3;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace EdiFabric.UnitTests.Eancom
+namespace EdiWeave.UnitTests.Eancom
 {
     [TestClass]
     public class UnitTests

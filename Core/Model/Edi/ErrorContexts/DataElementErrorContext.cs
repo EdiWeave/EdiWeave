@@ -9,9 +9,9 @@
 // PURPOSE.
 //---------------------------------------------------------------------
 
-using EdiFabric.Core.ErrorCodes;
+using EdiWeave.Core.ErrorCodes;
 
-namespace EdiFabric.Core.Model.Edi.ErrorContexts
+namespace EdiWeave.Core.Model.Edi.ErrorContexts
 {
     /// <summary>
     /// Information for the position, data and error code of the data element that failed. 

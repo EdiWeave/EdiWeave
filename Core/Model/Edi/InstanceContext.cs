@@ -14,11 +14,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using EdiFabric.Core.Annotations.Edi;
-using EdiFabric.Core.Annotations.Validation;
-using EdiFabric.Core.Model.Edi.ErrorContexts;
+using EdiWeave.Core.Annotations.Edi;
+using EdiWeave.Core.Annotations.Validation;
+using EdiWeave.Core.Model.Edi.ErrorContexts;
 
-namespace EdiFabric.Core.Model.Edi
+namespace EdiWeave.Core.Model.Edi
 {
     /// <summary>
     /// The instance context used for validation

@@ -14,11 +14,11 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using EdiFabric.Core.Model.Edi;
-using EdiFabric.Core.Model.Edi.X12;
-using EdiFabric.Framework.Model;
+using EdiWeave.Core.Model.Edi;
+using EdiWeave.Core.Model.Edi.X12;
+using EdiWeave.Framework.Model;
 
-namespace EdiFabric.Framework.Readers
+namespace EdiWeave.Framework.Readers
 {
     /// <summary>
     /// Reads X12 documents into .NET objects.

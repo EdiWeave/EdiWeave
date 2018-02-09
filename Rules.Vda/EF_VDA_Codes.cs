@@ -1,7 +1,7 @@
 using System;
-using EdiFabric.Core.Annotations.Edi;
+using EdiWeave.Core.Annotations.Edi;
 
-namespace EdiFabric.Rules.Vda
+namespace EdiWeave.Rules.Vda
 {
     [Serializable()]
     public class VDA_AN

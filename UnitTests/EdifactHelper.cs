@@ -1,15 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using EdiFabric.Core.Model.Edi;
-using EdiFabric.Core.Model.Edi.Edifact;
-using EdiFabric.Framework;
-using EdiFabric.Framework.Writers;
-using EdiFabric.Rules.EDIFACT_D00A;
-using S009 = EdiFabric.Rules.EDIFACT_D00A.S009;
-using UNH = EdiFabric.Rules.EDIFACT_D00A.UNH;
+using EdiWeave.Core.Model.Edi;
+using EdiWeave.Core.Model.Edi.Edifact;
+using EdiWeave.Framework;
+using EdiWeave.Framework.Writers;
+using EdiWeave.Rules.EDIFACT_D00A;
+using S009 = EdiWeave.Rules.EDIFACT_D00A.S009;
+using UNH = EdiWeave.Rules.EDIFACT_D00A.UNH;
 
-namespace EdiFabric.UnitTests
+namespace EdiWeave.UnitTests
 {
     public class EdifactHelper
     {

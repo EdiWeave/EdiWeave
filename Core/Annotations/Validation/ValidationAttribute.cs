@@ -11,10 +11,10 @@
 
 using System;
 using System.Collections.Generic;
-using EdiFabric.Core.Model.Edi;
-using EdiFabric.Core.Model.Edi.ErrorContexts;
+using EdiWeave.Core.Model.Edi;
+using EdiWeave.Core.Model.Edi.ErrorContexts;
 
-namespace EdiFabric.Core.Annotations.Validation
+namespace EdiWeave.Core.Annotations.Validation
 {
     /// <summary>
     /// Abstract attribute for validation.

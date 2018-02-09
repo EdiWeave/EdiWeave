@@ -3,12 +3,12 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Xml.Linq;
-using EdiFabric.Core.Model.Edi;
-using EdiFabric.Framework.Readers;
-using EdiFabric.Rules.EDIFACT_D00A.Rep;
+using EdiWeave.Core.Model.Edi;
+using EdiWeave.Framework.Readers;
+using EdiWeave.Rules.EDIFACT_D00A.Rep;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace EdiFabric.UnitTests
+namespace EdiWeave.UnitTests
 {
     /// <summary>
     /// Summary description for UnitTestsXml

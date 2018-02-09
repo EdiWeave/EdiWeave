@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using EdiFabric.Core.Model.Edi;
-using EdiFabric.Core.Model.Edi.ErrorContexts;
-using EdiFabric.Framework;
-using EdiFabric.Framework.Readers;
-using EdiFabric.Rules.Vda;
+using EdiWeave.Core.Model.Edi;
+using EdiWeave.Core.Model.Edi.ErrorContexts;
+using EdiWeave.Framework;
+using EdiWeave.Framework.Readers;
+using EdiWeave.Rules.Vda;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace EdiFabric.UnitTests.Vda
+namespace EdiWeave.UnitTests.Vda
 {
     [TestClass]
     public class UnitTests

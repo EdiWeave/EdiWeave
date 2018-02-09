@@ -12,7 +12,7 @@
 using System;
 using System.Threading;
 
-namespace EdiFabric.Core.Model.Ack
+namespace EdiWeave.Core.Model.Ack
 {
     /// <summary>
     /// This class contains delegates used to generate control numbers.

@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using EdiFabric.Core.Model.Edi;
-using EdiFabric.Framework.Writers;
+using EdiWeave.Core.Model.Edi;
+using EdiWeave.Framework.Writers;
 
-namespace EdiFabric.UnitTests
+namespace EdiWeave.UnitTests
 {
     public class VdaHelper
     {

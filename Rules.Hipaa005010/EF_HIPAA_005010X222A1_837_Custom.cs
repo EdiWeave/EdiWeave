@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Reflection;
-using EdiFabric.Core.ErrorCodes;
-using EdiFabric.Core.Model.Edi;
-using EdiFabric.Core.Model.Edi.ErrorContexts;
+using EdiWeave.Core.ErrorCodes;
+using EdiWeave.Core.Model.Edi;
+using EdiWeave.Core.Model.Edi.ErrorContexts;
 
-namespace EdiFabric.Rules.HIPAA_005010X222A1_837
+namespace EdiWeave.Rules.HIPAA_005010X222A1_837
 {
     public partial class Loop_2000A : IValidator
     {

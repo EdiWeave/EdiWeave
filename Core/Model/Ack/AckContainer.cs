@@ -12,7 +12,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace EdiFabric.Core.Model.Ack
+namespace EdiWeave.Core.Model.Ack
 {
     /// <summary>
     /// This class represents an acknowledgment container.

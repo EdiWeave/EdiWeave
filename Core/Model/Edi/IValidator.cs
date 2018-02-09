@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using EdiFabric.Core.Model.Edi.ErrorContexts;
+using EdiWeave.Core.Model.Edi.ErrorContexts;
 
-namespace EdiFabric.Core.Model.Edi
+namespace EdiWeave.Core.Model.Edi
 {
     /// <summary>
     /// Edi item validation interface.

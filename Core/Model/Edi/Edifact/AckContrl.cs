@@ -11,10 +11,10 @@
 
 using System;
 using System.Collections.Generic;
-using EdiFabric.Core.Annotations.Edi;
-using EdiFabric.Core.Annotations.Validation;
+using EdiWeave.Core.Annotations.Edi;
+using EdiWeave.Core.Annotations.Validation;
 
-namespace EdiFabric.Core.Model.Edi.Edifact
+namespace EdiWeave.Core.Model.Edi.Edifact
 {
     [Serializable()]
     [Message("EDIFACT", "41", "CONTRL")]

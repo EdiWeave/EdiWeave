@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using EdiFabric.Core.Annotations.Edi;
-using EdiFabric.Core.Annotations.Validation;
-using EdiFabric.Core.Model.Edi;
+using EdiWeave.Core.Annotations.Edi;
+using EdiWeave.Core.Annotations.Validation;
+using EdiWeave.Core.Model.Edi;
 
-namespace EdiFabric.Rules.X12_002040.Rep
+namespace EdiWeave.Rules.X12_002040.Rep
 {
     [Serializable()]
     [Message("X12", "002050", "810", @"^(N1\*)")]

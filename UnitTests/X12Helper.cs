@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using EdiFabric.Core.Model.Edi;
-using EdiFabric.Core.Model.Edi.X12;
-using EdiFabric.Framework;
-using EdiFabric.Framework.Writers;
-using EdiFabric.Rules.X12_002040;
-using ST = EdiFabric.Rules.X12_002040.ST;
+using EdiWeave.Core.Model.Edi;
+using EdiWeave.Core.Model.Edi.X12;
+using EdiWeave.Framework;
+using EdiWeave.Framework.Writers;
+using EdiWeave.Rules.X12_002040;
+using ST = EdiWeave.Rules.X12_002040.ST;
 
-namespace EdiFabric.UnitTests
+namespace EdiWeave.UnitTests
 {
     public class X12Helper
     {

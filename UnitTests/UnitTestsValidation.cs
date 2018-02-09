@@ -1,15 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using EdiFabric.Core.ErrorCodes;
-using EdiFabric.Core.Model.Edi;
-using EdiFabric.Core.Model.Edi.Edifact;
-using EdiFabric.Core.Model.Edi.ErrorContexts;
-using EdiFabric.Core.Model.Edi.X12;
-using EdiFabric.Framework.Readers;
-using EdiFabric.Rules.EDIFACT_D00A.Rep;
+using EdiWeave.Core.ErrorCodes;
+using EdiWeave.Core.Model.Edi;
+using EdiWeave.Core.Model.Edi.Edifact;
+using EdiWeave.Core.Model.Edi.ErrorContexts;
+using EdiWeave.Core.Model.Edi.X12;
+using EdiWeave.Framework.Readers;
+using EdiWeave.Rules.EDIFACT_D00A.Rep;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace EdiFabric.UnitTests
+namespace EdiWeave.UnitTests
 {
     /// <summary>
     /// Summary description for UnitTestsValidation
@@ -416,7 +416,7 @@ namespace EdiFabric.UnitTests
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
-            var msg = ediItems.OfType<Rules.EDIFACT_D00A.TSINVOIC>().Single();
+            var msg = ediItems.OfType<EdiWeave.Rules.EDIFACT_D00A.TSINVOIC>().Single();
 
             MessageErrorContext result;
             var validationResult = msg.IsValid(out result);
@@ -441,7 +441,7 @@ namespace EdiFabric.UnitTests
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
-            var msg = ediItems.OfType<Rules.EDIFACT_D00A.TSINVOIC>().Single();
+            var msg = ediItems.OfType<EdiWeave.Rules.EDIFACT_D00A.TSINVOIC>().Single();
 
             MessageErrorContext result;
             var validationResult = msg.IsValid(out result);
@@ -466,7 +466,7 @@ namespace EdiFabric.UnitTests
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
-            var msg = ediItems.OfType<Rules.EDIFACT_D00A.TSINVOIC>().Single();
+            var msg = ediItems.OfType<EdiWeave.Rules.EDIFACT_D00A.TSINVOIC>().Single();
 
             MessageErrorContext result;
             var validationResult = msg.IsValid(out result);
@@ -491,7 +491,7 @@ namespace EdiFabric.UnitTests
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
-            var msg = ediItems.OfType<Rules.EDIFACT_D00A.TSINVOIC>().Single();
+            var msg = ediItems.OfType<EdiWeave.Rules.EDIFACT_D00A.TSINVOIC>().Single();
 
             MessageErrorContext result;
             var validationResult = msg.IsValid(out result);
@@ -516,7 +516,7 @@ namespace EdiFabric.UnitTests
             {
                 ediItems = ediReader.ReadToEnd().ToList();
             }
-            var msg = ediItems.OfType<Rules.EDIFACT_D00A.TSINVOIC>().Single();
+            var msg = ediItems.OfType<EdiWeave.Rules.EDIFACT_D00A.TSINVOIC>().Single();
 
             MessageErrorContext result;
             var validationResult = msg.IsValid(out result);

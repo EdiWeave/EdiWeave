@@ -9,7 +9,7 @@
 // PURPOSE.
 //---------------------------------------------------------------------
 
-namespace EdiFabric.Core.Model.Edi.ErrorContexts
+namespace EdiWeave.Core.Model.Edi.ErrorContexts
 {
     /// <summary>
     /// The abstract error context.

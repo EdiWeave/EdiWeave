@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using EdiFabric.Core.Annotations.Edi;
-using EdiFabric.Core.Annotations.Validation;
-using EdiFabric.Core.Model.Edi;
+using EdiWeave.Core.Annotations.Edi;
+using EdiWeave.Core.Annotations.Validation;
+using EdiWeave.Core.Model.Edi;
 
-namespace EdiFabric.Rules.Vda
+namespace EdiWeave.Rules.Vda
 {
     [Serializable()]
     [Message("VDA", "1", "4905")]

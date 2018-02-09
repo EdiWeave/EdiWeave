@@ -9,7 +9,7 @@
 // PURPOSE.
 //---------------------------------------------------------------------
 
-namespace EdiFabric.Core.ErrorCodes
+namespace EdiWeave.Core.ErrorCodes
 {
     /// <summary>
     /// The reader error codes.

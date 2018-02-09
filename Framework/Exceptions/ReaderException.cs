@@ -10,9 +10,9 @@
 //---------------------------------------------------------------------
 
 using System;
-using EdiFabric.Core.ErrorCodes;
+using EdiWeave.Core.ErrorCodes;
 
-namespace EdiFabric.Framework.Exceptions
+namespace EdiWeave.Framework.Exceptions
 {
     class ReaderException : Exception
     {

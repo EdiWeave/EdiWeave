@@ -9,7 +9,7 @@
 // PURPOSE.
 //---------------------------------------------------------------------
 
-namespace EdiFabric.Core.Model.Edi
+namespace EdiWeave.Core.Model.Edi
 {
     /// <summary>
     /// EDI items are:

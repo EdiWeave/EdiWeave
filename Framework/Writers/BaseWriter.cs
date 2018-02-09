@@ -12,9 +12,9 @@
 using System;
 using System.IO;
 using System.Text;
-using EdiFabric.Core.Model.Edi;
+using EdiWeave.Core.Model.Edi;
 
-namespace EdiFabric.Framework.Writers
+namespace EdiWeave.Framework.Writers
 {
     /// <summary>
     /// Writes .NET object into files or streams.

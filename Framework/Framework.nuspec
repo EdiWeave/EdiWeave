@@ -1,18 +1,17 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>ediFabric.Framework</id>
+    <id>EdiWeave.Framework</id>
     <version>7.3.3</version>
     <title>The Ultimate EDI Framework for .NET</title>
-    <authors>ediFabric</authors>
-    <owners>ediFabric</owners>
-    <licenseUrl>http://edifabric.com/files/lgpl.pdf</licenseUrl>
-    <projectUrl>http://edifabric.com/</projectUrl>
-    <iconUrl>http://edifabric.com/images/favicon.png</iconUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <authors>Silvenga</authors>
+    <owners>Silvenga</owners>
+    <licenseUrl>https://github.com/Silvenga/EdiWeave/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Silvenga/EdiWeave/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>.NET framework for reading and creating of EDI documents.</description>
-    <releaseNotes>Fix issue with ISA characters being near the end of a file</releaseNotes>
-    <copyright>Copyright 2017</copyright>
+    <releaseNotes>Initial Release</releaseNotes>
+    <copyright>Copyright 2018</copyright>
     <tags>.NET EDI Framework EDIFACT X12 HIPAA</tags>
   </metadata>
 </package>

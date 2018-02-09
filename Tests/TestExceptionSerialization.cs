@@ -4,7 +4,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using EdiWeave.Framework.Exceptions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace EdiFabric.Tests
+namespace EdiWeave.Tests
 {
     [TestClass]
     public class TestExceptionSerialization

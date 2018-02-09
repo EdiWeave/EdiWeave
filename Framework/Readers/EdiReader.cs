@@ -58,12 +58,12 @@ namespace EdiWeave.Framework.Readers
         /// </summary>
         /// <param name="ediStream">The EDI stream to read from.</param>
         /// <param name="rulesAssembly">The name of the assembly containing the EDI classes.</param>
-        /// <param name="rulesNamespacePrefix">The namespace prefix for the EDI classes. The default is EdiFabric.Rules.</param>
+        /// <param name="rulesNamespacePrefix">The namespace prefix for the EDI classes. The default is EdiWeave.Rules.</param>
         /// <param name="encoding">The encoding. The default is Encoding.Default.</param>
         protected EdiReader(Stream ediStream, string rulesAssembly, string rulesNamespacePrefix,
             Encoding encoding)
             : this(
-                ediStream, mc => Assembly.Load(rulesAssembly), key => rulesNamespacePrefix ?? "EdiFabric.Rules",
+                ediStream, mc => Assembly.Load(rulesAssembly), key => rulesNamespacePrefix ?? "EdiWeave.Rules",
                 encoding ?? Encoding.Default)
         {
         }
@@ -73,7 +73,7 @@ namespace EdiWeave.Framework.Readers
         /// </summary>
         /// <param name="ediStream">The EDI stream to read from.</param>
         /// <param name="rulesAssembly">The delegate to return the assembly containing the EDI classes.</param>
-        /// <param name="rulesNamespacePrefix">The delegate to return the namespace prefix for the EDI classes. The default is EdiFabric.Rules.</param>
+        /// <param name="rulesNamespacePrefix">The delegate to return the namespace prefix for the EDI classes. The default is EdiWeave.Rules.</param>
         /// <param name="encoding">The encoding. The default is Encoding.Default.</param>
         protected EdiReader(Stream ediStream, Func<MessageContext, Assembly> rulesAssembly,
             Func<MessageContext, string> rulesNamespacePrefix, Encoding encoding)

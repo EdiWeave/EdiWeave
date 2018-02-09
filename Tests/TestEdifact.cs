@@ -11,7 +11,7 @@ using EdiWeave.Framework.Validation;
 using EdiWeave.Rules.EdifactD00AINVOIC;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace EdiFabric.Tests
+namespace EdiWeave.Tests
 {
     [TestClass]
     public class TestEdifact
@@ -20,8 +20,8 @@ namespace EdiFabric.Tests
         public void TestParseEdifact()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.Edifact_INVOIC_D00A.xml";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.Edifact_INVOIC_D00A.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
@@ -44,7 +44,7 @@ namespace EdiFabric.Tests
         public void TestGenerate()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A.txt";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A.txt";
             var interchange = TestHelper.GenerateEdifact<M_INVOIC>(sample);
 
             // ACT
@@ -58,11 +58,11 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithValidationFailure()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A.txt";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A.txt";
 
             // ACT
             var message = TestHelper.ParseEdifact(sample).OfType<M_INVOIC>().Single();
-            var validationResults = EdiValidator.Create("EdiFabric.Xsd").Validate(message);
+            var validationResults = EdiValidator.Create("EdiWeave.Xsd").Validate(message);
 
             // ASSERT
             Assert.IsNotNull(validationResults);
@@ -74,11 +74,11 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithValidation()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_Valid.txt";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_Valid.txt";
 
             // ACT
             var message = TestHelper.ParseEdifact(sample).OfType<M_INVOIC>().Single();
-            var validationResults = EdiValidator.Create("EdiFabric.Xsd").Validate(message);
+            var validationResults = EdiValidator.Create("EdiWeave.Xsd").Validate(message);
 
             // ASSERT
             Assert.IsNotNull(validationResults);
@@ -91,8 +91,8 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithDefaultUna()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_DefaultUNA.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.Edifact_INVOIC_D00A.xml";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_DefaultUNA.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.Edifact_INVOIC_D00A.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
@@ -115,8 +115,8 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithNonDefaultUna()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_NonDefaultSeparators.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.Edifact_INVOIC_D00A.xml";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_NonDefaultSeparators.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.Edifact_INVOIC_D00A.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
@@ -139,8 +139,8 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithLf()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_LF.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.Edifact_INVOIC_D00A.xml";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_LF.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.Edifact_INVOIC_D00A.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
@@ -163,8 +163,8 @@ namespace EdiFabric.Tests
         public void TestGenerateWithNonDefaultSeparators()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A.txt";
-            const string expectedResult = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_NonDefaultSeparators.txt";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A.txt";
+            const string expectedResult = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_NonDefaultSeparators.txt";
             var interchange = TestHelper.GenerateEdifact<M_INVOIC>(sample);
             var defaultSeparators = Separators.DefaultEdifact();
             var newSeparators = new Separators(defaultSeparators.Segment,
@@ -182,7 +182,7 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithError()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_BadSegment.txt";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_BadSegment.txt";
 
             // ACT
             var ediItems = TestHelper.ParseEdifact(sample).ToList();
@@ -199,8 +199,8 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithGroup()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_Group.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.Edifact_INVOIC_D00A.xml";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_Group.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.Edifact_INVOIC_D00A.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
@@ -223,8 +223,8 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithGroupAndMultipleMessages()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_GroupMultipleMessages.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.Edifact_INVOIC_D00A.xml";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_GroupMultipleMessages.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.Edifact_INVOIC_D00A.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
@@ -251,8 +251,8 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithMultipleGroups()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_MultipleGroups.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.Edifact_INVOIC_D00A.xml";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_MultipleGroups.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.Edifact_INVOIC_D00A.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
@@ -279,8 +279,8 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithMultipleMessages()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_MultipleMessages.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.Edifact_INVOIC_D00A.xml";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_MultipleMessages.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.Edifact_INVOIC_D00A.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
@@ -307,8 +307,8 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithEscapedSegmentTerminator()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_EscapedSegmentTerminator.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.Edifact_INVOIC_D00A_EscapedSegmentTerminator.xml";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_EscapedSegmentTerminator.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.Edifact_INVOIC_D00A_EscapedSegmentTerminator.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
@@ -331,7 +331,7 @@ namespace EdiFabric.Tests
         public void TestGenerateWithEscapedSegmentTerminator()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_EscapedSegmentTerminator.txt";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_EscapedSegmentTerminator.txt";
             var interchange = TestHelper.GenerateEdifact<M_INVOIC>(sample);
 
             // ACT
@@ -345,7 +345,7 @@ namespace EdiFabric.Tests
         public void TestGenerateWithRepeatingSegment()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_RepeatingSegment.txt";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_RepeatingSegment.txt";
             var interchange = TestHelper.GenerateEdifact<M_INVOIC>(sample);
 
             // ACT
@@ -359,8 +359,8 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithEscapedEscape()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_EscapedEscape.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.Edifact_INVOIC_D00A_EscapedEscape.xml";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_EscapedEscape.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.Edifact_INVOIC_D00A_EscapedEscape.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
@@ -383,7 +383,7 @@ namespace EdiFabric.Tests
         public void TestGenerateWithEscapedEscape()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_EscapedEscape.txt";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_EscapedEscape.txt";
             var interchange = TestHelper.GenerateEdifact<M_INVOIC>(sample);
 
             // ACT
@@ -397,7 +397,7 @@ namespace EdiFabric.Tests
         public void TestGenerateWithTrailingSeparator()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_TrailingSeparator.txt";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_TrailingSeparator.txt";
             var interchange = TestHelper.GenerateEdifact<M_INVOIC>(sample);
 
             // ACT
@@ -411,8 +411,8 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithRepeatingDataElement()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_RepeatingDataElement.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.Edifact_INVOIC_D00A_RepeatingDataElement.xml";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_RepeatingDataElement.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.Edifact_INVOIC_D00A_RepeatingDataElement.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
@@ -435,7 +435,7 @@ namespace EdiFabric.Tests
         public void TestGenerateWithRepeatingDataElement()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_RepeatingDataElement.txt";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_RepeatingDataElement.txt";
             var interchange = TestHelper.GenerateEdifact<M_INVOIC>(sample);
 
             // ACT
@@ -449,8 +449,8 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithEscapedRepetiton()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_EscapedRepetition.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.Edifact_INVOIC_D00A_EscapedRepetition.xml";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_EscapedRepetition.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.Edifact_INVOIC_D00A_EscapedRepetition.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
@@ -473,7 +473,7 @@ namespace EdiFabric.Tests
         public void TestGenerateWithEscapedRepetiton()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_EscapedRepetition.txt";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_EscapedRepetition.txt";
             var interchange = TestHelper.GenerateEdifact<M_INVOIC>(sample);
 
             // ACT
@@ -487,7 +487,7 @@ namespace EdiFabric.Tests
         public void TestGenerateWithBom()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_BOM.txt";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_BOM.txt";
             var interchange = TestHelper.GenerateEdifact<M_INVOIC>(sample);
 
             // ACT
@@ -501,10 +501,10 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithHeaders()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_Group.txt";
-            const string expectedGroup = "EdiFabric.Tests.Xml.Edifact_Group.xml";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_Group.txt";
+            const string expectedGroup = "EdiWeave.Tests.Xml.Edifact_Group.xml";
             var expectedXmlGroup = XElement.Load(TestHelper.Load(expectedGroup));
-            const string expectedInterchange = "EdiFabric.Tests.Xml.Edifact_Interchange.xml";
+            const string expectedInterchange = "EdiWeave.Tests.Xml.Edifact_Interchange.xml";
             var expectedXmlInterchange = XElement.Load(TestHelper.Load(expectedInterchange));
 
             // ACT
@@ -530,8 +530,8 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithTrailingBlanks()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_TrailingBlanks.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.Edifact_INVOIC_D00A.xml";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_TrailingBlanks.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.Edifact_INVOIC_D00A.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
@@ -554,12 +554,12 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithMultipleInterchange()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_MultipleInterchange.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.Edifact_INVOIC_D00A.xml";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_MultipleInterchange.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.Edifact_INVOIC_D00A.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
-            const string expectedInterchange = "EdiFabric.Tests.Xml.Edifact_Interchange.xml";
+            const string expectedInterchange = "EdiWeave.Tests.Xml.Edifact_Interchange.xml";
             var expectedXmlInterchange = XElement.Load(TestHelper.Load(expectedInterchange));
-            const string expectedInterchange2 = "EdiFabric.Tests.Xml.Edifact_Interchange2.xml";
+            const string expectedInterchange2 = "EdiWeave.Tests.Xml.Edifact_Interchange2.xml";
             var expectedXmlInterchange2 = XElement.Load(TestHelper.Load(expectedInterchange2));
 
             // ACT
@@ -592,7 +592,7 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithInvalidTrailers()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_InvalidTrailers.txt";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_InvalidTrailers.txt";
 
             // ACT
             var ediItems = TestHelper.ParseEdifact(sample).ToList();
@@ -610,7 +610,7 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithInvalidHeader()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_InvalidHeader.txt";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_InvalidHeader.txt";
 
             // ACT
             var ediItems = TestHelper.ParseEdifact(sample).ToList();
@@ -623,7 +623,7 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithInvalidSegment()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_InvalidSegment.txt";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_InvalidSegment.txt";
 
             // ACT
             var ediItems = TestHelper.ParseEdifact(sample).ToList();
@@ -641,7 +641,7 @@ namespace EdiFabric.Tests
         public void TestGenerateGroup()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_Group.txt";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_Group.txt";
             var interchange = TestHelper.GenerateEdifact<M_INVOIC>(sample);
 
             // ACT
@@ -655,12 +655,12 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithRulesAssemblyName()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.Edifact_INVOIC_D00A.xml";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.Edifact_INVOIC_D00A.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
-            var ediItems = TestHelper.ParseEdifact(sample, null, "EdiFabric.Rules").ToList();
+            var ediItems = TestHelper.ParseEdifact(sample, null, "EdiWeave.Rules").ToList();
 
             // ASSERT
             Assert.IsNotNull(ediItems);
@@ -680,11 +680,11 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithGroupRead()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_MultipleGroups.txt";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_MultipleGroups.txt";
             var ediItems = new List<object>();
 
             // ACT
-            using (var ediReader = EdifactReader.Create(TestHelper.Load(sample), "EdiFabric.Rules"))
+            using (var ediReader = EdifactReader.Create(TestHelper.Load(sample), "EdiWeave.Rules"))
             {
                 while (ediReader.Read())
                 {
@@ -705,11 +705,11 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithInterchangeRead()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_MultipleInterchange.txt";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_MultipleInterchange.txt";
             var ediItems = new List<object>();
 
             // ACT
-            using (var ediReader = EdifactReader.Create(TestHelper.Load(sample), "EdiFabric.Rules"))
+            using (var ediReader = EdifactReader.Create(TestHelper.Load(sample), "EdiWeave.Rules"))
             {
                 while (ediReader.Read())
                 {
@@ -732,11 +732,11 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithMissingGroupTrailer()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_MissingGroupTrailer.txt";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_MissingGroupTrailer.txt";
             var ediItems = new List<object>();
 
             // ACT
-            using (var ediReader = EdifactReader.Create(TestHelper.Load(sample), "EdiFabric.Rules"))
+            using (var ediReader = EdifactReader.Create(TestHelper.Load(sample), "EdiWeave.Rules"))
             {
                 while (ediReader.Read())
                 {
@@ -757,11 +757,11 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithMissingInterchangeTrailer()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_MissingInterchangeTrailer.txt";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_MissingInterchangeTrailer.txt";
             var ediItems = new List<object>();
 
             // ACT
-            using (var ediReader = EdifactReader.Create(TestHelper.Load(sample), "EdiFabric.Rules"))
+            using (var ediReader = EdifactReader.Create(TestHelper.Load(sample), "EdiWeave.Rules"))
             {
                 while (ediReader.Read())
                 {
@@ -782,10 +782,10 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithValidAndInvalidMessageRead()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_ValidAndInvalidMessage.txt";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_ValidAndInvalidMessage.txt";
 
             // ACT
-            using (var ediReader = EdifactReader.Create(TestHelper.Load(sample), "EdiFabric.Rules"))
+            using (var ediReader = EdifactReader.Create(TestHelper.Load(sample), "EdiWeave.Rules"))
             {
                 var ediItems = ediReader.ReadToEnd().ToList();
 
@@ -804,8 +804,8 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithBlankRepetition()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_BlankRepetition.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.Edifact_INVOIC_D00A.xml";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_BlankRepetition.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.Edifact_INVOIC_D00A.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
@@ -828,8 +828,8 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithMultipleInvalidInterchanges()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_MultipleInvalidInterchanges.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.Edifact_INVOIC_D00A.xml";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_MultipleInvalidInterchanges.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.Edifact_INVOIC_D00A.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
@@ -856,8 +856,8 @@ namespace EdiFabric.Tests
         public void TestParseEdifactWithMultipleInvalidMessages()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.Edifact_INVOIC_D00A_MultipleInvalidMessages.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.Edifact_INVOIC_D00A_Probe.xml";
+            const string sample = "EdiWeave.Tests.Edi.Edifact_INVOIC_D00A_MultipleInvalidMessages.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.Edifact_INVOIC_D00A_Probe.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
@@ -883,13 +883,13 @@ namespace EdiFabric.Tests
         public void TestValidationRules()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Xml.Edifact_INVOIC_D00A_Validation.xml";
+            const string sample = "EdiWeave.Tests.Xml.Edifact_INVOIC_D00A_Validation.xml";
             var obj = TestHelper.Deserialize<M_INVOIC>(TestHelper.Load(sample));
-            const string expectedResult = "EdiFabric.Tests.Xml.Edifact_INVOIC_D00A_ValidationExpected.xml";
+            const string expectedResult = "EdiWeave.Tests.Xml.Edifact_INVOIC_D00A_ValidationExpected.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
-            var error = EdiValidator.Create("EdiFabric.Xsd").Validate(obj);
+            var error = EdiValidator.Create("EdiWeave.Xsd").Validate(obj);
 
             // ASSERT
             Assert.IsNotNull(error);

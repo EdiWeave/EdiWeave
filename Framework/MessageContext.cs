@@ -60,7 +60,7 @@ namespace EdiWeave.Framework
         /// <param name="version">The message version.</param>
         /// <param name="format">The message format.</param>
         /// <param name="rulesAssembly">The delegate to return the assembly containing the EDI classes.</param>
-        /// <param name="rulesNamespacePrefix">The delegate to return the namespace prefix for the EDI classes. The default is EdiFabric.Rules.</param>
+        /// <param name="rulesNamespacePrefix">The delegate to return the namespace prefix for the EDI classes. The default is EdiWeave.Rules.</param>
         public MessageContext(string tag, string controlNumber, string version, string format,
             Func<MessageContext, Assembly> rulesAssembly, Func<MessageContext, string> rulesNamespacePrefix)
         {

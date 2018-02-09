@@ -10,7 +10,7 @@ using EdiWeave.Framework.Validation;
 using EdiWeave.Rules.X12002040810;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace EdiFabric.Tests
+namespace EdiWeave.Tests
 {
     [TestClass]
     public class TestX12
@@ -19,8 +19,8 @@ namespace EdiFabric.Tests
         public void TestParseX12()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.X12_810_00204.xml";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.X12_810_00204.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
@@ -43,7 +43,7 @@ namespace EdiFabric.Tests
         public void TestGenerate()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204.txt";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204.txt";
             var interchange = TestHelper.GenerateX12<M_810>(sample);
 
             // ACT
@@ -57,11 +57,11 @@ namespace EdiFabric.Tests
         public void TestParseX12WithValidationFailure()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204.txt";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204.txt";
 
             // ACT
             var message = TestHelper.ParseX12(sample).OfType<M_810>().Single();
-            var validationResults = EdiValidator.Create("EdiFabric.Xsd").Validate(message);
+            var validationResults = EdiValidator.Create("EdiWeave.Xsd").Validate(message);
 
             // ASSERT
             Assert.IsNotNull(validationResults);
@@ -73,11 +73,11 @@ namespace EdiFabric.Tests
         public void TestParseX12WithValidation()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_Valid.txt";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_Valid.txt";
 
             // ACT
             var message = TestHelper.ParseX12(sample).OfType<M_810>().Single();
-            var validationResults = EdiValidator.Create("EdiFabric.Xsd").Validate(message);
+            var validationResults = EdiValidator.Create("EdiWeave.Xsd").Validate(message);
 
             // ASSERT
             Assert.IsNotNull(validationResults);
@@ -90,22 +90,22 @@ namespace EdiFabric.Tests
         public void TestParseX12WithRepetitionSeparator()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_RepetitionSeparator.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.X12_810_00204_RepetitionSeparator.xml";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_RepetitionSeparator.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.X12_810_00204_RepetitionSeparator.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
-            var ediItems = TestHelper.ParseX12(sample, null, null, "EdiFabric.Rules.Rep").ToList();
+            var ediItems = TestHelper.ParseX12(sample, null, null, "EdiWeave.Rules.Rep").ToList();
 
             // ASSERT
             Assert.IsNotNull(ediItems);
             Assert.IsNotNull(ediItems.OfType<S_ISA>().SingleOrDefault());
             Assert.IsNotNull(ediItems.OfType<S_GS>().SingleOrDefault());
-            Assert.IsNotNull(ediItems.OfType<EdiWeave.Rules.Rep.X12002040810.M_810>().SingleOrDefault());
+            Assert.IsNotNull(ediItems.OfType<Rules.Rep.X12002040810.M_810>().SingleOrDefault());
             Assert.IsNotNull(ediItems.OfType<S_GE>().SingleOrDefault());
             Assert.IsNotNull(ediItems.OfType<S_IEA>().SingleOrDefault());
             Assert.IsNull(ediItems.OfType<ParsingException>().SingleOrDefault());
-            var parsedXml = TestHelper.Serialize(ediItems.OfType<EdiWeave.Rules.Rep.X12002040810.M_810>().Single());
+            var parsedXml = TestHelper.Serialize(ediItems.OfType<Rules.Rep.X12002040810.M_810>().Single());
             Assert.IsNotNull(parsedXml.Root);
             Assert.AreEqual(parsedXml.Root.ToString(), expectedXml.ToString());
         }
@@ -114,8 +114,8 @@ namespace EdiFabric.Tests
         public void TestGenerateWithRepetitionSeparator()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_RepetitionSeparator.txt";
-            var interchange = TestHelper.GenerateX12<EdiWeave.Rules.Rep.X12002040810.M_810>(sample, "EdiFabric.Rules.Rep");
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_RepetitionSeparator.txt";
+            var interchange = TestHelper.GenerateX12<Rules.Rep.X12002040810.M_810>(sample, "EdiWeave.Rules.Rep");
 
             // ACT
             var defaultSeparators = Separators.DefaultX12();
@@ -131,8 +131,8 @@ namespace EdiFabric.Tests
         public void TestGenerateWithDuplicateSeparator()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_RepetitionSeparator.txt";
-            var interchange = TestHelper.GenerateX12<EdiWeave.Rules.Rep.X12002040810.M_810>(sample, "EdiFabric.Rules.Rep");
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_RepetitionSeparator.txt";
+            var interchange = TestHelper.GenerateX12<Rules.Rep.X12002040810.M_810>(sample, "EdiWeave.Rules.Rep");
 
             // ACT
             var defaultSeparators = Separators.DefaultX12();
@@ -148,8 +148,8 @@ namespace EdiFabric.Tests
         public void TestParseX12WithSegmentSeparatorLf()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_SegmentSeparatorLF.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.X12_810_00204.xml";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_SegmentSeparatorLF.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.X12_810_00204.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
@@ -172,8 +172,8 @@ namespace EdiFabric.Tests
         public void TestParseX12WithLf()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_LF.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.X12_810_00204.xml";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_LF.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.X12_810_00204.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
@@ -196,7 +196,7 @@ namespace EdiFabric.Tests
         public void TestGenerateWithSegmentSeparatorLf()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_SegmentSeparatorLF.txt";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_SegmentSeparatorLF.txt";
             var interchange = TestHelper.GenerateX12<M_810>(sample);
 
             // ACT
@@ -213,7 +213,7 @@ namespace EdiFabric.Tests
         public void TestParseX12WithError()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_BadSegment.txt";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_BadSegment.txt";
 
             // ACT
             var ediItems = TestHelper.ParseX12(sample).ToList();
@@ -230,8 +230,8 @@ namespace EdiFabric.Tests
         public void TestParseX12WithMultipleGroups()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_MultipleGroups.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.X12_810_00204.xml";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_MultipleGroups.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.X12_810_00204.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
@@ -258,8 +258,8 @@ namespace EdiFabric.Tests
         public void TestParseX12WithMultipleMessages()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_MultipleMessages.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.X12_810_00204.xml";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_MultipleMessages.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.X12_810_00204.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
@@ -286,7 +286,7 @@ namespace EdiFabric.Tests
         public void TestGenerateWithBom()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_BOM.txt";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_BOM.txt";
             var interchange = TestHelper.GenerateX12<M_810>(sample);
 
             // ACT
@@ -300,10 +300,10 @@ namespace EdiFabric.Tests
         public void TestParseX12WithHeaders()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204.txt";
-            const string expectedGroup = "EdiFabric.Tests.Xml.X12_Group.xml";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204.txt";
+            const string expectedGroup = "EdiWeave.Tests.Xml.X12_Group.xml";
             var expectedXmlGroup = XElement.Load(TestHelper.Load(expectedGroup));
-            const string expectedInterchange = "EdiFabric.Tests.Xml.X12_Interchange.xml";
+            const string expectedInterchange = "EdiWeave.Tests.Xml.X12_Interchange.xml";
             var expectedXmlInterchange = XElement.Load(TestHelper.Load(expectedInterchange),
                 LoadOptions.PreserveWhitespace);
 
@@ -330,8 +330,8 @@ namespace EdiFabric.Tests
         public void TestParseX12WithTrailingBlanks()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_TrailingBlanks.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.X12_810_00204.xml";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_TrailingBlanks.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.X12_810_00204.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
@@ -354,13 +354,13 @@ namespace EdiFabric.Tests
         public void TestParseX12WithMultipleInterchange()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_MultipleInterchanges.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.X12_810_00204.xml";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_MultipleInterchanges.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.X12_810_00204.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
-            const string expectedInterchange = "EdiFabric.Tests.Xml.X12_Interchange.xml";
+            const string expectedInterchange = "EdiWeave.Tests.Xml.X12_Interchange.xml";
             var expectedXmlInterchange = XElement.Load(TestHelper.Load(expectedInterchange),
                 LoadOptions.PreserveWhitespace);
-            const string expectedInterchange2 = "EdiFabric.Tests.Xml.X12_Interchange2.xml";
+            const string expectedInterchange2 = "EdiWeave.Tests.Xml.X12_Interchange2.xml";
             var expectedXmlInterchange2 = XElement.Load(TestHelper.Load(expectedInterchange2),
                 LoadOptions.PreserveWhitespace);
 
@@ -395,7 +395,7 @@ namespace EdiFabric.Tests
         public void TestParseX12WithInvalidTrailers()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_InvalidTrailers.txt";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_InvalidTrailers.txt";
 
             // ACT
             var ediItems = TestHelper.ParseX12(sample).ToList();
@@ -413,7 +413,7 @@ namespace EdiFabric.Tests
         public void TestParseX12WithInvalidHeader()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_InvalidHeader.txt";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_InvalidHeader.txt";
 
             // ACT
             var ediItems = TestHelper.ParseX12(sample).ToList();
@@ -426,7 +426,7 @@ namespace EdiFabric.Tests
         public void TestParseX12WithInvalidSegment()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_InvalidSegment.txt";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_InvalidSegment.txt";
 
             // ACT
             var ediItems = TestHelper.ParseX12(sample).ToList();
@@ -443,12 +443,12 @@ namespace EdiFabric.Tests
         public void TestParseX12WithRulesAssemblyName()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.X12_810_00204.xml";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.X12_810_00204.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
-            var ediItems = TestHelper.ParseX12(sample, null, "EdiFabric.Rules").ToList();
+            var ediItems = TestHelper.ParseX12(sample, null, "EdiWeave.Rules").ToList();
 
             // ASSERT
             Assert.IsNotNull(ediItems);
@@ -467,11 +467,11 @@ namespace EdiFabric.Tests
         public void TestParseX12WithGroupRead()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_MultipleGroups.txt";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_MultipleGroups.txt";
             var ediItems = new List<object>();
 
             // ACT
-            using (var ediReader = X12Reader.Create(TestHelper.Load(sample), "EdiFabric.Rules"))
+            using (var ediReader = X12Reader.Create(TestHelper.Load(sample), "EdiWeave.Rules"))
             {
                 while (ediReader.Read())
                 {
@@ -492,11 +492,11 @@ namespace EdiFabric.Tests
         public void TestParseX12WithInterchangeRead()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_MultipleInterchanges.txt";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_MultipleInterchanges.txt";
             var ediItems = new List<object>();
 
             // ACT
-            using (var ediReader = X12Reader.Create(TestHelper.Load(sample), "EdiFabric.Rules"))
+            using (var ediReader = X12Reader.Create(TestHelper.Load(sample), "EdiWeave.Rules"))
             {
                 while (ediReader.Read())
                 {
@@ -519,11 +519,11 @@ namespace EdiFabric.Tests
         public void TestParseX12WithMissingGroupTrailer()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_MissingGroupTrailer.txt";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_MissingGroupTrailer.txt";
             var ediItems = new List<object>();
 
             // ACT
-            using (var ediReader = X12Reader.Create(TestHelper.Load(sample), "EdiFabric.Rules"))
+            using (var ediReader = X12Reader.Create(TestHelper.Load(sample), "EdiWeave.Rules"))
             {
                 while (ediReader.Read())
                 {
@@ -544,11 +544,11 @@ namespace EdiFabric.Tests
         public void TestParseX12WithMissingInterchangeTrailer()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_MissingInterchangeTrailer.txt";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_MissingInterchangeTrailer.txt";
             var ediItems = new List<object>();
 
             // ACT
-            using (var ediReader = X12Reader.Create(TestHelper.Load(sample), "EdiFabric.Rules"))
+            using (var ediReader = X12Reader.Create(TestHelper.Load(sample), "EdiWeave.Rules"))
             {
                 while (ediReader.Read())
                 {
@@ -569,10 +569,10 @@ namespace EdiFabric.Tests
         public void TestParseX12WithValidAndInvalidMessageRead()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_ValidAndInvalidMessage.txt";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_ValidAndInvalidMessage.txt";
 
             // ACT
-            using (var ediReader = X12Reader.Create(TestHelper.Load(sample), "EdiFabric.Rules"))
+            using (var ediReader = X12Reader.Create(TestHelper.Load(sample), "EdiWeave.Rules"))
             {
                 var ediItems = ediReader.ReadToEnd().ToList();
 
@@ -590,10 +590,10 @@ namespace EdiFabric.Tests
         public void TestParseX12WithVersionFromSt()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_VersionFromSt.txt";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_VersionFromSt.txt";
 
             // ACT
-            using (var ediReader = X12Reader.Create(TestHelper.Load(sample), "EdiFabric.Rules"))
+            using (var ediReader = X12Reader.Create(TestHelper.Load(sample), "EdiWeave.Rules"))
             {
                 var ediItems = ediReader.ReadToEnd().ToList();
 
@@ -611,8 +611,8 @@ namespace EdiFabric.Tests
         public void TestParseX12WithNoRepetition()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_NoRepetition.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.X12_810_00204_NoRepetition.xml";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_NoRepetition.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.X12_810_00204_NoRepetition.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
@@ -635,8 +635,8 @@ namespace EdiFabric.Tests
         public void TestParseX12WithBlankRepetition()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_BlankRepetition.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.X12_810_00204.xml";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_BlankRepetition.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.X12_810_00204.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
@@ -659,8 +659,8 @@ namespace EdiFabric.Tests
         public void TestParseX12WithMultipleInvalidInterchanges()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_MultipleInvalidInterchanges.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.X12_810_00204.xml";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_MultipleInvalidInterchanges.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.X12_810_00204.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
@@ -686,8 +686,8 @@ namespace EdiFabric.Tests
         public void TestParseX12WithMultipleInvalidIMessages()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_MultipleInvalidMessages.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.X12_810_00204_Probe.xml";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_MultipleInvalidMessages.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.X12_810_00204_Probe.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
@@ -714,13 +714,13 @@ namespace EdiFabric.Tests
         public void TestValidationRules()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Xml.X12_810_00204_Validation.xml";
-            var obj = TestHelper.Deserialize<EdiWeave.Rules.Rep.X12002040810.M_810>(TestHelper.Load(sample));
-            const string expectedResult = "EdiFabric.Tests.Xml.X12_810_00204_ValidationExpected.xml";
+            const string sample = "EdiWeave.Tests.Xml.X12_810_00204_Validation.xml";
+            var obj = TestHelper.Deserialize<Rules.Rep.X12002040810.M_810>(TestHelper.Load(sample));
+            const string expectedResult = "EdiWeave.Tests.Xml.X12_810_00204_ValidationExpected.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT
-            var error = EdiValidator.Create("EdiFabric.Xsd").Validate(obj);
+            var error = EdiValidator.Create("EdiWeave.Xsd").Validate(obj);
 
             // ASSERT
             Assert.IsNotNull(error);
@@ -733,8 +733,8 @@ namespace EdiFabric.Tests
         public void TestParseX12WithTa1()
         {
             // ARRANGE
-            const string sample = "EdiFabric.Tests.Edi.X12_810_00204_TA1.txt";
-            const string expectedResult = "EdiFabric.Tests.Xml.X12_810_00204.xml";
+            const string sample = "EdiWeave.Tests.Edi.X12_810_00204_TA1.txt";
+            const string expectedResult = "EdiWeave.Tests.Xml.X12_810_00204.xml";
             var expectedXml = XElement.Load(TestHelper.Load(expectedResult));
 
             // ACT

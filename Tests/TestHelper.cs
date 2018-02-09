@@ -9,7 +9,7 @@ using System.Xml.Serialization;
 using EdiWeave.Framework.Controls;
 using EdiWeave.Framework.Readers;
 
-namespace EdiFabric.Tests
+namespace EdiWeave.Tests
 {
     internal class TestHelper
     {
@@ -70,7 +70,7 @@ namespace EdiFabric.Tests
             string rulesAssembly = null, string rulesNameSpacePrefix = null)
         {
             using (
-                var ediReader = X12Reader.Create(Load(sample),rulesAssembly ?? "EdiFabric.Rules", rulesNameSpacePrefix ?? "EdiFabric.Rules",
+                var ediReader = X12Reader.Create(Load(sample),rulesAssembly ?? "EdiWeave.Rules", rulesNameSpacePrefix ?? "EdiWeave.Rules",
                         encoding ?? Encoding.Default))
             {
                 return ediReader.ReadToEnd().ToList();
@@ -81,7 +81,7 @@ namespace EdiFabric.Tests
             string rulesAssembly = null, string rulesNameSpacePrefix = null)
         {
             using (
-                var ediReader = EdifactReader.Create(Load(sample),rulesAssembly ?? "EdiFabric.Rules", rulesNameSpacePrefix ?? "EdiFabric.Rules",
+                var ediReader = EdifactReader.Create(Load(sample),rulesAssembly ?? "EdiWeave.Rules", rulesNameSpacePrefix ?? "EdiWeave.Rules",
                         encoding ?? Encoding.Default))
             {
                 return ediReader.ReadToEnd().ToList();

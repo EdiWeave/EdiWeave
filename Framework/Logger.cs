@@ -33,7 +33,7 @@ namespace EdiWeave.Framework
         {
             try
             {
-                LogFile = ConfigurationManager.AppSettings["EdiFabric.LogFile"];
+                LogFile = ConfigurationManager.AppSettings["EdiWeave.LogFile"];
                 if (!String.IsNullOrWhiteSpace(LogFile))
                     File.Delete(LogFile);
             }

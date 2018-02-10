@@ -5,5 +5,6 @@ EdiWeave is a hard fork of the now close-souce library EdiFabric. It was a mirro
 
 Supported frameworks:
 - .NET Framework 4.5
+- .NET Standard 2.0
 
 EdiFabric has migrated from CodePlex, for old discussions and issues please go to http://edifabric.codeplex.com/.

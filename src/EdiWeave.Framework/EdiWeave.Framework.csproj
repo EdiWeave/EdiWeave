@@ -14,7 +14,7 @@
     <TargetFrameworks>net45;netstandard1.6;netstandard2.0;netcoreapp1.1</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="../Core/Core.csproj" />
+    <ProjectReference Include="..\EdiWeave.Core\EdiWeave.Core.csproj" />
   </ItemGroup>
 </Project>
 

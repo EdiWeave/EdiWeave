@@ -1,3 +1,8 @@
+![](./Assets/logo.png)
+
+[![Nuget Package](https://img.shields.io/nuget/v/EdiWeave.Framework.svg?maxAge=86400&style=flat-square)](https://www.nuget.org/packages/EdiWeave.Framework/) 
+[![Build status](https://img.shields.io/appveyor/ci/Silvenga/ediweave.svg?maxAge=86400&style=flat-square)](https://ci.appveyor.com/project/Silvenga/ediweave)
+
 > An **open source** framework that empowers developers and businesses interested in enabling their software systems with EDI capabilities and can be integrated into your business applications.
 > \- Originally from EdiFrabric
 

@@ -36,10 +36,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+      <HintPath>..\..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+      <HintPath>..\..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>
@@ -56,27 +56,27 @@
     <Compile Include="UnitTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core\Core.csproj">
-      <Project>{6ce3310f-1dc2-4074-8559-27c5adb46fe7}</Project>
-      <Name>Core</Name>
+    <ProjectReference Include="..\..\src\EdiWeave.Core\EdiWeave.Core.csproj">
+      <Project>{235a10b1-bb49-4e27-b993-69179253076f}</Project>
+      <Name>EdiWeave.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Framework\Framework.csproj">
-      <Project>{d39915c6-da36-406f-828e-4c8c2e299324}</Project>
-      <Name>Framework</Name>
+    <ProjectReference Include="..\..\src\EdiWeave.Framework\EdiWeave.Framework.csproj">
+      <Project>{665e6ed9-b16a-4b08-8f31-58e2436727dc}</Project>
+      <Name>EdiWeave.Framework</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Rules.X12002040.Eval\Rules.X12002040.Eval.csproj">
+    <ProjectReference Include="..\..\rules\Rules.X12002040.Eval\Rules.X12002040.Eval.csproj">
       <Project>{395dfe7d-2676-47b5-bcc9-878ee6f8cf12}</Project>
       <Name>Rules.X12002040.Eval</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Rules.X12002040.NoValidation\Rules.X12002040.NoValidation.csproj">
+    <ProjectReference Include="..\..\rules\Rules.X12002040.NoValidation\Rules.X12002040.NoValidation.csproj">
       <Project>{1928fb85-d646-466a-8e6b-ff3c3a6cbce5}</Project>
       <Name>Rules.X12002040.NoValidation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Rules.X12002040.Rep\Rules.X12002040.Rep.csproj">
+    <ProjectReference Include="..\..\rules\Rules.X12002040.Rep\Rules.X12002040.Rep.csproj">
       <Project>{8ccc6ec4-a522-463f-bb5d-1c7c07a87460}</Project>
       <Name>Rules.X12002040.Rep</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Rules.X12002040\Rules.X12002040.csproj">
+    <ProjectReference Include="..\..\rules\Rules.X12002040\Rules.X12002040.csproj">
       <Project>{1763d12e-5c4d-4270-bbaf-24fb4c289b25}</Project>
       <Name>Rules.X12002040</Name>
     </ProjectReference>
@@ -84,9 +84,6 @@
       <Project>{f66e2275-fae0-4876-8f12-831a2a90c7a7}</Project>
       <Name>UnitTests</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Edi\X12_810_00204.txt" />
@@ -123,6 +120,9 @@
     <EmbeddedResource Include="Edi\X12_810_00204_VersionFromSt.txt" />
     <EmbeddedResource Include="Edi\X12_810_00204_Write.txt" />
     <EmbeddedResource Include="Edi\X12_810_00204_WriteNoPreserveWhitespace.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

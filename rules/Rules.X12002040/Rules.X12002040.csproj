@@ -46,9 +46,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core\Core.csproj">
-      <Project>{6ce3310f-1dc2-4074-8559-27c5adb46fe7}</Project>
-      <Name>Core</Name>
+    <ProjectReference Include="..\..\src\EdiWeave.Core\EdiWeave.Core.csproj">
+      <Project>{235a10b1-bb49-4e27-b993-69179253076f}</Project>
+      <Name>EdiWeave.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

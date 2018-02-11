@@ -1,8 +1,0 @@
-title: Edifabric
-description: The ultimate EDI (EDIFACT, X12, HIPAA) parser for .NET
-google_analytics: 
-show_downloads: true
-theme: jekyll-theme-modernist
-
-gems:
-  - jekyll-mentions

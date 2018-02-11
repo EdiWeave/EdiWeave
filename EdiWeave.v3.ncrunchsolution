@@ -1,6 +1,20 @@
 ﻿<SolutionConfiguration>
   <Settings>
     <AllowParallelTestExecution>True</AllowParallelTestExecution>
+    <MetricsExclusionList>
+      <Value>rules\Rules.EancomD01BEAN3\Rules.EancomD01BEAN3.csproj</Value>
+      <Value>rules\Rules.EdifactD00A\Rules.EdifactD00A.csproj</Value>
+      <Value>rules\Rules.EdifactD00A.Eval\Rules.EdifactD00A.Eval.csproj</Value>
+      <Value>rules\Rules.EdifactD00A.NoValidation\Rules.EdifactD00A.NoValidation.csproj</Value>
+      <Value>rules\Rules.EdifactD00A.Rep\Rules.EdifactD00A.Rep.csproj</Value>
+      <Value>rules\Rules.Hipaa004010\Rules.Hipaa004010.csproj</Value>
+      <Value>rules\Rules.Hipaa005010\Rules.Hipaa005010.csproj</Value>
+      <Value>rules\Rules.Vda\Rules.Vda.csproj</Value>
+      <Value>rules\Rules.X12002040\Rules.X12002040.csproj</Value>
+      <Value>rules\Rules.X12002040.Eval\Rules.X12002040.Eval.csproj</Value>
+      <Value>rules\Rules.X12002040.NoValidation\Rules.X12002040.NoValidation.csproj</Value>
+      <Value>rules\Rules.X12002040.Rep\Rules.X12002040.Rep.csproj</Value>
+    </MetricsExclusionList>
     <SolutionConfigured>True</SolutionConfigured>
   </Settings>
 </SolutionConfiguration>

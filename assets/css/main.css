@@ -1,5 +1,5 @@
 .sec-head {
-    height: 100vh;
+    height: 96vh;
     background-color: #424242;
     color: #FAFAFA;
     background-image: url(overlay.png);
@@ -12,6 +12,15 @@
 
 .sec-head hr {
     border-top: 1px solid rgba(250, 250, 250, .3);
+}
+
+.sec-head .scroll-arrow {
+    position: absolute;
+    bottom: 2em;
+}
+
+.sec-head .scroll-arrow a {
+    color: #FAFAFA;
 }
 
 .sec-download hr {

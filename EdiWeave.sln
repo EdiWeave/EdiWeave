@@ -13,17 +13,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdiWeave.Core", "src\EdiWea
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdiWeave.Framework", "src\EdiWeave.Framework\EdiWeave.Framework.csproj", "{665E6ED9-B16A-4B08-8F31-58E2436727DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "tests\UnitTests\UnitTests.csproj", "{F66E2275-FAE0-4876-8F12-831A2A90C7A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdiWeave.UnitTests", "tests\UnitTests\EdiWeave.UnitTests.csproj", "{F66E2275-FAE0-4876-8F12-831A2A90C7A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.Eancom", "tests\UnitTests.Eancom\UnitTests.Eancom.csproj", "{085CA191-2F38-4633-84E1-92BDD6B9C142}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdiWeave.UnitTests.Eancom", "tests\UnitTests.Eancom\EdiWeave.UnitTests.Eancom.csproj", "{085CA191-2F38-4633-84E1-92BDD6B9C142}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.Edifact", "tests\UnitTests.Edifact\UnitTests.Edifact.csproj", "{F6E80A66-ECA6-46CF-A338-374AB0622523}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdiWeave.UnitTests.Edifact", "tests\UnitTests.Edifact\EdiWeave.UnitTests.Edifact.csproj", "{F6E80A66-ECA6-46CF-A338-374AB0622523}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.Hipaa", "tests\UnitTests.Hipaa\UnitTests.Hipaa.csproj", "{82E0A3B3-A0EB-45FF-99CC-1D7A5BCAEDF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdiWeave.UnitTests.Hipaa", "tests\UnitTests.Hipaa\EdiWeave.UnitTests.Hipaa.csproj", "{82E0A3B3-A0EB-45FF-99CC-1D7A5BCAEDF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.Vda", "tests\UnitTests.Vda\UnitTests.Vda.csproj", "{ED920450-3F20-4B67-924A-9E3FAE6D95E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdiWeave.UnitTests.Vda", "tests\UnitTests.Vda\EdiWeave.UnitTests.Vda.csproj", "{ED920450-3F20-4B67-924A-9E3FAE6D95E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.X12", "tests\UnitTests.X12\UnitTests.X12.csproj", "{1ED7BA28-72F8-42E4-B157-D7D9E8473416}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdiWeave.UnitTests.X12", "tests\UnitTests.X12\EdiWeave.UnitTests.X12.csproj", "{1ED7BA28-72F8-42E4-B157-D7D9E8473416}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rules.EancomD01BEAN3", "rules\Rules.EancomD01BEAN3\Rules.EancomD01BEAN3.csproj", "{344F2698-7A31-4DDB-9053-9F8BA8A53131}"
 EndProject

@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net45</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.1.18" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Edi\*.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\EdiWeave.Core\EdiWeave.Core.csproj" />
+    <ProjectReference Include="..\..\src\EdiWeave.Framework\EdiWeave.Framework.csproj" />
+    <ProjectReference Include="..\..\rules\Rules.Hipaa004010\Rules.Hipaa004010.csproj" />
+    <ProjectReference Include="..\..\rules\Rules.Hipaa005010\Rules.Hipaa005010.csproj" />
+    <ProjectReference Include="..\UnitTests\EdiWeave.UnitTests.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+</Project>

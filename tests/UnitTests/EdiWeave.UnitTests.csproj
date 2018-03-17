@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net45</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Edi\Edifact_INVOIC_D00A.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Edi\*.txt" />
+    <EmbeddedResource Include="Xml\*.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.1.18" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\EdiWeave.Core\EdiWeave.Core.csproj" />
+    <ProjectReference Include="..\..\src\EdiWeave.Framework\EdiWeave.Framework.csproj" />
+    <ProjectReference Include="..\..\rules\Rules.EdifactD00A.Rep\Rules.EdifactD00A.Rep.csproj" />
+    <ProjectReference Include="..\..\rules\Rules.EdifactD00A\Rules.EdifactD00A.csproj" />
+    <ProjectReference Include="..\..\rules\Rules.X12002040.Rep\Rules.X12002040.Rep.csproj" />
+    <ProjectReference Include="..\..\rules\Rules.X12002040\Rules.X12002040.csproj" />
+  </ItemGroup>
+</Project>

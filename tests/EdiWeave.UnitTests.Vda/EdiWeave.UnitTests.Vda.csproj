@@ -13,8 +13,8 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\EdiWeave.Core\EdiWeave.Core.csproj" />
     <ProjectReference Include="..\..\src\EdiWeave.Framework\EdiWeave.Framework.csproj" />
-    <ProjectReference Include="..\..\rules\Rules.EancomD01BEAN3\Rules.EancomD01BEAN3.csproj" />
-    <ProjectReference Include="..\UnitTests\EdiWeave.UnitTests.csproj" />
+    <ProjectReference Include="..\..\rules\Rules.Vda\Rules.Vda.csproj" />
+    <ProjectReference Include="..\EdiWeave.UnitTests\EdiWeave.UnitTests.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

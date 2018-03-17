@@ -13,11 +13,9 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\EdiWeave.Core\EdiWeave.Core.csproj" />
     <ProjectReference Include="..\..\src\EdiWeave.Framework\EdiWeave.Framework.csproj" />
-    <ProjectReference Include="..\..\rules\Rules.EdifactD00A.Eval\Rules.EdifactD00A.Eval.csproj" />
-    <ProjectReference Include="..\..\rules\Rules.EdifactD00A.NoValidation\Rules.EdifactD00A.NoValidation.csproj" />
-    <ProjectReference Include="..\..\rules\Rules.EdifactD00A.Rep\Rules.EdifactD00A.Rep.csproj" />
-    <ProjectReference Include="..\..\rules\Rules.EdifactD00A\Rules.EdifactD00A.csproj" />
-    <ProjectReference Include="..\UnitTests\EdiWeave.UnitTests.csproj" />
+    <ProjectReference Include="..\..\rules\Rules.Hipaa004010\Rules.Hipaa004010.csproj" />
+    <ProjectReference Include="..\..\rules\Rules.Hipaa005010\Rules.Hipaa005010.csproj" />
+    <ProjectReference Include="..\EdiWeave.UnitTests\EdiWeave.UnitTests.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

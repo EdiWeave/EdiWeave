@@ -13,9 +13,11 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\EdiWeave.Core\EdiWeave.Core.csproj" />
     <ProjectReference Include="..\..\src\EdiWeave.Framework\EdiWeave.Framework.csproj" />
-    <ProjectReference Include="..\..\rules\Rules.Hipaa004010\Rules.Hipaa004010.csproj" />
-    <ProjectReference Include="..\..\rules\Rules.Hipaa005010\Rules.Hipaa005010.csproj" />
-    <ProjectReference Include="..\UnitTests\EdiWeave.UnitTests.csproj" />
+    <ProjectReference Include="..\..\rules\Rules.X12002040.Eval\Rules.X12002040.Eval.csproj" />
+    <ProjectReference Include="..\..\rules\Rules.X12002040.NoValidation\Rules.X12002040.NoValidation.csproj" />
+    <ProjectReference Include="..\..\rules\Rules.X12002040.Rep\Rules.X12002040.Rep.csproj" />
+    <ProjectReference Include="..\..\rules\Rules.X12002040\Rules.X12002040.csproj" />
+    <ProjectReference Include="..\EdiWeave.UnitTests\EdiWeave.UnitTests.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

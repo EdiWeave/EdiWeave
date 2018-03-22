@@ -128,6 +128,7 @@ namespace EdiWeave.Tests
         }
 
         [TestMethod]
+        [ExpectedException(typeof(Exception))]
         public void TestGenerateWithDuplicateSeparator()
         {
             // ARRANGE
@@ -138,10 +139,8 @@ namespace EdiWeave.Tests
             var defaultSeparators = Separators.DefaultX12();
             var newSeparators = new Separators(defaultSeparators.Segment,
                 '>', defaultSeparators.DataElement, '>', null);
-            var ediSegments = interchange.GenerateEdi(newSeparators);
 
-            // ASSERT
-            Assert.AreEqual(TestHelper.AsString(sample), TestHelper.AsString(ediSegments, Environment.NewLine));
+            // ASSERT -- Expect exception
         }
 
         [TestMethod]

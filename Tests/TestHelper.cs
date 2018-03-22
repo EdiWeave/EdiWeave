@@ -23,9 +23,11 @@ namespace EdiWeave.Tests
             using (var reader = new StreamReader(Load(qualifiedFileName), Encoding.Default))
             {
                 if (withLfCr)
+                {
                     return reader.ReadToEnd().Replace("\r\n", "\n").Replace("\n", "\r\n");
+                }
 
-                return reader.ReadToEnd();
+                return reader.ReadToEnd().Replace("\r\n", "\n");
             }
         }
 

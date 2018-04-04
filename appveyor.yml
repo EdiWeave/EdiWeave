@@ -1,0 +1,10 @@
+version: 1.0.{build}
+image: Visual Studio 2017
+build_script:
+- ps: >-
+    nuget restore
+    dotnet build
+
+    dotnet pack Framework\Framework.csproj
+artifacts:
+- path: Framework\bin\Debug\*.nupkg

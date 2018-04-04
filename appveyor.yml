@@ -2,7 +2,7 @@ version: 1.0.{build}
 image: Visual Studio 2017
 build_script:
 - ps: >-
-    nuget restore
+    nuget restore EdiWeave.sln
     dotnet build
 
     dotnet pack Framework\Framework.csproj

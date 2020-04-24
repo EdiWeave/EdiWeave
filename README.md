@@ -43,3 +43,5 @@ Install-Package EdiWeave.Framework
 ```
 
 Then simply find and replace the strings `EdiFabric` with `EdiWeave`.
+
+**Note**: If you are using the latest version of the existing class-based definitions, please find and remove the `Id` property as well as the attributes adorning it. Failure to do so will cause parsing errors.

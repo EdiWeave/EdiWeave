@@ -168,6 +168,8 @@ namespace EdiWeave.Framework.Readers
 
                 if (Separators.Escape.HasValue &&
                     line.EndsWith(string.Concat(Separators.Escape.Value, Separators.Segment),
+                        StringComparison.Ordinal) &&
+                    !line.EndsWith(string.Concat(Separators.Escape.Value, Separators.Escape.Value, Separators.Segment),
                         StringComparison.Ordinal))
                     continue;
 

@@ -114,14 +114,11 @@ namespace EdiWeave.Framework.Model
             if (name != "HL")
                 return false;
 
-            int fv;
-            int sv;
-
             //  All top level: HL*2**, HL*3**, etc.
-            if (int.TryParse(firstValue, out fv) && fv > 1 && string.IsNullOrEmpty(secondValue))
+            if (int.TryParse(firstValue, out var fv) && fv > 1 && string.IsNullOrEmpty(secondValue))
                 return true;
 
-            if (int.TryParse(secondValue, out sv) && (fv - sv > 1))
+            if (int.TryParse(secondValue, out var sv) && (fv - sv > 1))
                 return true;
 
             return false;

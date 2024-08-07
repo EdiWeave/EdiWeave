@@ -18,13 +18,10 @@ namespace EdiWeave.Framework.Model
 {
     class Loop : ParseNode
     {
-        public Loop(PropertyInfo propertyInfo, GroupAttribute gAttr, object instance = null)
-            : base(propertyInfo.GetGenericType(), propertyInfo.Name, gAttr.Id)
-        {
-            BuildChildren(instance);
-        }
+    public Loop(PropertyInfo propertyInfo, GroupAttribute gAttr, object instance = null)
+        : base(propertyInfo.GetGenericType(), propertyInfo.Name, gAttr.Id) => BuildChildren(instance);
 
-        public Loop(ParseNode parseNode)
+    public Loop(ParseNode parseNode)
             : base(parseNode.TypeInfo, parseNode.Name, parseNode.EdiName)
         {
             parseNode.Parent.InsertChild(parseNode.IndexInParent() + 1, this);

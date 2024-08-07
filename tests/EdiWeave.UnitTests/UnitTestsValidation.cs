@@ -33,8 +33,7 @@ namespace EdiWeave.UnitTests
             }
             var msg = ediItems.OfType<TSINVOICAll>().Single();
 
-            MessageErrorContext result;
-            var validationResult = msg.IsValid(out result);
+            var validationResult = msg.IsValid(out var result);
 
             // ASSERT
             Assert.IsFalse(validationResult);
@@ -111,8 +110,7 @@ namespace EdiWeave.UnitTests
             }
             var msg = ediItems.OfType<TSINVOIC>().Single();
 
-            MessageErrorContext result;
-            var validationResult = msg.IsValid(out result);
+            var validationResult = msg.IsValid(out var result);
 
             // ASSERT
             Assert.IsFalse(validationResult);
@@ -175,8 +173,7 @@ namespace EdiWeave.UnitTests
             }
             var msg = ediItems.OfType<TSINVOIC>().Single();
 
-            MessageErrorContext result;
-            var validationResult = msg.IsValid(out result);
+            var validationResult = msg.IsValid(out var result);
 
             // ASSERT
             Assert.IsFalse(validationResult);
@@ -239,8 +236,7 @@ namespace EdiWeave.UnitTests
             }
             var msg = ediItems.OfType<TSINVOICInvalidAttributes>().Single();
 
-            MessageErrorContext result;
-            msg.IsValid(out result, true);
+            msg.IsValid(out var result, true);
             
             // ASSERT
             Assert.IsFalse(result.HasErrors);
@@ -261,8 +257,7 @@ namespace EdiWeave.UnitTests
             }
             var msg = ediItems.OfType<TSINVOIC>().Single();
 
-            MessageErrorContext result;
-            var validationResult = msg.IsValid(out result);
+            var validationResult = msg.IsValid(out var result);
 
             // ASSERT
             Assert.IsFalse(validationResult);
@@ -331,8 +326,7 @@ namespace EdiWeave.UnitTests
             }
             var msg = ediItems.OfType<TSINVOICNoAttributes>().Single();
 
-            MessageErrorContext result;
-            msg.IsValid(out result, true);
+            msg.IsValid(out var result, true);
 
             // ASSERT
             Assert.IsFalse(result.HasErrors);
@@ -353,8 +347,7 @@ namespace EdiWeave.UnitTests
             }
             var msg = ediItems.OfType<TSINVOIC>().Single();
 
-            MessageErrorContext result;
-            var validationResult = msg.IsValid(out result);
+            var validationResult = msg.IsValid(out var result);
 
             // ASSERT
             Assert.IsFalse(validationResult);
@@ -381,12 +374,11 @@ namespace EdiWeave.UnitTests
             // ARRANGE
             var msg = EdifactHelper.CreateInvoice();
 
-            // ACT           
-            MessageErrorContext errorContext;
-            var result = msg.IsValid(out errorContext, true);
+      // ACT           
+      var result = msg.IsValid(out MessageErrorContext errorContext, true);
 
-            // ASSERT
-            Assert.IsTrue(result);
+      // ASSERT
+      Assert.IsTrue(result);
         }
 
         [TestMethod]
@@ -395,12 +387,11 @@ namespace EdiWeave.UnitTests
             // ARRANGE
             var msg = EdifactHelper.CreateInvoice();
 
-            // ACT           
-            MessageErrorContext errorContext;
-            var result = msg.IsValid(out errorContext);
+      // ACT           
+      var result = msg.IsValid(out MessageErrorContext errorContext);
 
-            // ASSERT
-            Assert.IsFalse(result);
+      // ASSERT
+      Assert.IsFalse(result);
         }
 
         [TestMethod]
@@ -418,8 +409,7 @@ namespace EdiWeave.UnitTests
             }
             var msg = ediItems.OfType<EdiWeave.Rules.EDIFACT_D00A.TSINVOIC>().Single();
 
-            MessageErrorContext result;
-            var validationResult = msg.IsValid(out result);
+            var validationResult = msg.IsValid(out var result);
 
             // ASSERT
             Assert.IsFalse(validationResult);
@@ -443,8 +433,7 @@ namespace EdiWeave.UnitTests
             }
             var msg = ediItems.OfType<EdiWeave.Rules.EDIFACT_D00A.TSINVOIC>().Single();
 
-            MessageErrorContext result;
-            var validationResult = msg.IsValid(out result);
+            var validationResult = msg.IsValid(out var result);
 
             // ASSERT
             Assert.IsFalse(validationResult);
@@ -468,8 +457,7 @@ namespace EdiWeave.UnitTests
             }
             var msg = ediItems.OfType<EdiWeave.Rules.EDIFACT_D00A.TSINVOIC>().Single();
 
-            MessageErrorContext result;
-            var validationResult = msg.IsValid(out result);
+            var validationResult = msg.IsValid(out var result);
 
             // ASSERT
             Assert.IsFalse(validationResult);
@@ -493,8 +481,7 @@ namespace EdiWeave.UnitTests
             }
             var msg = ediItems.OfType<EdiWeave.Rules.EDIFACT_D00A.TSINVOIC>().Single();
 
-            MessageErrorContext result;
-            var validationResult = msg.IsValid(out result);
+            var validationResult = msg.IsValid(out var result);
 
             // ASSERT
             Assert.IsFalse(validationResult);
@@ -518,8 +505,7 @@ namespace EdiWeave.UnitTests
             }
             var msg = ediItems.OfType<EdiWeave.Rules.EDIFACT_D00A.TSINVOIC>().Single();
 
-            MessageErrorContext result;
-            var validationResult = msg.IsValid(out result);
+            var validationResult = msg.IsValid(out var result);
 
             // ASSERT
             Assert.IsFalse(validationResult);

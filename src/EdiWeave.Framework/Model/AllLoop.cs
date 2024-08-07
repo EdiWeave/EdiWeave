@@ -17,13 +17,10 @@ namespace EdiWeave.Framework.Model
 {
     class AllLoop : ParseNode
     {
-        public AllLoop(PropertyInfo propertyInfo, object instance = null)
-            : base(propertyInfo.GetGenericType(), propertyInfo.Name, propertyInfo.Name)
-        {
-            BuildChildren(instance);
-        }
+    public AllLoop(PropertyInfo propertyInfo, object instance = null)
+        : base(propertyInfo.GetGenericType(), propertyInfo.Name, propertyInfo.Name) => BuildChildren(instance);
 
-        public AllLoop(ParseNode parseNode)
+    public AllLoop(ParseNode parseNode)
             : base(parseNode.TypeInfo, parseNode.Name, parseNode.EdiName)
         {
             parseNode.Parent.InsertChild(parseNode.IndexInParent() + 1, this);

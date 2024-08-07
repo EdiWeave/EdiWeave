@@ -20,13 +20,10 @@ namespace EdiWeave.Framework.Model
 {
     class ComplexDataElement : ParseNode
     {
-        public ComplexDataElement(PropertyInfo propertyInfo, CompositeAttribute cAttr, object instance = null)
-            : base(propertyInfo.GetGenericType(), propertyInfo.Name, cAttr.Id)
-        {
-            BuildChildren(instance, true);
-        }
+    public ComplexDataElement(PropertyInfo propertyInfo, CompositeAttribute cAttr, object instance = null)
+        : base(propertyInfo.GetGenericType(), propertyInfo.Name, cAttr.Id) => BuildChildren(instance, true);
 
-        public ComplexDataElement(ParseNode parseNode)
+    public ComplexDataElement(ParseNode parseNode)
             : base(parseNode.TypeInfo, parseNode.Name, parseNode.EdiName)
         {
             parseNode.Parent.InsertChild(parseNode.IndexInParent() + 1, this);

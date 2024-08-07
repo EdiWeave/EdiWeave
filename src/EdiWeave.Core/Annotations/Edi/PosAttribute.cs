@@ -23,13 +23,10 @@ namespace EdiWeave.Core.Annotations.Edi
         /// The position.
         /// </summary>
         public int Pos { get; private set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PosAttribute"/> class.
-        /// </summary>
-        /// <param name="pos">The position.</param>
-        public PosAttribute(int pos)
-        {
-            Pos = pos;
-        }
-    }
+    /// <summary>
+    /// Initializes a new instance of the <see cref="PosAttribute"/> class.
+    /// </summary>
+    /// <param name="pos">The position.</param>
+    public PosAttribute(int pos) => Pos = pos;
+  }
 }

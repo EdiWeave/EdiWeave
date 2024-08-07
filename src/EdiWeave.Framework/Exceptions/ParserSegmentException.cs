@@ -23,15 +23,12 @@ namespace EdiWeave.Framework.Exceptions
         /// The error context.
         /// </summary>
         public DataElementErrorContext ErrorContext { get; set; }
-        
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ParserSegmentException"/> class.
-        /// </summary>
-        /// <param name="errorContext">The data element error context.</param>
-        public ParserSegmentException(DataElementErrorContext errorContext)
-            : base(errorContext.Message)
-        {
-            ErrorContext = errorContext;
-        }
-    }
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="ParserSegmentException"/> class.
+    /// </summary>
+    /// <param name="errorContext">The data element error context.</param>
+    public ParserSegmentException(DataElementErrorContext errorContext)
+        : base(errorContext.Message) => ErrorContext = errorContext;
+  }
 }

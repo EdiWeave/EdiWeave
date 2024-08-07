@@ -73,7 +73,7 @@ namespace EdiWeave.Framework.Readers
                     var isaElements = isa.Split(dataElement);
                     if (isaElements.Length != 16)
                         throw new Exception("ISA is invalid. Too little data elements.");
-                    if (isaElements[15].Count() != 2)
+                    if (isaElements[15].Length != 2)
                         throw new Exception("ISA is invalid. Segment terminator was not found.");
                     var componentDataElement = isaElements[15].First();
                     char? repetitionDataElement = null;
@@ -184,7 +184,7 @@ namespace EdiWeave.Framework.Readers
                 throw new Exception("GS was not found.");
 
             var ediCompositeDataElementsGs = _currentGroupHeader.Value.GetDataElements(Separators);
-            if (ediCompositeDataElementsGs.Count() < 8)
+            if (ediCompositeDataElementsGs.Length < 8)
                 throw new Exception("GS is invalid. Too little data elements.");
 
             var version = ediCompositeDataElementsGs[7];
@@ -195,11 +195,11 @@ namespace EdiWeave.Framework.Readers
 
             var ediCompositeDataElementsSt = st.Value.GetDataElements(Separators);
             var tag = ediCompositeDataElementsSt[0];
-            if (ediCompositeDataElementsSt.Count() == 3)
+            if (ediCompositeDataElementsSt.Length == 3)
             {
                 version = ediCompositeDataElementsSt[2];
             }
-            if (ediCompositeDataElementsSt.Count() < 2)
+            if (ediCompositeDataElementsSt.Length < 2)
                 throw new Exception("ST is invalid.Too little data elements.");
 
             var controlNumber = ediCompositeDataElementsSt[1];

@@ -1,7 +1,6 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "rules", "rules", "{BBCBB763-8BC4-403E-8D8D-427E4396F8DE}"
 EndProject
@@ -25,29 +24,33 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdiWeave.UnitTests.Vda", "t
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdiWeave.UnitTests.X12", "tests\EdiWeave.UnitTests.X12\EdiWeave.UnitTests.X12.csproj", "{1ED7BA28-72F8-42E4-B157-D7D9E8473416}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rules.EancomD01BEAN3", "rules\Rules.EancomD01BEAN3\Rules.EancomD01BEAN3.csproj", "{344F2698-7A31-4DDB-9053-9F8BA8A53131}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rules.EancomD01BEAN3", "rules\Rules.EancomD01BEAN3\Rules.EancomD01BEAN3.csproj", "{344F2698-7A31-4DDB-9053-9F8BA8A53131}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rules.EdifactD00A", "rules\Rules.EdifactD00A\Rules.EdifactD00A.csproj", "{17947E82-982A-4828-8E8B-E36CE8E86636}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rules.EdifactD00A", "rules\Rules.EdifactD00A\Rules.EdifactD00A.csproj", "{17947E82-982A-4828-8E8B-E36CE8E86636}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rules.EdifactD00A.Eval", "rules\Rules.EdifactD00A.Eval\Rules.EdifactD00A.Eval.csproj", "{C92F88A9-74B2-417A-B2D1-55AEE80E009C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rules.EdifactD00A.Eval", "rules\Rules.EdifactD00A.Eval\Rules.EdifactD00A.Eval.csproj", "{C92F88A9-74B2-417A-B2D1-55AEE80E009C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rules.EdifactD00A.NoValidation", "rules\Rules.EdifactD00A.NoValidation\Rules.EdifactD00A.NoValidation.csproj", "{B23595A4-D9CE-420D-A1AC-BA2E7CE91E71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rules.EdifactD00A.NoValidation", "rules\Rules.EdifactD00A.NoValidation\Rules.EdifactD00A.NoValidation.csproj", "{B23595A4-D9CE-420D-A1AC-BA2E7CE91E71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rules.EdifactD00A.Rep", "rules\Rules.EdifactD00A.Rep\Rules.EdifactD00A.Rep.csproj", "{A1E921DC-B93B-41A7-81B4-4EA15193AE10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rules.EdifactD00A.Rep", "rules\Rules.EdifactD00A.Rep\Rules.EdifactD00A.Rep.csproj", "{A1E921DC-B93B-41A7-81B4-4EA15193AE10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rules.Hipaa004010", "rules\Rules.Hipaa004010\Rules.Hipaa004010.csproj", "{4F7C7B1C-8580-461A-B143-306460DEE135}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rules.Hipaa004010", "rules\Rules.Hipaa004010\Rules.Hipaa004010.csproj", "{4F7C7B1C-8580-461A-B143-306460DEE135}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rules.Hipaa005010", "rules\Rules.Hipaa005010\Rules.Hipaa005010.csproj", "{466ADC2C-1B13-47D6-B31C-F4420489F604}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rules.Hipaa005010", "rules\Rules.Hipaa005010\Rules.Hipaa005010.csproj", "{466ADC2C-1B13-47D6-B31C-F4420489F604}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rules.Vda", "rules\Rules.Vda\Rules.Vda.csproj", "{8DB14447-6C22-4BBB-9126-73AC17FA38C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rules.Vda", "rules\Rules.Vda\Rules.Vda.csproj", "{8DB14447-6C22-4BBB-9126-73AC17FA38C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rules.X12002040", "rules\Rules.X12002040\Rules.X12002040.csproj", "{1763D12E-5C4D-4270-BBAF-24FB4C289B25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rules.X12002040", "rules\Rules.X12002040\Rules.X12002040.csproj", "{1763D12E-5C4D-4270-BBAF-24FB4C289B25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rules.X12002040.Eval", "rules\Rules.X12002040.Eval\Rules.X12002040.Eval.csproj", "{395DFE7D-2676-47B5-BCC9-878EE6F8CF12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rules.X12002040.Eval", "rules\Rules.X12002040.Eval\Rules.X12002040.Eval.csproj", "{395DFE7D-2676-47B5-BCC9-878EE6F8CF12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rules.X12002040.NoValidation", "rules\Rules.X12002040.NoValidation\Rules.X12002040.NoValidation.csproj", "{1928FB85-D646-466A-8E6B-FF3C3A6CBCE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rules.X12002040.NoValidation", "rules\Rules.X12002040.NoValidation\Rules.X12002040.NoValidation.csproj", "{1928FB85-D646-466A-8E6B-FF3C3A6CBCE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rules.X12002040.Rep", "rules\Rules.X12002040.Rep\Rules.X12002040.Rep.csproj", "{8CCC6EC4-A522-463F-BB5D-1C7C07A87460}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rules.X12002040.Rep", "rules\Rules.X12002040.Rep\Rules.X12002040.Rep.csproj", "{8CCC6EC4-A522-463F-BB5D-1C7C07A87460}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rules.X12004010", "rules\Rules.X12004010\Rules.X12004010.csproj", "{2E81FC70-0B78-4A45-8022-5D80D2B724AF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rules.EdifactD96A", "rules\Rules.EdifactD96A\Rules.EdifactD96A.csproj", "{340B341B-E6C2-4CE5-A1F5-CA73F00E64E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -135,6 +138,14 @@ Global
 		{8CCC6EC4-A522-463F-BB5D-1C7C07A87460}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CCC6EC4-A522-463F-BB5D-1C7C07A87460}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CCC6EC4-A522-463F-BB5D-1C7C07A87460}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E81FC70-0B78-4A45-8022-5D80D2B724AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E81FC70-0B78-4A45-8022-5D80D2B724AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E81FC70-0B78-4A45-8022-5D80D2B724AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E81FC70-0B78-4A45-8022-5D80D2B724AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{340B341B-E6C2-4CE5-A1F5-CA73F00E64E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{340B341B-E6C2-4CE5-A1F5-CA73F00E64E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{340B341B-E6C2-4CE5-A1F5-CA73F00E64E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{340B341B-E6C2-4CE5-A1F5-CA73F00E64E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -160,6 +171,8 @@ Global
 		{395DFE7D-2676-47B5-BCC9-878EE6F8CF12} = {BBCBB763-8BC4-403E-8D8D-427E4396F8DE}
 		{1928FB85-D646-466A-8E6B-FF3C3A6CBCE5} = {BBCBB763-8BC4-403E-8D8D-427E4396F8DE}
 		{8CCC6EC4-A522-463F-BB5D-1C7C07A87460} = {BBCBB763-8BC4-403E-8D8D-427E4396F8DE}
+		{2E81FC70-0B78-4A45-8022-5D80D2B724AF} = {BBCBB763-8BC4-403E-8D8D-427E4396F8DE}
+		{340B341B-E6C2-4CE5-A1F5-CA73F00E64E2} = {BBCBB763-8BC4-403E-8D8D-427E4396F8DE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {52CEA451-9FAA-4E24-9733-D5ABE08540E6}

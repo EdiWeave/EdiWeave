@@ -113,25 +113,22 @@ namespace EdiWeave.Core.Model.Edi.ErrorContexts
             Add(errorCode);
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SegmentErrorContext"/> class.
-        /// </summary>
-        /// <param name="name">The segment ID.</param>
-        /// <param name="position">The segment position.</param>
-        /// <param name="specType">The segment type in the spec.</param>
-        /// <param name="errorCode">The error code.</param>
-        /// <param name="message">The message.</param>
-        public SegmentErrorContext(string name, int position, TypeInfo specType, SegmentErrorCode errorCode, string message = null)
-            : this(name, position, specType, message)
-        {
-            Add(errorCode);
-        }
-        
-        /// <summary>
-        /// Adds a syntax error code to the error codes collection.
-        /// </summary>
-        /// <param name="errorCode">The syntax error code.</param>
-        public void Add(SegmentErrorCode errorCode)
+    /// <summary>
+    /// Initializes a new instance of the <see cref="SegmentErrorContext"/> class.
+    /// </summary>
+    /// <param name="name">The segment ID.</param>
+    /// <param name="position">The segment position.</param>
+    /// <param name="specType">The segment type in the spec.</param>
+    /// <param name="errorCode">The error code.</param>
+    /// <param name="message">The message.</param>
+    public SegmentErrorContext(string name, int position, TypeInfo specType, SegmentErrorCode errorCode, string message = null)
+        : this(name, position, specType, message) => Add(errorCode);
+
+    /// <summary>
+    /// Adds a syntax error code to the error codes collection.
+    /// </summary>
+    /// <param name="errorCode">The syntax error code.</param>
+    public void Add(SegmentErrorCode errorCode)
         {
             if (!_codes.Contains(errorCode))
                 _codes.Add(errorCode);

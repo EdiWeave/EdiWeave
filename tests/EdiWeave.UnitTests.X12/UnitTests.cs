@@ -302,14 +302,14 @@ namespace EdiWeave.UnitTests.X12
                 {
                     if (ediReader.Item is ISA && ediItems.Any())
                     {
-                        actual = actual + X12Helper.Generate(ediItems, null, Environment.NewLine);
+                        actual += X12Helper.Generate(ediItems, null, Environment.NewLine);
                         ediItems.Clear();
                     }
 
                     ediItems.Add(ediReader.Item);
                 }
 
-                actual = actual + X12Helper.Generate(ediItems, ediReader.Separators, Environment.NewLine);
+                actual += X12Helper.Generate(ediItems, ediReader.Separators, Environment.NewLine);
             }
 
             // ASSERT
@@ -388,8 +388,7 @@ namespace EdiWeave.UnitTests.X12
             Assert.IsNotNull(error.ErrorContext);
             Assert.IsTrue(error.ErrorContext.Errors.Any(e => e.SpecType != null));
 
-            MessageErrorContext mec;
-            Assert.IsFalse(error.IsValid(out mec));
+            Assert.IsFalse(error.IsValid(out var mec));
             Assert.IsTrue(mec.Errors.Any(e => e.Errors.Any(d => d.Code == DataElementErrorCode.TooManyDataElements)));
             Assert.IsTrue(mec.Errors.Count > 1);
         }
@@ -422,8 +421,7 @@ namespace EdiWeave.UnitTests.X12
             Assert.IsNotNull(error.ErrorContext);
             Assert.IsTrue(error.ErrorContext.Errors.Any(e => e.SpecType != null));
 
-            MessageErrorContext mec;
-            Assert.IsFalse(error.IsValid(out mec));
+            Assert.IsFalse(error.IsValid(out var mec));
             Assert.IsTrue(mec.Errors.Any(e => e.Errors.Any(d => d.Code == DataElementErrorCode.TooManyComponents)));
             Assert.IsTrue(mec.Errors.Count > 1);
         }
@@ -1013,8 +1011,7 @@ namespace EdiWeave.UnitTests.X12
                 Assert.IsTrue(!string.IsNullOrEmpty(msg.Format));
                 Assert.IsTrue(!string.IsNullOrEmpty(msg.Version));
 
-                MessageErrorContext mec;
-                if (!msg.IsValid(out mec))
+                if (!msg.IsValid(out var mec))
                 {
                     Assert.IsTrue(mec.MessagePart > 0);
                     Assert.IsTrue(!string.IsNullOrEmpty(mec.ControlNumber));
@@ -1025,7 +1022,7 @@ namespace EdiWeave.UnitTests.X12
             Assert.IsNotNull(ediItems.OfType<GE>().SingleOrDefault());
             Assert.IsNotNull(ediItems.OfType<IEA>().SingleOrDefault());
             var errors = ediItems.OfType<TS810Split>().Where(m => m.HasErrors).ToList();
-            Assert.IsTrue(errors.Count() == 2);
+            Assert.IsTrue(errors.Count == 2);
 
             foreach (var err in errors)
             {

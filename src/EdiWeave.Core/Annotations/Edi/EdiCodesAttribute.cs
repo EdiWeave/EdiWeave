@@ -23,13 +23,10 @@ namespace EdiWeave.Core.Annotations.Edi
         /// The list of EDI codes.
         /// </summary>
         public string Codes { get; private set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EdiCodesAttribute"/> class.
-        /// </summary>
-        /// <param name="codes"></param>
-        public EdiCodesAttribute(string codes)
-        {
-            Codes = codes;
-        }
-    }
+    /// <summary>
+    /// Initializes a new instance of the <see cref="EdiCodesAttribute"/> class.
+    /// </summary>
+    /// <param name="codes"></param>
+    public EdiCodesAttribute(string codes) => Codes = codes;
+  }
 }

@@ -25,8 +25,7 @@ namespace EdiWeave.Core.Model.Edi
         /// <returns>A list of segment error contexts. The list is empty if the item is valid.</returns>
         public virtual List<SegmentErrorContext> Validate()
         {
-            int segmentsNum;
-            return this.Validate(out segmentsNum);
-        }
+      return this.Validate(out var segmentsNum);
+    }
     }
 }

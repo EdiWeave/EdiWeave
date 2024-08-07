@@ -21,13 +21,10 @@ namespace EdiWeave.Core.Model.Edi.ErrorContexts
         /// </summary>
         public string Message { get; private set; }
 
-        /// <summary>
-        /// Protected constructor. Initializes a new instance of the <see cref="ErrorContext"/> class.
-        /// </summary>
-        /// <param name="message">Error message.</param>
-        protected ErrorContext(string message)
-        {
-            Message = message;
-        }
-    }
+    /// <summary>
+    /// Protected constructor. Initializes a new instance of the <see cref="ErrorContext"/> class.
+    /// </summary>
+    /// <param name="message">Error message.</param>
+    protected ErrorContext(string message) => Message = message;
+  }
 }

@@ -109,8 +109,7 @@ namespace EdiWeave.Core.Model.Edi
         {
             result = new MessageErrorContext(Name, ControlNumber, Version, MessagePart, null);
 
-            int segmentsNum;
-            result.AddRange(this.Validate(out segmentsNum));
+            result.AddRange(this.Validate(out var segmentsNum));
         
             if (!skipTrailer)
                 foreach (var errorCode in ValidateStructure(segmentsNum))
@@ -200,8 +199,7 @@ namespace EdiWeave.Core.Model.Edi
             var sn = values[0] as string;
             var cn = values[1] as string;
 
-            int trailerSegmentsNumber;
-            if (!Int32.TryParse(sn, out trailerSegmentsNumber))
+            if (!Int32.TryParse(sn, out var trailerSegmentsNumber))
                 return new Tuple<int, string>(-1, cn);
 
             return new Tuple<int, string>(trailerSegmentsNumber, cn);

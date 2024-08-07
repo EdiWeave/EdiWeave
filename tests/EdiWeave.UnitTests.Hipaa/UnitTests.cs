@@ -156,8 +156,7 @@ namespace EdiWeave.UnitTests.Hipaa
                 ediItems = ediReader.ReadToEnd().ToList();
             }
             var msg = ediItems.OfType<TS837>().Single();
-            MessageErrorContext ec;
-            msg.IsValid(out ec);
+            msg.IsValid(out var ec);
 
             // ASSERT
             Assert.IsNotNull(ec);

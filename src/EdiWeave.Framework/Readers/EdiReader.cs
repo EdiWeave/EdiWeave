@@ -24,7 +24,7 @@ namespace EdiWeave.Framework.Readers
     /// <summary>
     /// Reads EDI documents into .NET objects.
     /// </summary>
-    public abstract class EdiReader : BaseReader
+    public abstract class EdiReader : BaseReader, IEdiReader
     {
         internal readonly Func<MessageContext, Assembly> RulesAssembly;
         
@@ -129,13 +129,11 @@ namespace EdiWeave.Framework.Readers
             var line = "";
             while (!StreamReader.EndOfStream || InternalBuffer.Any())
             {
-                line = line + Read(1);
+                line += Read(1);
                 if (line.Length > 2)
                 {
                     var last3 = line.Substring(line.Length - 3);
-                    Separators separators;
-                    string probed;
-                    if (TryReadHeader(last3, out probed, out separators))
+                    if (TryReadHeader(last3, out var probed, out var separators))
                     {
                         Separators = separators;
                         Trims = Trims.Except(new[] {Separators.Segment}).ToArray();
@@ -168,6 +166,8 @@ namespace EdiWeave.Framework.Readers
 
                 if (Separators.Escape.HasValue &&
                     line.EndsWith(string.Concat(Separators.Escape.Value, Separators.Segment),
+                        StringComparison.Ordinal) &&
+                    !line.EndsWith(string.Concat(Separators.Escape.Value, Separators.Escape.Value, Separators.Segment),
                         StringComparison.Ordinal))
                     continue;
 

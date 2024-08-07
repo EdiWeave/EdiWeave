@@ -192,23 +192,23 @@ namespace EdiWeave.Framework.Readers
                 throw new Exception("UNH was not found.");
 
             var ediCompositeDataElements = unh.Value.GetDataElements(Separators);
-            if (ediCompositeDataElements.Count() < 2)
+            if (ediCompositeDataElements.Length < 2)
                 throw new Exception("UNH is invalid. Too little data elements.");
 
             var ediDataElements = ediCompositeDataElements[1].GetComponentDataElements(Separators);
-            if (ediDataElements.Count() < 3)
+            if (ediDataElements.Length < 3)
                 throw new Exception("UNH is invalid. Unable to read message type or version.");
 
             var tag = ediDataElements[0];
             var version = ediDataElements[1] + ediDataElements[2];
             var controlNumber = ediCompositeDataElements[0];
 
-            if (ediDataElements.Count() >= 5 && ediDataElements[4].StartsWith("EAN"))
+            if (ediDataElements.Length >= 5 && ediDataElements[4].StartsWith("EAN"))
             {
-                version = version + "EAN";
+                version += "EAN";
                 if (version.StartsWith("D01B"))
                 {
-                    version = version + _currentUnb.SYNTAXIDENTIFIER_1.SyntaxVersionNumber_2;
+                    version += _currentUnb.SYNTAXIDENTIFIER_1.SyntaxVersionNumber_2;
                 }
             }
 

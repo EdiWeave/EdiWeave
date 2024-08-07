@@ -498,14 +498,14 @@ namespace EdiWeave.UnitTests.Edifact
                 {
                     if (ediReader.Item is UNB && ediItems.Any())
                     {
-                        actual = actual + EdifactHelper.Generate(ediItems, null, Environment.NewLine);
+                        actual += EdifactHelper.Generate(ediItems, null, Environment.NewLine);
                         ediItems.Clear();
                     }
 
                     ediItems.Add(ediReader.Item);
                 }
 
-                actual = actual + EdifactHelper.Generate(ediItems, ediReader.Separators, Environment.NewLine);
+                actual += EdifactHelper.Generate(ediItems, ediReader.Separators, Environment.NewLine);
             }
             
             // ASSERT
@@ -584,8 +584,7 @@ namespace EdiWeave.UnitTests.Edifact
             Assert.IsTrue(error.ErrorContext.Errors.Any(e => e.SpecType != null));
             Assert.IsTrue(error.ErrorContext.Errors.Any(e => e.Errors.Any(d => d.Code == DataElementErrorCode.TooManyDataElements)));
 
-            MessageErrorContext mec;
-            Assert.IsFalse(error.IsValid(out mec));
+            Assert.IsFalse(error.IsValid(out var mec));
             Assert.IsTrue(mec.Errors.Any(e => e.Errors.Any(d => d.Code == DataElementErrorCode.TooManyDataElements)));
             Assert.IsTrue(mec.Errors.Count > 1);
         }
@@ -617,8 +616,7 @@ namespace EdiWeave.UnitTests.Edifact
             Assert.IsTrue(error.ErrorContext.Errors.Any(e => e.SpecType != null));
             Assert.IsTrue(error.ErrorContext.Errors.Any(e => e.Errors.Any(d => d.Code == DataElementErrorCode.TooManyComponents)));
 
-            MessageErrorContext mec;
-            Assert.IsFalse(error.IsValid(out mec));
+            Assert.IsFalse(error.IsValid(out var mec));
             Assert.IsTrue(mec.Errors.Any(e => e.Errors.Any(d => d.Code == DataElementErrorCode.TooManyComponents)));
             Assert.IsTrue(mec.Errors.Count > 1);
         }
@@ -886,8 +884,7 @@ namespace EdiWeave.UnitTests.Edifact
             }
             var msg = ediItems.OfType<TSINVOIC>().Single();
 
-            MessageErrorContext result;
-            var validationResult = msg.IsValid(out result);
+            var validationResult = msg.IsValid(out var result);
 
             // ASSERT
             Assert.IsTrue(validationResult);
@@ -1094,8 +1091,7 @@ namespace EdiWeave.UnitTests.Edifact
                 Assert.IsTrue(!string.IsNullOrEmpty(msg.Format));
                 Assert.IsTrue(!string.IsNullOrEmpty(msg.Version));
 
-                MessageErrorContext mec;
-                if (!msg.IsValid(out mec))
+                if (!msg.IsValid(out var mec))
                 {
                     Assert.IsTrue(mec.MessagePart > 0);
                     Assert.IsTrue(!string.IsNullOrEmpty(mec.ControlNumber));
@@ -1106,7 +1102,7 @@ namespace EdiWeave.UnitTests.Edifact
             Assert.IsNull(ediItems.OfType<UNE>().SingleOrDefault());
             Assert.IsNotNull(ediItems.OfType<UNZ>().SingleOrDefault());
             var errors = ediItems.OfType<EdiWeave.Rules.EDIFACT_D00A.Rep.TSINVOICSplit>().Where(m => m.HasErrors).ToList();
-            Assert.IsTrue(errors.Count() == 1);
+            Assert.IsTrue(errors.Count == 1);
            
             foreach (var err in errors)
             {

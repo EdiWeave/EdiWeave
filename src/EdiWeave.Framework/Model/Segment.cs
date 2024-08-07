@@ -73,13 +73,10 @@ namespace EdiWeave.Framework.Model
         {
         }
 
-        public Segment(Segment segment)
-            : this(segment.TypeInfo, segment.Name, segment.EdiName)
-        {
-            segment.Parent.InsertChild(segment.IndexInParent() + 1, this);
-        }
+    public Segment(Segment segment)
+        : this(segment.TypeInfo, segment.Name, segment.EdiName) => segment.Parent.InsertChild(segment.IndexInParent() + 1, this);
 
-        public override IEnumerable<ParseNode> NeighboursWithExclusion(IEnumerable<ParseNode> exclusion)
+    public override IEnumerable<ParseNode> NeighboursWithExclusion(IEnumerable<ParseNode> exclusion)
         {
             return new List<ParseNode> {Parent};
         }
@@ -275,7 +272,7 @@ namespace EdiWeave.Framework.Model
                 {
                     foreach (var child in element.Children.OfType<DataElement>())
                     {
-                        result = result + pad(child);
+                        result += pad(child);
                     }                    
                 }
                 else
@@ -285,7 +282,7 @@ namespace EdiWeave.Framework.Model
                         throw new Exception(String.Format("Unexpected node {0} under parent {1}", element.TypeInfo.FullName,
                             element.Parent.TypeInfo.FullName));
 
-                    result = result + pad(de);
+                    result += pad(de);
                 }
             }
 

@@ -15,7 +15,7 @@
     <RepositoryUrl>https://github.com/Silvenga/EdiWeave/</RepositoryUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/Silvenga/EdiWeave/master/Assets/nuget-logo.png</PackageIconUrl>
     <PackageTags>.NET-EDI-Framework EDIFACT X12 HIPAA EANCOM</PackageTags>
-    <TargetFrameworks>net45;netstandard1.6;netstandard2.0;netcoreapp1.1;netcoreapp2.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net8.0</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.6' Or '$(TargetFramework)' == 'netcoreapp1.1'">
     <PackageReference Include="System.Runtime.Serialization.Formatters" Version="4.3.0" />

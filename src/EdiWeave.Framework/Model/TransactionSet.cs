@@ -21,13 +21,10 @@ namespace EdiWeave.Framework.Model
 {
     class TransactionSet : ParseNode
     {
-        public TransactionSet(TypeInfo typeInfo, object instance = null)
-            : base(typeInfo, typeInfo.Name, typeInfo.Name)
-        {
-            BuildChildren(instance);
-        }
+    public TransactionSet(TypeInfo typeInfo, object instance = null)
+        : base(typeInfo, typeInfo.Name, typeInfo.Name) => BuildChildren(instance);
 
-        public override IEnumerable<ParseNode> NeighboursWithExclusion(IEnumerable<ParseNode> exclusion)
+    public override IEnumerable<ParseNode> NeighboursWithExclusion(IEnumerable<ParseNode> exclusion)
         {
             var result = new List<ParseNode>();
             result.AddRange(this.ChildrenWithExclusion(exclusion.ToList()));

@@ -24,7 +24,7 @@ namespace EdiWeave.Framework.Readers
     /// <summary>
     /// Reads VDA documents into .NET objects.
     /// </summary>
-    public class VdaReader : BaseReader
+    public class VdaReader : BaseReader, IEdiReader
     {
         internal readonly Func<string, MessageContext> MessageContext;
         private readonly string _postFix;
@@ -126,12 +126,12 @@ namespace EdiWeave.Framework.Readers
             var postFix = "";
             while ((!StreamReader.EndOfStream || InternalBuffer.Any()) && line.Length < MaxSegmentLength)
             {
-                line = line + Read(1); 
+                line += Read(1); 
             }
 
             while (!string.IsNullOrEmpty(_postFix) && !StreamReader.EndOfStream && postFix.Length < _postFix.Length)
             {
-                postFix = postFix + Read(1); 
+                postFix += Read(1); 
             }
 
             if (!string.IsNullOrEmpty(_postFix) && postFix != _postFix)

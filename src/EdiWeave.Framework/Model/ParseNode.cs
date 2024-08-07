@@ -147,8 +147,7 @@ namespace EdiWeave.Framework.Model
 
                 if (propertyInfo.GetStandardType().IsGenericType)
                 {
-                    IList list;
-                    if (!listTypes.TryGetValue(propertyInfo.MetadataToken.ToString(), out list))
+                    if (!listTypes.TryGetValue(propertyInfo.MetadataToken.ToString(), out var list))
                     {
                         list = (IList)Activator.CreateInstance(typeof(List<>).MakeGenericType(nodeChild.TypeInfo.AsType()));
                         propertyInfo.SetValue(result, list, null);

@@ -7,10 +7,7 @@ namespace EdiWeave.Framework.Exceptions
     {
         public MessageErrorContext MessageErrorContext { get; private set; }
 
-        public ParserMessageException(MessageErrorContext messageErrorContext)
-            : base(messageErrorContext.Message)
-        {
-            MessageErrorContext = messageErrorContext;
-        }
-    }
+    public ParserMessageException(MessageErrorContext messageErrorContext)
+        : base(messageErrorContext.Message) => MessageErrorContext = messageErrorContext;
+  }
 }

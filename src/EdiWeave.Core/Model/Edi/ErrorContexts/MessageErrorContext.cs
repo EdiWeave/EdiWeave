@@ -83,28 +83,25 @@ namespace EdiWeave.Core.Model.Edi.ErrorContexts
             MessagePart = messagePart;
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="MessageErrorContext"/> class.
-        /// </summary>
-        /// <param name="name">The message name (or tag).</param>
-        /// <param name="controlNumber">The message control number.</param>
-        /// <param name="version">The message version.</param>
-        /// <param name="messagePart">Message part index.</param>
-        /// <param name="message">The error message.</param>
-        /// <param name="errorCode">The syntax error code.</param>
-        public MessageErrorContext(string name, string controlNumber, string version, int messagePart, string message, MessageErrorCode errorCode)
-            : this(name, controlNumber, version, messagePart, message)
-        {
-            _codes.Add(errorCode);
-        }
-        
-        /// <summary>
-        /// Merges a segment context into the errors collection.
-        /// There can be only one reference for a segment, containing all the errors for that segment.
-        /// A segment is identified by its name (or segment ID) and its position.
-        /// </summary>
-        /// <param name="segmentContexts">The segment error contexts to merge.</param>
-        public void AddRange(IEnumerable<SegmentErrorContext> segmentContexts)
+    /// <summary>
+    /// Initializes a new instance of the <see cref="MessageErrorContext"/> class.
+    /// </summary>
+    /// <param name="name">The message name (or tag).</param>
+    /// <param name="controlNumber">The message control number.</param>
+    /// <param name="version">The message version.</param>
+    /// <param name="messagePart">Message part index.</param>
+    /// <param name="message">The error message.</param>
+    /// <param name="errorCode">The syntax error code.</param>
+    public MessageErrorContext(string name, string controlNumber, string version, int messagePart, string message, MessageErrorCode errorCode)
+        : this(name, controlNumber, version, messagePart, message) => _codes.Add(errorCode);
+
+    /// <summary>
+    /// Merges a segment context into the errors collection.
+    /// There can be only one reference for a segment, containing all the errors for that segment.
+    /// A segment is identified by its name (or segment ID) and its position.
+    /// </summary>
+    /// <param name="segmentContexts">The segment error contexts to merge.</param>
+    public void AddRange(IEnumerable<SegmentErrorContext> segmentContexts)
         {
             foreach (var segmentContext in segmentContexts)
                 Add(segmentContext);

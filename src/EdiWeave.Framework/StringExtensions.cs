@@ -104,7 +104,7 @@ namespace EdiWeave.Framework
                 return null;
 
             if (escapeCharacter.HasValue && result.EndsWith(escapeCharacter.ToString(), StringComparison.Ordinal))
-                result = result + separator;
+                result += separator;
 
             return result;
         }
@@ -132,7 +132,7 @@ namespace EdiWeave.Framework
                 : new List<string> { line };
             foreach (var str in temp)
             {
-                result = result + str;
+                result += str;
             }
 
             if (separators.Escape.HasValue && !line.EndsWith(String.Concat(separators.Escape.Value, separators.Escape.Value), StringComparison.Ordinal))

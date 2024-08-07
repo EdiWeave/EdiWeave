@@ -18,10 +18,7 @@ namespace EdiWeave.Framework.Exceptions
     {
         public ReaderErrorCode ErrorCode { get; set; }
 
-        public ReaderException(string message, ReaderErrorCode errorCode)
-            : base(message)
-        {
-            ErrorCode = errorCode;
-        }
-    }
+    public ReaderException(string message, ReaderErrorCode errorCode)
+        : base(message) => ErrorCode = errorCode;
+  }
 }

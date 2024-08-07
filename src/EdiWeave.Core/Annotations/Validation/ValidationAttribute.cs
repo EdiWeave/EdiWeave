@@ -22,19 +22,16 @@ namespace EdiWeave.Core.Annotations.Validation
     [AttributeUsage(AttributeTargets.Property)]
     public abstract class ValidationAttribute : Attribute, IValidator
     {
-        /// <summary>
-        /// Protected constructor. Initializes a new instance of the <see cref="ValidationAttribute"/> class.
-        /// </summary>
-        /// <param name="priority"></param>
-        protected ValidationAttribute(int priority)
-        {
-            Priority = priority;
-        }
+    /// <summary>
+    /// Protected constructor. Initializes a new instance of the <see cref="ValidationAttribute"/> class.
+    /// </summary>
+    /// <param name="priority"></param>
+    protected ValidationAttribute(int priority) => Priority = priority;
 
-        /// <summary>
-        /// The validation attribute priority.
-        /// </summary>
-        public int Priority { get; private set; }
+    /// <summary>
+    /// The validation attribute priority.
+    /// </summary>
+    public int Priority { get; private set; }
 
         /// <summary>
         /// Detects if an item is valid.
